@@ -1,1 +1,18 @@
 
+What is Cloud Computing? :
+
+On-demand delivery of IT resources over the internet with pay-as-you-go pricing.
+
+Benefits of AWS Cloud :
+
+High availability, scalability, cost efficiency, and global reach.
+
+AWS Global Infrastructure :
+
+Overview of Regions, Availability Zones (AZs), and edge locations.
+
+AWS Shared Responsibility Model :
+
+AWS is responsible for security of the cloud (hardware, infrastructure, facilities).
+
+Customers are responsible for security in the cloud (data, OS, configurations, access control).
