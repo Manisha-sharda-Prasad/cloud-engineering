@@ -15,3 +15,4 @@ https://skillbuilder.aws/learn/94T2BEN85A/aws-cloud-practitioner-essentials/8D79
 ## 4.AWS Shared Responsibility Model :
 - AWS is responsible for security of the cloud (hardware, infrastructure, facilities).
 - Customers are responsible for security in the cloud (data, OS, configurations, access control).
+
