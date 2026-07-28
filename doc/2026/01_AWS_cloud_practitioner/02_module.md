@@ -1,26 +1,26 @@
-## Amazon EC2 Overview :-
+## 1. Amazon EC2 Overview :-
 - Provides on-demand virtual server capacity (virtual machines/VMs) in the cloud.
 - Faster,flexible, and cheaper than buying and maintaining physical servers on-premises.
 
-## 1.Pay-as-You-Go Pricing :
+## 1.1.Pay-as-You-Go Pricing :
 - You only pay while instances are actively running,no charges when stopped.
 
-## 2.Multi-Tenancy & Isolation:
+## 1.2.Multi-Tenancy & Isolation:
 - Multiple VMs share the same physical host hardware.
 - A 'hypervisor' manages resource sharing and keeps each VM isolated and secure.
 
-## 3.Launching & Scaling :
+## 1.3.Launching & Scaling :
 - AMI (Amazon Machine Image): Defines the OS and pre-installed software.
 - Instance Type: Determines hardware resources (CPU, memory, network capability).
 - Vertical Scaling: Easily resize instances up or down to match changing demand.
 
-## 4.Steps to Get Started :
+## 1.4.Steps to Get Started :
 - Launch: Choose an AMI and instance type.
 - Connect: Access via SSH (Linux), RDP (Windows), or AWS Systems Manager.
 - Use: Run commands, install applications, and manage files.
 
 
-## Instance Families & Best Use Cases :-
+## 2.EC2 Instance Types:-
 - 1.General Purpose: Balanced compute, memory, and networking (web servers, code repos).
 - 2.Compute Optimized: High-performance processing (gaming servers, scientific modeling, ML).
 - 3.Memory Optimized: Fast performance for large in-memory datasets (real-time analytics, databases).
@@ -28,14 +28,48 @@
 - 5.Storage Optimized: High throughput & low latency for large, locally stored data (data warehousing).
 
 
-## Provision AWS Resources :-
+## 3.Provision AWS Resources :-
  Everything in AWS is powered by API calls behind the scenes :-
 
-## 3 Ways to Provision & Interact:
+## 3.1. 3 Ways to Provision & Interact:
 - AWS Management Console: Web UI for visual navigation, testing, and manual setup.
 - AWS CLI: Command-line tool for terminal commands, automation, and reducing manual errors via scripts.
 - AWS SDK: Code libraries to control AWS services directly inside programming languages (e.g., Python, Java).
 
-## Unmanaged Services (e.g., EC2):
+## 3.2.Unmanaged Services (e.g., EC2):
 - AWS Responsibilities: Hardware, physical infrastructure, and global facilities (Security of the cloud).
 - Customer Responsibilities: Guest OS, updates, application configuration, data, and security groups/firewalls (Security in the cloud).
+
+
+
+## 4.Launching an Amazon EC2 Instance & AMIs:-
+
+## 4.1. 3 Required Configurations: 
+- AMI, Instance Type, and Storage (type & size).
+
+## 4.2 What is an AMI? 
+- A pre-configured template containing the OS, storage setup, and software.
+
+## 4.3 3 Ways to Get AMIs: 
+- Build custom, use standard AWS AMIs, or buy from AWS Marketplace.
+
+## 4.4 Key AMI Benefit: 
+- Ensures identical, repeatable environments for quick and error-free scaling.
+
+
+
+## 5. Amazon EC2 Pricing Models :-
+
+## 5.1 On-Demand: 
+- Pay for compute capacity by the hour or second with no long-term commitments
+- for flexible workload, short-term.
+## 5.2.Reserved Instances: 
+- Commit to a 1- or 3-year term for significant savings
+## 5.3.Spot Instances: 
+- Bid for unused capacity at a discount, but can be interrupted by AWS with short notice
+## 5.4.Savings Plans: 
+- Flexible pricing model offering lower prices
+- exchange for a commitment to a consistent amount of usage (measured in $/hour) for a 1- or 3-year term
+## 5.5 Dedicated Hosts:
+- Physical servers dedicated for your use, helping you meet compliance requirements 
+- ideal for strict compliance and licensing needs.
