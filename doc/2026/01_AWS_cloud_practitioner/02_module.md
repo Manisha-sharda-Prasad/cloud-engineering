@@ -73,3 +73,20 @@
 ## 5.5 Dedicated Hosts:
 - Physical servers dedicated for your use, helping you meet compliance requirements 
 - ideal for strict compliance and licensing needs.
+
+
+## 6. Scaling Amazon EC2 :-
+Ensures high performance while cutting costs by paying only for active resources.
+Example: Amazon EC2 Auto Scaling:
+- Minimum: Baseline instances that run 24/7 for minimum service.
+- Desired: Target instances running to handle normal everyday traffic.
+- Maximum: Hard limit on instances to control costs and prevent over-scaling.
+
+## S6.1. Scalability: 
+- Scale up (bigger instance) or out (more instances) for growth.
+## 6.2. Elasticity: 
+- Real-time auto-scaling (up/down) to match fluctuating demand.
+## 6.3. High Availability: 
+- Deploying across multiple AZs prevents single points of failure.
+## 6.4. Auto Scaling: 
+- Uses CloudWatch metrics to scale within min/desired/max limits.
