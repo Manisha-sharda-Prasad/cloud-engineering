@@ -93,3 +93,17 @@
 - Deploying across multiple AZs prevents single points of failure.
 ## 6.4. Auto Scaling: 
 - Uses CloudWatch metrics to scale within min/desired/max limits.
+
+
+
+## 7. Directing Traffic with Elastic Load Balancing :-
+- Example: In hospital booking systems, ELB spreads high patient traffic across multiple servers so the site stays up.
+
+## 7.1. Elastic Load Balancing: 
+- Distributes incoming traffic across EC2 instances to prevent overload and act as a single point of entry.
+## 7.2. ELB Benefits: 
+- Ensures efficient traffic distribution, scales automatically with demand, and simplifies backend management.
+## 7.3. Routing Methods:
+- Uses strategies like Round Robin, Least Connections, IP Hash, and Least Response Time to manage load.
+
+
