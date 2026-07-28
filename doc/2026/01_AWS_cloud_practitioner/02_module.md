@@ -20,12 +20,14 @@
 - Use: Run commands, install applications, and manage files.
 
 
+
 ## 2.EC2 Instance Types:-
 - 1.General Purpose: Balanced compute, memory, and networking (web servers, code repos).
 - 2.Compute Optimized: High-performance processing (gaming servers, scientific modeling, ML).
 - 3.Memory Optimized: Fast performance for large in-memory datasets (real-time analytics, databases).
 - 4.Accelerated Computing: Hardware accelerators for heavy calculations (graphics, floating-point math).
 - 5.Storage Optimized: High throughput & low latency for large, locally stored data (data warehousing).
+
 
 
 ## 3.Provision AWS Resources :-
@@ -75,12 +77,13 @@
 - ideal for strict compliance and licensing needs.
 
 
+
 ## 6. Scaling Amazon EC2 :-
-Ensures high performance while cutting costs by paying only for active resources.
-Example: Amazon EC2 Auto Scaling:
-- Minimum: Baseline instances that run 24/7 for minimum service.
-- Desired: Target instances running to handle normal everyday traffic.
-- Maximum: Hard limit on instances to control costs and prevent over-scaling.
+- Ensures high performance while cutting costs by paying only for active resources.
+- Example: Amazon EC2 Auto Scaling:
+  - Minimum: Baseline instances that run 24/7 for minimum service.
+  - Desired: Target instances running to handle normal everyday traffic.
+  - Maximum: Hard limit on instances to control costs and prevent over-scaling.
 
 ## S6.1. Scalability: 
 - Scale up (bigger instance) or out (more instances) for growth.
