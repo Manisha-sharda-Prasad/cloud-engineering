@@ -19,3 +19,20 @@ Run applications without managing the underlying infrastructure.
 - AWS handles infrastructure overhead; you configure scaling and deployment.
 ## 2.3. Fully-Managed / Serverless (Lambda): 
 - AWS manages all servers and scaling; you only write code.
+
+
+
+
+## 3. AWS Lambda :-
+- Serverless compute service that runs code in response to events
+- runs code on-demand
+- no need to provision or manage servers manually. 
+
+## 3.1. Event-Driven: 
+- Set Triggers
+- Functions are triggered by events (e.g., file uploads, database changes, API calls).
+## 3.2. Pay-per-Use:
+- You pay only for the compute time consumed by your code, measured in milliseconds.
+## 3.3. Automatic Scaling: ()
+- Lambda automatically scales based on the number of incoming requests, without manual intervention.
+
