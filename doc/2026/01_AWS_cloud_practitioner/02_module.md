@@ -48,16 +48,12 @@
 
 ## 4.1. 3 Required Configurations: 
 - AMI, Instance Type, and Storage (type & size).
-
 ## 4.2 What is an AMI? 
 - A pre-configured template containing the OS, storage setup, and software.
-
 ## 4.3 3 Ways to Get AMIs: 
 - Build custom, use standard AWS AMIs, or buy from AWS Marketplace.
-
 ## 4.4 Key AMI Benefit: 
 - Ensures identical, repeatable environments for quick and error-free scaling.
-
 
 
 ## 5. Amazon EC2 Pricing Models :-
@@ -85,7 +81,7 @@
   - Desired: Target instances running to handle normal everyday traffic.
   - Maximum: Hard limit on instances to control costs and prevent over-scaling.
 
-## S6.1. Scalability: 
+## 6.1. Scalability: 
 - Scale up (bigger instance) or out (more instances) for growth.
 ## 6.2. Elasticity: 
 - Real-time auto-scaling (up/down) to match fluctuating demand.
