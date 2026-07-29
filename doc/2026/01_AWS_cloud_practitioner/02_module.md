@@ -107,3 +107,22 @@
 - Uses strategies like Round Robin, Least Connections, IP Hash, and Least Response Time to manage load.
 
 
+## 8. Messaging & Queuing :- 
+- Buffer system that passes messages between components 
+- applications can communicate without waiting on each other.
+
+## 8.1. Decoupling Services: 
+- Separating system parts, if one component fails, the rest keep running without cascading failures.
+## 8.2. Monolithic Architecture: 
+- Tightly coupled single system where all components depend on each other; 
+- a single failure can bring down the entire app.
+## 8.3. Microservices Architecture: 
+- Loosely coupled independent services ,
+- components communicate across boundaries without disrupting the whole app.
+## 8.4. Amazon EventBridge: 
+- Serverless event, bus that routes real-time events from multiple sources to different app services.
+## 8.5. Amazon SQS: 
+- Message queue service that stores payloads in a buffer until receiver instances pick and process them.
+## 8.6. Amazon SNS: 
+- Publish-subscribe notification service
+- pushes out messages to multiple subscribers (based on their choices) via SMS, email, or endpoints.
