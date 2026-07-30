@@ -27,6 +27,7 @@ Run applications without managing the underlying infrastructure.
 - Serverless compute service that runs code in response to events
 - runs code on-demand
 - no need to provision or manage servers manually. 
+- 15 minutes max execution time per request
 
 ## 3.1. Event-Driven: 
 - Set Triggers
@@ -36,3 +37,22 @@ Run applications without managing the underlying infrastructure.
 ## 3.3. Automatic Scaling: ()
 - Lambda automatically scales based on the number of incoming requests, without manual intervention.
 
+## 4. Containers and Orchestration on AWS :-
+
+## 4.1. Containers: 
+- Package code with its dependencies so it runs reliably anywhere.
+## 4.2. vs. VMs: 
+- Lighter and faster because they share the host OS instead of running a full guest OS.
+## 4.3. Orchestration:
+- Automates deploying, scaling, and managing large numbers of containers.
+
+## Key AWS Container Services :-
+
+## 4.4. Amazon ECS: 
+- AWS’s native tool to scale and manage Docker containers.
+## 4.5. Amazon EKS: 
+- AWS’s managed service to run open-source Kubernetes.
+## 4.6. Amazon ECR: 
+- A secure repository to store and manage container images.
+## 4.7. AWS Fargate: 
+- A serverless compute engine that runs containers without managing underlying servers.
