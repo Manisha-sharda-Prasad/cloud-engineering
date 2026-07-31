@@ -5,7 +5,6 @@
 ## 1.1.Choosing Regions & Edge Locations:
 - Pick Regions based on compliance, latency, cost, and service availability; 
 - use Edge Locations to cache content closer to users for lower latency.
-
 ## 1.2.IaC & CloudFormation:
 - Infrastructure as Code (IaC) defines cloud setup in code files, 
 - while AWS CloudFormation automates consistent deployment of these resources.
@@ -26,3 +25,28 @@
 ## 2.4. Pricing: 
 - Choose cost-effective regions, as service rates vary globally by location.
 - Tax laws and regulations can also play a role in cost.
+
+
+
+## 3. AWS Global Infrastructure Core Pillars :-
+
+## 3.1. Difference between these advantages:
+## High Availability:
+- capability of a system to operate continuously without failing.
+- applications can handle the failure  without significant downtime.
+## Agility: 
+- ability to quickly adapt to changing requirements or market conditions.
+- Rapid deployment and provisioning of global infrastructure in seconds.
+## Elasticity: 
+- ability of a system to scale resources up or down automatically in response to changes in demand.
+
+
+
+## 3.2. Key elements of AWS Global Infrastructure:
+## AWS Regions: 
+- Isolated geographical areas worldwide containing multiple physical data center clusters.
+## Availability Zones (AZs):
+- Separate, distinct locations with one or more data centers that 
+- are isolated from failures in other areas
+## Edge Locations: 
+- Locations that cache content to deliver data, video, and applications to users with lower latency
