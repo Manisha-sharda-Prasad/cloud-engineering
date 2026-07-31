@@ -54,7 +54,8 @@
 
 ## 5. CloudFormation (IaC tools)
 - IaC- define your infrastructure in a file, like a blueprint for your AWS architecture.
-- designed to handle complex infrastructure setups. 
-- deployments are consistent across different environments such as development, testing, and production.
-- deploy the same template in multiple accounts or multiple Regions, identical environments are created across them. 
+- deployments are consistent across different environments.
+- deploy the same template in multiple accounts or multiple Regions. 
 - less room for human error, totally automated process.
+- set up AWS resources using code to automate provisioning and the management of infrastructure. 
+- designed to handle complex infrastructure setups. 
