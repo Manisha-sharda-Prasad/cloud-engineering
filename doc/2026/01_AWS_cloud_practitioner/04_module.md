@@ -42,7 +42,7 @@
 
 
 
-## 3.2. Key elements of AWS Global Infrastructure:
+## 4. Key elements of AWS Global Infrastructure:
 ## AWS Regions: 
 - Isolated geographical areas worldwide containing multiple physical data center clusters.
 ## Availability Zones (AZs):
@@ -50,3 +50,11 @@
 - are isolated from failures in other areas
 ## Edge Locations: 
 - Locations that cache content to deliver data, video, and applications to users with lower latency
+
+
+## 5. CloudFormation (IaC tools)
+- IaC- define your infrastructure in a file, like a blueprint for your AWS architecture.
+- designed to handle complex infrastructure setups. 
+- deployments are consistent across different environments such as development, testing, and production.
+- deploy the same template in multiple accounts or multiple Regions, identical environments are created across them. 
+- less room for human error, totally automated process.
