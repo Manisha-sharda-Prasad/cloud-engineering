@@ -22,3 +22,18 @@
 ## 2.3. Virtual private network(VPN):
 - A VPN encrypts your internet traffic,
 - helps protect it from anyone who might try to intercept or monitor it.
+
+
+## 3. More Ways to Connect to the AWS Cloud :-
+
+## AWS Direct Connect 
+- is a private, dedicated AWS connection to your data center or office.
+
+## AWS Client VPN 
+- connects your remote workforce to AWS or on-premises with a VPN.
+
+## AWS Site-to-Site VPN 
+- is an encrypted network connection to your Amazon VPCs.
+
+## AWS PrivateLink 
+- connects your VPC privately to services and resources as though they were in your VPC.
