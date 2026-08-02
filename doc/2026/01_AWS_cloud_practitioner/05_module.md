@@ -60,5 +60,9 @@
 
 
 
+## 5. Create an internet gateway and route traffic :
+- First, you create the internet gateway. Other-wise your users can't get to your resources. 
+- Then, you create route tables to route traffic, It allows internet traffic in and local traffic out.
+
 
 
