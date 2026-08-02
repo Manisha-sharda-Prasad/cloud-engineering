@@ -28,16 +28,13 @@
 
 ## 3. More Ways to Connect to the AWS Cloud :-
 
-## AWS Direct Connect 
+## 3.1. AWS Direct Connect 
 - is a private, dedicated AWS connection to your data center or office.
-
-## AWS Client VPN 
+## 3.2. AWS Client VPN 
 - connects your remote workforce to AWS or on-premises with a VPN.
-
-## AWS Site-to-Site VPN 
+## 3.3. AWS Site-to-Site VPN 
 - is an encrypted network connection to your Amazon VPCs.
-
-## AWS PrivateLink 
+## 3.4. AWS PrivateLink 
 - connects your VPC privately to services and resources as though they were in your VPC.
 
 
@@ -49,7 +46,19 @@
 - Before a packet enter or exit from a subnet, it will run into several checks for permissions,
 - If permissions defined, ACLs indicate what is allowed or denied.
 
-## 5. Network ACLs (Virtual firewall controlling traffic) :-
+## 4.1.  Network ACLs (Access Control Lists) :
+- Virtual firewall controlling traffic
+- perform stateless packet filtering, remember nothing and check packets that cross the subnet border each way: inbound and outbound.
 - When configuring your VPC, you can use your account’s default network ACL or create custom network ACLs.
-- your account’s default network ACL allows all inbound and outbound traffic, 
 - you can modify it by adding your own rules.
+
+## 4.2. Security groups :
+- Control inbound and outbound traffic at the resource level
+- add custom rules to configure which traffic should be allowed.
+- It is the VPC component that checks packet permissions for an Amazon EC2 instance. 
+- A virtual firewall that controls inbound and outbound traffic for AWS resources
+
+
+
+
+
