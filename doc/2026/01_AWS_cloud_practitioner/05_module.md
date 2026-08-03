@@ -1,4 +1,5 @@
-## 1. Introduction to Networking:-
+## 1. Introduction to Networking in AWS:-
+- Interconnected devices that can exchange data and resources
 
 ## 1.1.Subnets:
 - used to organize resources, share resources publicly, or isolate resources to keep them private.
@@ -10,6 +11,8 @@
 - e.g. online store’s website,
 - designed to provide direct internet access to resources placed inside them. 
 - allowing access, they are connected with an internet gateway.
+
+
 
 ## 2. Boundaries around AWS resources:-
 
@@ -26,16 +29,28 @@
 - helps protect it from anyone who might try to intercept or monitor it.
 
 
+
 ## 3. More Ways to Connect to the AWS Cloud :-
 
 ## 3.1. AWS Direct Connect 
 - is a private, dedicated AWS connection to your data center or office.
+- takes time to set up,
+- not designed for remote worker.
+
 ## 3.2. AWS Client VPN 
 - connects your remote workforce to AWS or on-premises with a VPN.
+- ideal for a newly expanded worldwide remote workforce.
+
 ## 3.3. AWS Site-to-Site VPN 
+- connect branch offices or data centers (fixed locations)
+- not ideal for remote workers.
 - is an encrypted network connection to your Amazon VPCs.
+
 ## 3.4. AWS PrivateLink 
+- private connectivity between VPCs, AWS services, and on-premises applications 
+- without exposing traffic to the public internet
 - connects your VPC privately to services and resources as though they were in your VPC.
+
 
 
 ## 4. Network traffic in a VPC :-
@@ -47,29 +62,35 @@
 - If permissions defined, ACLs indicate what is allowed or denied.
 
 ## 4.1.  Network ACLs (Access Control Lists) :
+- operate at the subnet level,
 - Virtual firewall controlling traffic
+- evaluating traffic before it enters or leaves a subnet,
 - perform stateless packet filtering, remember nothing and check packets that cross the subnet border each way: inbound and outbound.
 - When configuring your VPC, you can use your account’s default network ACL or create custom network ACLs.
 - you can modify it by adding your own rules.
 
 ## 4.2. Security groups :
-- Control inbound and outbound traffic at the resource level
+- operate at the instance level, 
+- Virtual firewall for individual EC2 instances
+- Control inbound and outbound traffic 
 - add custom rules to configure which traffic should be allowed.
 - It is the VPC component that checks packet permissions for an Amazon EC2 instance. 
-- A virtual firewall that controls inbound and outbound traffic for AWS resources
 
 
 
-## 5. Create an internet gateway and route traffic :
 
-- First, you create the internet gateway. Other-wise your users can't get to your resources. 
-- Then, you create route tables to route traffic, It allows internet traffic in and local traffic out.
+## 5. Create an Internet Gateway and Route Traffic :
+
+- First, create the internet gateway. Other-wise your users can't get to your resources. 
+- Then, create route tables to route traffic,
+- It allows internet traffic in and local traffic out.
 
 
 
 ## 6. Three Edge networking services :-
-- important because organizations need lower latency, fast access to their data and content.
-- tasks like caching data locally or closer to users, so it can deliver faster.
+- important because organizations need lower latency,
+- fast access to their data and content.
+- tasks like caching data locally or closer to users, deliver faster.
 
 ## Translating domain names to IP addresses with DNS :-
 - DNS is like the phone book of the internet. 
