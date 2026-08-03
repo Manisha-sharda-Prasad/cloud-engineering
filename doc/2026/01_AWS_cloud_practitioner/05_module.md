@@ -67,18 +67,20 @@
 
 
 
-## 6. Translating domain names to IP addresses with DNS :
+## 6. Three Edge networking services :-
+- important because organizations need lower latency, fast access to their data and content.
+- tasks like caching data locally or closer to users, so it can deliver faster.
 
-- think of DNS as being the phone book of the internet. 
-- Customers enters web address and able to access the website, because of DNS resolution.
-- DNS resolution is the process of translating a domain name to an IP address.
-
+## Translating domain names to IP addresses with DNS :-
+- DNS is like the phone book of the internet. 
+- DNS is the process of translating a domain name to an IP address.
+- Customer enters web address and able to access the website, because of DNS resolution.
 
 ## 6.1. Amazon Route 53 :
 - Is DNS that provides a reliable and cost-effective way to route end users to internet applications.
 - connects user requests to infrastructure running in AWS, e.g.Amazon EC2 instances and load balancers. 
 - also routes to infrastructure outside of AWS.
-- has ability to manage the DNS records for domain names. 
+- ability to manage all the DNS records for domain names in single service.
 - register new domain names directly in Route 53. 
 
 ## 6.2. Amazon CloudFront :
@@ -94,3 +96,8 @@
 - user requests through regular congested internet route, It creates express lane on the internet highway
 - getting users to your application faster and more reliably.
 - e.g. Gaming company - lag free gameplay; Banking app - fastaccess to accounts.
+
+## 7. AWS Direct Connect 
+- when lots of data needs to flow between corporate data centers and AWS. 
+- huge data transfers can take a long time over the public Internet, opt for Direct Connect instead.
+- use when need much higher bandwidth with a dedicated line like large data transfers between your on-premises network and AWS.
