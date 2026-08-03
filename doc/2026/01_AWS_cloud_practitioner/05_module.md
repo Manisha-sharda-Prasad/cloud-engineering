@@ -66,3 +66,8 @@
 
 
 
+## 6. Translating domain names to IP addresses with DNS :
+
+- think of DNS as being the phone book of the internet. 
+- Customers enters web address and able to access the website, because of DNS resolution.
+- DNS resolution is the process of translating a domain name to an IP address.
