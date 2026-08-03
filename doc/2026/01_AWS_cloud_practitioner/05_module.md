@@ -61,6 +61,7 @@
 
 
 ## 5. Create an internet gateway and route traffic :
+
 - First, you create the internet gateway. Other-wise your users can't get to your resources. 
 - Then, you create route tables to route traffic, It allows internet traffic in and local traffic out.
 
@@ -71,3 +72,24 @@
 - think of DNS as being the phone book of the internet. 
 - Customers enters web address and able to access the website, because of DNS resolution.
 - DNS resolution is the process of translating a domain name to an IP address.
+
+
+## 6.1. Amazon Route 53 :
+- Is DNS that provides a reliable and cost-effective way to route end users to internet applications.
+- connects user requests to infrastructure running in AWS, e.g.Amazon EC2 instances and load balancers. 
+- also routes to infrastructure outside of AWS.
+- has ability to manage the DNS records for domain names. 
+- register new domain names directly in Route 53. 
+
+## 6.2. Amazon CloudFront :
+- content delivery network (CDN) service, delivers your content with faster loading times,cost savings.
+- global network of delivery trucks that quickly brings web content to users around the world. 
+- stores copies of your content at locations closer to your users. 
+- means websites, videos, images, and applications load much faster, no matter where your customers are located.
+- e.g. websites : streaming-workout videos, ecommerce-shopping, mobile-map data  
+
+## 6.3. AWS Global Accelerator :
+- uses intelligent traffic routing and fast failover if something goes wrong in your 1 application locations.
+- networking service that helps your applications run faster  across the globe. 
+- e.g.user requests through regular congested internet route, It creates express lane on the internet highway
+- getting users to your application faster and more reliably.
