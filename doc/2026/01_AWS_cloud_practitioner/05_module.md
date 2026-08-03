@@ -91,5 +91,6 @@
 ## 6.3. AWS Global Accelerator :
 - uses intelligent traffic routing and fast failover if something goes wrong in your 1 application locations.
 - networking service that helps your applications run faster  across the globe. 
-- e.g.user requests through regular congested internet route, It creates express lane on the internet highway
+- user requests through regular congested internet route, It creates express lane on the internet highway
 - getting users to your application faster and more reliably.
+- e.g. Gaming company - lag free gameplay; Banking app - fastaccess to accounts.
