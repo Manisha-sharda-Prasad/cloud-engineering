@@ -6,10 +6,28 @@
 - Low-latency storage attached to instances like physical drives.
 - can be encrypted, backed up via snapshots, and modified while in use without disrupting the instance.
 ## a. EC2 Instance Store: 
-- Unmanaged, attached to EC2 instances for temporary data.
-- high-performance storage directly attached to the physical host.
-## b. Amazon EBS: 
-- Managed, persistent block storage volumes that persist independently of EC2 instance lifecycles.
+- Unmanaged, attached to EC2 instances, high-performance storage
+- Temporary block storage physically attached to the EC2 host computer (default storage).
+- Data is deleted when the EC2 instance is stopped or terminated.
+- High I/O performance needs like temporary buffers, caches, and scratch data.
+
+## b. Amazon EBS (Elastic Block Store) : 
+- Managed, persistent block storage volumes,
+- Data persists independently even if the EC2 instance is stopped or terminated.
+- Supports incremental backups via EBS snapshots, detaching/reattaching, 
+- automatic replication within an Availability Zone for high availability.
+- Databases, file systems, and long-term application data retention.
+
+## Amazon EBS data lifecycle management 
+- involves creating, backing up, and deleting volumes and snapshots. 
+- This process optimizes storage costs and helps to ensure data protection
+## EBS Snapshots :
+- incremental backups of EBS volumes
+- create multiple new volumes, created from a snapshot are an exact copy of the original volume
+- Disaster recovery, migration, volume resizing, and mirroring production
+- Snapshots of EBS volumes, stored redundantly in multiple Availability Zones using Amazon S3.
+
+
 
 ## 1.2. Object Storage:
 - offers unlimited scalability so you can store vast amounts of unstructured data
@@ -27,10 +45,12 @@
 - Fully managed third-party file systems 
 - (e.g., Windows File Server, Lustre, NetApp ONTAP).
 
+
+
+
 ## 2. Additional Storage Services : 
 
 ## a. AWS Storage Gateway: 
 - Hybrid cloud storage service providing on-premises applications seamless access to AWS Cloud storage.
 ## b. AWS Elastic Disaster Recovery: 
 - Automated service for recovering physical, virtual, and cloud-based servers into AWS.
-- streamlines the recovery of your physical, virtual, and cloud-based servers into AWS.
