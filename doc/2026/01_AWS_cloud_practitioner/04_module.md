@@ -2,12 +2,16 @@
 - Expand applications worldwide using AWS Regions (geographic clusters)
 - Availability Zones (isolated data centers) for high availability.
 
-## 1.1.Choosing Regions & Edge Locations:
+## 1.1. Choosing Regions & Edge Locations:
 - Pick Regions based on compliance, latency, cost, and service availability; 
 - use Edge Locations to cache content closer to users for lower latency.
-## 1.2.IaC & CloudFormation:
-- Infrastructure as Code (IaC) defines cloud setup in code files, 
+## 1.2. IaC & CloudFormation:
+- Infrastructure as Code (IaC) defines cloud setup in code files, like blueprint for AWS architecture.
 - while AWS CloudFormation automates consistent deployment of these resources.
+- deployments are consistent across different environments.
+- deploy the same template in multiple accounts or multiple Regions.
+- less room for human error, totally automated process.
+- designed to handle complex infrastructure setups.
 
 
 ## 2. Choosing AWS RegionsDefinition : -
@@ -52,10 +56,4 @@
 - Locations that cache content to deliver data, video, and applications to users with lower latency
 
 
-## 5. CloudFormation (IaC tools)
-- IaC- define your infrastructure in a file, like a blueprint for your AWS architecture.
-- deployments are consistent across different environments.
-- deploy the same template in multiple accounts or multiple Regions. 
-- less room for human error, totally automated process.
-- set up AWS resources using code to automate provisioning and the management of infrastructure. 
-- designed to handle complex infrastructure setups. 
+
