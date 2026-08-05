@@ -83,8 +83,7 @@
 
 
 
-## 4. Additional Storage Services : 
-
+## 4. Additional Storage Services :
 ## 4.1. AWS Storage Gateway: 
 - Hybrid cloud storage service providing on-premises applications seamless access to AWS Cloud storage.
 ## 4.2. AWS Elastic Disaster Recovery: 
