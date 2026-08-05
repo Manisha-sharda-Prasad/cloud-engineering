@@ -61,7 +61,7 @@
 - S3 Glacier Instant Retrieval: archiving data that is rarely accessed, requires millisecond retrieval. Cost savings -68% compared to the S3 Standard-IA.
 - S3 Glacier Flexible Retrieval: archived data accessed 1–2 times per year. Bulk retrievals in up to 5–12 hours at no additional cost. Ideal for backup,disaster recovery, offsite data storage.
 - S3 Glacier Deep Archive: long-term retention,digital preservation for data that might be accessed once or twice per year. Ideal for 7–10 years or longer. Ideal for financial, healthcare.
-- S3 Outposts: Brings S3 object storage directly to on-premises environments for local data residency and processing needs. 
+- S3 Outposts: S3 object storage directly to on-premises environments for local data residency and processing needs. 
 
 
 
@@ -69,10 +69,16 @@
 - Shared networked file systems accessible by multiple systems concurrently.
 - you can expand storage capacity as needs grow without managing physical infrastructure.
 ## 3.1. Amazon EFS: 
-- Fully managed, scalable NFS file system for Linux workloads across AWS and on-premises.
+- Fully managed, scalable file system, automatically grows or shrinks as files are added or removed,
+- It operates using the Linux Network File System (NFS) protocol.
+- allowing thousands of EC2 instances to access the same dataset simultaneously.
+- Multi-AZ: automatically replicates data across multiple AZ for high availability. Protects failures and provides continuous access to your file systems.
+
+
 ## 3.2. Amazon FSx: 
-- Fully managed third-party file systems 
-- (e.g., Windows File Server, Lustre, NetApp ONTAP).
+- Provides high-performance,Fully managed third-party file systems 
+- 4 Core Engine Options: Windows File Server, Lustre, NetApp ONTAP, OpenZFS.
+- shared file storage built on popular third-party file systems while handling hardware setup, patching, and backups.
 
 
 
