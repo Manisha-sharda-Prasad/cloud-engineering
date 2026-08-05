@@ -48,6 +48,22 @@
 - Identity-Based Policies: 'AWS IAM' policies attached to users, groups, or roles.
 - S3 Block Public Access: Account- or bucket-level setting, overrides public permissions to prevent accidental data exposure.
 
+##  S3 Storage Classes :
+
+## a. General & Ultra-Fast Access:
+- S3 Standard: Default option for frequently accessed data (cloud apps,dynamic websites,analytics,mobile and gaming applications).
+- S3 Express One Zone: Single-AZ storage for sub-millisecond, latency-sensitive applications, speed-10x faster and costs up to 80% lower than S3 Standard.
+## b. Automated & Infrequent Access(IA):
+- S3 Intelligent-Tiering: Automatically moves objects between 3 tiers:frequent,infrequent,and archive instant access tiers based on changing unknown access patterns to cut costs.
+- S3 Standard-IA: Infrequently accessed data, requiring fast retrieval. Uses Multi-AZ for high availability. 
+- One Zone-IA: Infrequent Access,Uses 1 AZ for secondary backups at a lower cost, as compared to S3 Standard-IA, which uses 3 zones.
+## c. Archival & On-Premises:
+- S3 Glacier Instant Retrieval: archiving data that is rarely accessed, requires millisecond retrieval. Cost savings -68% compared to the S3 Standard-IA.
+- S3 Glacier Flexible Retrieval: archived data accessed 1–2 times per year. Bulk retrievals in up to 5–12 hours at no additional cost. Ideal for backup,disaster recovery, offsite data storage.
+- S3 Glacier Deep Archive: long-term retention,digital preservation for data that might be accessed once or twice per year. Ideal for 7–10 years or longer. Ideal for financial, healthcare.
+- S3 Outposts: Brings S3 object storage directly to on-premises environments for local data residency and processing needs. 
+
+
 
 ## 3.File Storage: 
 - Shared networked file systems accessible by multiple systems concurrently.
