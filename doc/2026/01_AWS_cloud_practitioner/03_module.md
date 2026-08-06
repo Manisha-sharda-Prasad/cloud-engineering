@@ -21,13 +21,12 @@ Run applications without managing the underlying infrastructure.
 - AWS manages all servers and scaling; you only write code.
 
 
-
-
 ## 3. AWS Lambda :-
-- Serverless compute service that runs code in response to events
-- runs code on-demand
-- no need to provision or manage servers manually. 
+- Serverless compute service, that runs code(on demand) in response to events.
+- handles execution, scaling, and resource allocation.
+- automatically manages the infrastructure, scaling resources based on the volume requests
 - 15 minutes max execution time per request
+- charged only for the compute time consumed.
 
 ## 3.1. Event-Driven: 
 - Set Triggers
@@ -37,22 +36,39 @@ Run applications without managing the underlying infrastructure.
 ## 3.3. Automatic Scaling: ()
 - Lambda automatically scales based on the number of incoming requests, without manual intervention.
 
-## 4. Containers and Orchestration on AWS :-
 
-## 4.1. Containers: 
-- Package code with its dependencies so it runs reliably anywhere.
-## 4.2. vs. VMs: 
-- Lighter and faster because they share the host OS instead of running a full guest OS.
+## 4. Containers, Orchestration and VM on AWS :-
+
+## 4.1. Containers:
+- Application-level packaging
+- Package code with its dependencies,
+- Speed - Seconds or milliseconds
+- Primary Tool e.g. - Docker, Podman
+- creates a consistent and portable runtime environment, across different systems.
+- faster and lighter than virtual machines (VMs).
+
+## 4.2. Virtual machines (VM): 
+- Hardware-level virtualization
+- High (runs a complete Guest OS per VM)
+- Speed - Minutes (boots full OS)
+- Primary Tool e.g. - AWS EC2, VMware, Hyper-V
+- A hypervisor partitions a physical server, helps run multiple independent OS on single physical machine.
+
 ## 4.3. Orchestration:
-- Automates deploying, scaling, and managing large numbers of containers.
+- Automated system management 
+- Handle operations- deployments, load balancing, auto-scaling and managing lifecycle of large number of containers
+- Scale containers out when traffic increases, scale back in when calm down.
+- Primary Tool e.g. - Kubernetes (EKS), Amazon ECS (for packaging an application).
 
-## Key AWS Container Services :-
 
-## 4.4. Amazon ECS: 
+
+## 5. Key AWS Container Orchestration Services :-
+
+## 5.1. Amazon ECS: 
 - AWS’s native tool to scale and manage Docker containers.
-## 4.5. Amazon EKS: 
+## 5.2. Amazon EKS: 
 - AWS’s managed service to run open-source Kubernetes.
-## 4.6. Amazon ECR: 
-- A secure repository to store and manage container images.
-## 4.7. AWS Fargate: 
+## 5.3. Amazon ECR: 
+- A secure repository to store and fully managed container registry that stores your container images.
+## 5.4. AWS Fargate: 
 - A serverless compute engine that runs containers without managing underlying servers.
