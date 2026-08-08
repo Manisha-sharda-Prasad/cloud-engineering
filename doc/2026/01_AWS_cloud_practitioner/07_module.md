@@ -14,8 +14,9 @@
 ## 1.2. Amazon Aurora :
 - AWS's high-performance, cloud-native database engine compatible with MySQL and PostgreSQL.
 - traits: Auto-scaling storage, 6-way data replication across 3 AZs, and sub-minute failovers.
-- for: High-throughput, mission-critical, gaming applications, media and content management, 
-- requiring speed and reliability.
+- for: High-throughput, mission-critical, gaming applications, media and content management, requiring speed and reliability.
+- provides comparable performance to high-end commercial databases but at one-tenth the cost, reduce database costs without sacrificing performance.
+
 
 
 ## 2. NoSQL Database Services :-
@@ -45,6 +46,8 @@
 - high availability, When issues are detected, it maintains application availability while promoting a replica node.
 - enables automatic replication across multiple AZ , protect against infrastructure failures
 - supports data encryption mechanisms to safeguard sensitive information throughout its lifecycle
+
+
 
 
 ## 4. Additional Database Services :-
