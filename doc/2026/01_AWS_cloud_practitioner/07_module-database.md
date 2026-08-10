@@ -34,7 +34,7 @@
 - for Social networks, recommendation engines, and fraud detection graphs.
 
 ---
-## C. in-memory cache :-
+## C. In-memory cache :-
 ### Overview :-
 - high-speed storage layer that temporarily stores frequently accessed data in a computer's memory, or RAM. 
 - Retrieving data from RAM is fast processing, 
