@@ -31,8 +31,9 @@
 ## 3. More Ways to Connect to the AWS Cloud :-
 ### 3.1. AWS Direct Connect :-
 - is a private, dedicated AWS connection to your data center or office.
-- takes time to set up,
+- takes time to set up, physical wiring
 - not designed for remote worker.
+- AWS vpc-1 <--> AWS Direct Connect <--> Client vpn-1
 
 ### 3.2. AWS Client VPN :-
 - connects your remote workforce to AWS or on-premises with a VPN.
@@ -42,6 +43,7 @@
 - connect branch offices or data centers (fixed locations)
 - not ideal for remote workers.
 - is an encrypted network connection to your Amazon VPCs.
+- vpc-1 <--> site-2-site <--> vpc-2
 
 ### 3.4. AWS PrivateLink :-
 - private connectivity between VPCs, AWS services, and on-premises applications 
