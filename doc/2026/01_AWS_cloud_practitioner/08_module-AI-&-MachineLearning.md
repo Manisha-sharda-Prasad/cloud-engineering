@@ -17,11 +17,10 @@
 
 ## 4. AWS AI/ML Stack :-
 
-### Tier 1: Pre-built AWS AI Services
+## Tier 1: Pre-built AWS AI Services :
 - Managed, ready-to-use models requiring no ML expertise.
 
-### 1. Language Services:
-
+## 1. Language Services:
 ### 1.1. Amazon Comprehend: 
 - Extracts insights, sentiment, and key phrases from text.
 ### 1.2. Amazon Polly: 
@@ -31,8 +30,7 @@
 ### 1.4. Amazon Translate: 
 - Translates text across multiple languages.
 
-### 2. Computer Vision & Search Services:
-
+## 2. Computer Vision & Search Services:
 ### 2.1. Amazon Kendra: 
 - Intelligent search using natural language processing over enterprise data.
 ### 2.2. Amazon Rekognition: 
@@ -40,15 +38,15 @@
 ### 2.3. Amazon Tex-tract: 
 - Extracts text and tables from documents/forms.
 
-### 3. Conversational AI & Personalization:
-
+## 3. Conversational AI & Personalization:
 ### 3.1. Amazon Lex: 
 - Builds conversational voice and text chatbots.
 ### 3.2. Amazon Personalize: 
 - Delivers personalized user product and content recommendations.
 
 
-### Tier 2: ML Services
+
+## Tier 2: ML Services :
 - Managed environments for custom model development without infrastructure overhead.
 
 ### Amazon SageMaker AI: 
@@ -56,7 +54,8 @@
 - Offers low-code/no-code options alongside pre-trained models.
 
 
-### Tier 3: ML Frameworks and Infrastructure
+
+## Tier 3: ML Frameworks and Infrastructure :
 - Complete control for expert ML teams needing maximum customization.
 
 ### ML Frameworks: 
