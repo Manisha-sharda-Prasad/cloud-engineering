@@ -35,6 +35,13 @@
 - not designed for remote worker.
 - AWS vpc-1 <--> AWS Direct Connect <--> Client vpn-1
 
+```mermaid
+flowchart LR
+    A[🏢 On-Premises<br/>Data Center] -->|Dedicated Private Connection| B[AWS Direct Connect]
+    B --> C[☁️ AWS VPC]
+    style B fill:yellow,color:black
+```
+
 ### 3.2. AWS Client VPN :-
 - connects your remote workforce to AWS or on-premises with a VPN.
 - ideal for a newly expanded worldwide remote workforce.
@@ -85,6 +92,7 @@
 - important because organizations need lower latency,
 - fast access to their data and content.
 - tasks like caching data locally or closer to users, deliver faster.
+
 
 ### Translating domain names to IP addresses with DNS :-
 - DNS is like the phone book of the internet. 
