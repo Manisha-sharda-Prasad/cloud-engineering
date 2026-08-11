@@ -77,3 +77,26 @@
 - Pre-built software libraries (e.g., PyTorch, TensorFlow, Apache MXNet).
 ### AWS Infrastructure: 
 - High-performance hardware compute resources (e.g., ML-optimized EC2 instances, EMR, ECS).
+
+
+## 5. Generative AI & Foundation Models :
+### 5.1. Generative AI 
+- uses pre-trained Foundation Models(FMs) to handle broad tasks like creating text, images, video, and code.
+- FMs are pre-trained on vast collections of data.
+- While traditional ML models are trained to perform singular tasks,
+- Large language models (LLMs), are a popular type of FM trained to use human language.
+### 5.2. Deep Learning
+- subset of machine learning, models are trained using layers of artificial neurons that mimic the human brain. 
+- Each layer of these neural networks feeds information to the next layer until a final model is produced.
+
+
+
+## 6.Generative AI on AWS :
+- AWS offers the following types of generative AI solutions:
+
+### 6.1. Amazon SageMaker 
+- JumpStart—An ML hub with FMs and pre-built ML solutions deployable with a few clicks
+### 6.2. Amazon Bedrock
+- A fully managed service for adapting and deploying FMs from Amazon and other leading AI companies
+### 6.3. Amazon Q
+- An interactive AI assistant that can be integrated with a company's information repositories
