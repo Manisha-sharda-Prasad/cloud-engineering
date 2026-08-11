@@ -91,7 +91,7 @@
 
 
 
-## 6.Generative AI on AWS :
+## 6. Generative AI on AWS :
 - AWS offers the following types of generative AI solutions:
 
 ### 6.1. Amazon SageMaker 
