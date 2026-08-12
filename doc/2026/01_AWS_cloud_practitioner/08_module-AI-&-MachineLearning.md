@@ -80,20 +80,19 @@
 
 
 ## 5. Generative AI & Foundation Models :
-### 5.1. Generative AI 
+
+### 5.1. Deep Learning
+- subset of machine learning, models are trained using layers of artificial neurons that mimic the human brain.
+- Each layer of these neural networks feeds information to the next layer until a final model is produced.
+### 5.2. Generative AI
 - uses pre-trained Foundation Models(FMs) to handle broad tasks like creating text, images, video, and code.
 - FMs are pre-trained on vast collections of data.
 - While traditional ML models are trained to perform singular tasks,
 - Large language models (LLMs), are a popular type of FM trained to use human language.
-### 5.2. Deep Learning
-- subset of machine learning, models are trained using layers of artificial neurons that mimic the human brain. 
-- Each layer of these neural networks feeds information to the next layer until a final model is produced.
-
 
 
 ## 6. Generative AI on AWS :
 - AWS offers the following types of generative AI solutions:
-
 ### 6.1. Amazon SageMaker 
 - JumpStart—An ML hub with FMs and pre-built ML solutions deployable with a few clicks
 ### 6.2. Amazon Bedrock
