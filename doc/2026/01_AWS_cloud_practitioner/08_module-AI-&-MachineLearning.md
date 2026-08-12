@@ -97,5 +97,19 @@
 - JumpStart—An ML hub with FMs and pre-built ML solutions deployable with a few clicks
 ### 6.2. Amazon Bedrock
 - A fully managed service for adapting and deploying FMs from Amazon and other leading AI companies
+- Enterprise-grade generative AI : Build production-ready generative AI applications with enterprise-level security, privacy, and scalability.
+- Multimodal content generation : Create applications that can generate multiple content types, such as text and images.
+- Advanced conversational AI : Develop advanced conversational agents that connect to your enterprise data to provide accurate responses.
 ### 6.3. Amazon Q
-- An interactive AI assistant that can be integrated with a company's information repositories
+- integrates with your existing information repositories to answer questions, helps generate insights and new content.
+- An interactive AI assistant for developers, e.g. UI of ChatGPT, Deepseek uses Bedrock.
+- split into Q Business (searches enterprise data repositories) and Q Developer (generates code and automates development).
+
+
+
+## 6. SageMaker JumpStart: 
+- ML hub to quickly test, fine-tune, and deploy pre-trained foundation models with minimal expertise.
+- Rapid ML model deployments : Quickly deploy pre-trained models without extensive ML expertise.
+- Custom fine-tuned solutions : Fine-tune pre-trained FMs with your domain-specific data.
+- ML experiments and prototypes : Compare performance for different models before committing to a specific approach.
+
