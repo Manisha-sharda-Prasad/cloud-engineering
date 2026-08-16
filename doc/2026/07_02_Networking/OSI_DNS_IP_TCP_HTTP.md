@@ -16,8 +16,8 @@
 
 
 ## Domain Name System (DNS)
--  acts as the internet's directory, translating human-readable domain names (like youtube.com) into machine-readable IP addresses.
-- there are over 350 million registered domains, 
+- Acts as the internet's directory, translating human-readable domain names (like youtube.com) into machine-readable IP addresses.
+- There are over 350 million registered domains, 
 - DNS is a distributed system rather than a single database to prevent overload and increase resilience against attacks.
 - DNS operates in three main levels to resolve queries:
   - Root name servers: The foundation of the hierarchy; there are 13 globally.
@@ -60,7 +60,7 @@
 
 
 ## Transition to QUIC (Quick UDP Internet Connections):
--  previous versions relied on TCP, HTTP/3 replaces TCP with QUIC , which operates over UDP (User Datagram Protocol).
+- Previous versions relied on TCP, HTTP/3 replaces TCP with QUIC , which operates over UDP (User Datagram Protocol).
 
 ### Key Issues Solved: Head-of-Line (HoL) Blocking :
 - HTTP/1.1 : Suffers HOL, client sends one request at one time over a TCP connection, if one completes than second can come. 
