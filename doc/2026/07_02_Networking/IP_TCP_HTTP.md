@@ -39,6 +39,8 @@
 
 ## The OSI Model : 
 - The OSI (Open Systems Interconnection) model is a theoretical, seven-layer blueprint designed to standardize how network communication should occur:
+- Application → Presentation → Session → Transport → Network → Data Link → Physical
+- Mnemonic: A P S T N D P — All People Seem To Need Data Processing.
 
 | Layer | Name             | Brief Description                                                                              | Examples                           |
 | ----: | ---------------- |------------------------------------------------------------------------------------------------| ---------------------------------- |
