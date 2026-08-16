@@ -1,5 +1,5 @@
 # network essential - part 1
-## A. The OSI Model :
+## The OSI Model :
 - The OSI (Open Systems Interconnection) model is a theoretical, seven-layer blueprint designed to standardize how network communication should occur:
 - Application → Presentation → Session → Transport → Network → Data Link → Physical
 - Mnemonic: A P S T N D P — All People Seem To Need Data Processing.
@@ -47,6 +47,12 @@
 - Provides a high-level abstraction on top of TCP,
 - standard protocol for transferring text and data across the web.
 - allowing for a structured request-response that developers (java, python) use to build web applications.
+
+```
+TCP --> abstraction by HTTP/1
+TCP --> abstraction by HTTP/2
+QUIC --> abstraction by HTTP/3
+```
 
 #### TCP Handshake
 - Essential process of establishing a reliable connection between a client and a server before any actual data transfer begins.
