@@ -27,7 +27,7 @@
 ---
 ## 🔸Layer 4 protocol:
 ### 1. TCP (Transmission Control Protocol): 
-- 
+- Transport Layer Protocol
 - Built on top of IP,
 - **Reliable delivery** - all packets arrive, and in order without damage.
 - **Slower than < UDP**.
