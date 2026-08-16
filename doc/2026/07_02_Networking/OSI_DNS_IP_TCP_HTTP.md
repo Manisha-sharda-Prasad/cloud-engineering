@@ -27,8 +27,11 @@
 ---
 ## 🔸Layer 4 protocol:
 ### 1. TCP (Transmission Control Protocol): 
+- 
 - Built on top of IP,
 - **Reliable delivery** - all packets arrive, and in order without damage.
+- **Slower than < UDP**.
+- **TCP = Reliable + Ordered + Connection-oriented**.
 - Requires  **handshake** to establish a **connection** between  client <-> server, before data transfer begins.
 
 #### TCP Handshake :
@@ -40,12 +43,11 @@
 
 ### 2. UDP (User Datagram Protocol) :
 - **connectionless** transport-layer protocol.
-- **fast**
+- **faster than > TCP**
 - **Unreliable delivery** 
 - **No guarantee** - packets arrive or arrive in order.
-  Used when speed is more important than reliability.
-  Examples: DNS, video streaming, online gaming, 
-- 
+- Examples: DNS, video streaming, online gaming, 
+
 
 ### 3. QUIC (Quick UDP Internet Connections):
 - New **Modern**, best mix of TCP & UDP.
