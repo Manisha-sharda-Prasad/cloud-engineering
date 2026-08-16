@@ -31,7 +31,6 @@
 #### TCP Handshake :
 - Essential process of establishing a reliable connection between a client and a server before any actual data transfer begins.
 - During this handshake, the machines follow a structured exchange to ensure both parties are ready to communicate:
-
 - Initiation: The client sends a packet to the server to request a connection.
 - Acknowledgement: The server responds to confirm that it is available and ready to connect.
 - Confirmation: Finally, the client sends a message back to the server's response, officially establishing the connection.
@@ -62,9 +61,10 @@ TCP --> abstraction by HTTP/2
 QUIC --> abstraction by HTTP/3
 ```
 
-#### REST vs HTTP:
-- REST is an architectural style for distributed systems,
-- whereas HTTP is the underlying network protocol used for communication.
+#### REST and HTTP:
+- REST is an architectural style of applications for writing APIs,
+- Application with REST Style api calls---> HTTP
+
 
 #### Key Issues Solved: Head-of-Line (HoL) Blocking :
 - HTTP/1.1 : Suffers HOL, client sends one request at one time over a TCP connection, if one completes than second can come. 
