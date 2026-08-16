@@ -1,4 +1,4 @@
-# network essential - part 1
+# Network Essential - part 1
 ## The OSI Model :
 - The OSI (Open Systems Interconnection) model is a theoretical, seven-layer blueprint designed to standardize how network communication should occur:
 - Application → Presentation → Session → Transport → Network → Data Link → Physical
@@ -15,13 +15,13 @@
 | **1** | **Physical**      | Transmits **raw data bits** over physical media.               | Cables, Fiber, Radio signals, Hubs |
 
 ---
-## 🔸Layer 3 protocol.
+## 🔸Layer 3 protocol:
 ### 1. IP (Internet Protocol): 
 - Information is sent in IP packets, containing headers (source/destination address, size) and data. 
 - Packet size is limited, large files  broken into multiple packets.
 
 ---
-## 🔸layer 4 protocol
+## 🔸Layer 4 protocol:
 ### 1. TCP (Transmission Control Protocol): 
 - Built on top of IP,
 - reliable delivery - packets do not get lost:
@@ -40,7 +40,7 @@
 - QUIC ---> abstraction by HTTP/3
 
 ---
-## 🔸layer 7 protocol
+## 🔸Layer 7 protocol:
 ### 1. HTTP : 
 #### Overview
 - HyperText Transfer Protocol
