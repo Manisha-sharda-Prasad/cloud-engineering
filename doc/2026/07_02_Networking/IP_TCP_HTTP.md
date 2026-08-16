@@ -35,3 +35,26 @@
 - HTTP/1.1 : Suffers HOL, client sends one request at one time over a TCP connection, if one completes than second can come. 
 - HTTP/2 : Solves  application-level HOL blocking, by Multiplexing, client can request data and download it simultaneously, transfers as many packets over a single TCP connections,
 - HTTP/3 Solution via HTTP/2 + QUIC : Supports ORTTs (0 Round Trip Time), handles streams independently, If a packet in a stream is lost, only that stream is delayed—other streams does not stop.
+
+
+## The OSI Model : 
+- The OSI (Open Systems Interconnection) model is a theoretical, seven-layer blueprint designed to standardize how network communication should occur:
+
+- Layer 7 (Application): Where end-user software (browsers, apps- www/http) interacts with the network.
+- Layer 6 (Presentation): Acts as a translator, handling data formatting, encryption, and compression(DOC/pdf/Mp3).
+- Layer 5 (Session): Manages connections between devices and handles authorization.
+- Layer 4 (Transport): Breaks data into packets and ensures reliable delivery using protocols like TCP or UDP.
+- Layer 3 (Network): Handles routing and addressing, similar to a postal service.
+- Layer 2 (Data Link): Facilitates node-to-node data transfer and manages media access.
+- Layer 1 (Physical): Transmits raw data bits over physical media like cables or wireless.
+
+
+| Layer | Name             | Brief Description                                                                              | Examples                           |
+| ----: | ---------------- |------------------------------------------------------------------------------------------------| ---------------------------------- |
+| **7** | **Application**  | Provides network services directly to user applications(browsers).                             | HTTP, HTTPS, FTP, SMTP, DNS        |
+| **6** | **Presentation** | Translator, Handles **data format, encryption, compression, encoding**.                        | SSL/TLS, JPEG, JSON, XML           |
+| **5** | **Session**      | Establishes, manages, and terminates communication sessions.                                   | RPC, NetBIOS                       |
+| **4** | **Transport**    | Breaks data into packets, Provides **end-to-end delivery**,reliability, flow and segmentation. | TCP, UDP                           |
+| **3** | **Network**      | Handles **routing and logical addressing** between networks. Similar to a postal service.      | IP, ICMP, Routers                  |
+| **2** | **Data Link**    | Handles **frames, MAC addresses, and local network delivery**.                                 | Ethernet, Wi-Fi, Switches          |
+| **1** | **Physical**     | Transmits **raw data bits** over physical media.                                               | Cables, Fiber, Radio signals, Hubs |
