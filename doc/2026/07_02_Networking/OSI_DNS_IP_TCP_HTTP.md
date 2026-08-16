@@ -33,7 +33,7 @@
 - unreliable delivery
 - **connectionless**
 
-### QUIC (Quick UDP Internet Connections):
+### 3. QUIC (Quick UDP Internet Connections):
 - new modern.
 - built on top of UDP (User Datagram Protocol),  **hence fast**
 - but TCP style **reliable delivery**
@@ -48,7 +48,7 @@
 - standard protocol for transferring text and data across the web.
 - allowing for a structured request-response that developers (java, python) use to build web applications.
 
-### TCP Handshake
+#### TCP Handshake
 - Essential process of establishing a reliable connection between a client and a server before any actual data transfer begins.
 - During this handshake, the machines follow a structured exchange to ensure both parties are ready to communicate:
 
@@ -56,11 +56,11 @@
 - Acknowledgement: The server responds to confirm that it is available and ready to connect.
 - Confirmation: Finally, the client sends a message back to the server's response, officially establishing the connection.
 
-### REST vs HTTP:
+#### REST vs HTTP:
 - REST is an architectural style for distributed systems,
 - whereas HTTP is the underlying network protocol used for communication.
 
-### Key Issues Solved: Head-of-Line (HoL) Blocking :
+#### Key Issues Solved: Head-of-Line (HoL) Blocking :
 - HTTP/1.1 : Suffers HOL, client sends one request at one time over a TCP connection, if one completes than second can come. 
 - HTTP/2 : Solves  application-level HOL blocking, by Multiplexing, client can request data and download it simultaneously, transfers as many packets over a single TCP connections,
 - HTTP/3 Solution via HTTP/2 + QUIC : Supports ORTTs (0 Round Trip Time), handles streams independently, If a packet in a stream is lost, only that stream is delayed—other streams does not stop.
