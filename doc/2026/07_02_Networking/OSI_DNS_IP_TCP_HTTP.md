@@ -28,6 +28,8 @@
   - If the IP isn't found, the query traverses the hierarchy—from root to TLD to authoritative server—to retrieve the correct destination IP address,
   - allowing your browser to connect to the site.
 
+![img.png](img.png)
+
 ```
 Root (.)
 │
