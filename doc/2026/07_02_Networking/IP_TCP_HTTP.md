@@ -40,15 +40,6 @@
 ## The OSI Model : 
 - The OSI (Open Systems Interconnection) model is a theoretical, seven-layer blueprint designed to standardize how network communication should occur:
 
-- Layer 7 (Application): Where end-user software (browsers, apps- www/http) interacts with the network.
-- Layer 6 (Presentation): Acts as a translator, handling data formatting, encryption, and compression(DOC/pdf/Mp3).
-- Layer 5 (Session): Manages connections between devices and handles authorization.
-- Layer 4 (Transport): Breaks data into packets and ensures reliable delivery using protocols like TCP or UDP.
-- Layer 3 (Network): Handles routing and addressing, similar to a postal service.
-- Layer 2 (Data Link): Facilitates node-to-node data transfer and manages media access.
-- Layer 1 (Physical): Transmits raw data bits over physical media like cables or wireless.
-
-
 | Layer | Name             | Brief Description                                                                              | Examples                           |
 | ----: | ---------------- |------------------------------------------------------------------------------------------------| ---------------------------------- |
 | **7** | **Application**  | Provides network services directly to user applications(browsers).                             | HTTP, HTTPS, FTP, SMTP, DNS        |
