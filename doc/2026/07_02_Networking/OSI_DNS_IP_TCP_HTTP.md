@@ -24,20 +24,20 @@
 ## 🔸layer 4 protocol
 ### 1. TCP (Transmission Control Protocol): 
 - Built on top of IP,
-- reliable delivery:
+- reliable delivery - packets do not get lost:
   - data is received in the correct order without damage. 
 - It requires a handshake to establish a **connection** between the client and server, before data transfer begins.
 
 ### 2. UDP
 - **fast**
-- unreliable delivery
+- unreliable delivery - some packets get lost.
 - **connectionless**
 
 ### 3. QUIC (Quick UDP Internet Connections):
-- new modern.
-- built on top of UDP (User Datagram Protocol),  **hence fast**
-- but TCP style **reliable delivery**
-- QUIC --> abstraction by HTTP/3
+- new modern, best mix of TCP & UDP.
+- built on top of UDP (User Datagram Protocol),  **hence fast**,
+- and TCP style **reliable delivery**
+- QUIC ---> abstraction by HTTP/3
 
 ---
 ## 🔸layer 7 protocol
@@ -45,8 +45,8 @@
 #### Overview
 - HyperText Transfer Protocol
 - Provides a high-level abstraction on top of TCP,
-- standard protocol for transferring text and data across the web.
-- allowing for a structured request-response that developers (java, python) use to build web applications.
+- Standard protocol for transferring text and data across the web.
+- Allows Structured-Request-Response that developers (java, python) use to build web applications.
 
 ```
 TCP --> abstraction by HTTP/1
