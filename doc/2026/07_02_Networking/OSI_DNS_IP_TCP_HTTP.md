@@ -3,15 +3,15 @@
 - Application → Presentation → Session → Transport → Network → Data Link → Physical
 - Mnemonic: A P S T N D P — All People Seem To Need Data Processing.
 
-| Layer | Name             | Brief Description                                                                              | Examples                           |
-| ----: | ---------------- |------------------------------------------------------------------------------------------------| ---------------------------------- |
-| **7** | **Application**  | Provides network services directly to user applications(browsers).                             | HTTP, HTTPS, FTP, SMTP, DNS        |
-| **6** | **Presentation** | Translator, Handles **data format, encryption, compression, encoding**.                        | SSL/TLS, JPEG, JSON, XML           |
-| **5** | **Session**      | Establishes, manages, and terminates communication sessions.                                   | RPC, NetBIOS                       |
-| **4** | **Transport**    | Breaks data into packets, Provides **end-to-end delivery**,reliability, flow and segmentation. | TCP, UDP                           |
-| **3** | **Network**      | Handles **routing and logical addressing** between networks. Similar to a postal service.      | IP, ICMP, Routers                  |
-| **2** | **Data Link**    | Handles **frames, MAC addresses, and local network delivery**.                                 | Ethernet, Wi-Fi, Switches          |
-| **1** | **Physical**     | Transmits **raw data bits** over physical media.                                               | Cables, Fiber, Radio signals, Hubs |
+| Layer | Name             | Brief Description                                                                    | Examples                           |
+| ----: | ---------------- |--------------------------------------------------------------------------------------| ---------------------------------- |
+| **7** | **Application**  | Provides network services directly to user applications(browsers).                   | HTTP, HTTPS, FTP, SMTP, DNS        |
+| **6** | **Presentation** | Translator,**data format, encryption, compression, encoding**.                       | SSL/TLS, JPEG, JSON, XML           |
+| **5** | **Session**      | Establishes, manages and terminates communication sessions.                          | RPC, NetBIOS                       |
+| **4** | **Transport**    | Breaks data into packets,**end-to-end delivery**,reliability, flow and segmentation. | TCP, UDP                           |
+| **3** | **Network**      | Handles **routing and logical addressing** between networks.                         | IP, ICMP, Routers                  |
+| **2** | **Data Link**    | Handles **frames, MAC addresses, and local network delivery**.                       | Ethernet, Wi-Fi, Switches          |
+| **1** | **Physical**     | Transmits **raw data bits** over physical media.                                     | Cables, Fiber, Radio signals, Hubs |
 
 
 
