@@ -28,6 +28,14 @@
   - data is received in the correct order without damage. 
 - It requires a handshake to establish a **connection** between the client and server, before data transfer begins.
 
+#### TCP Handshake :
+- Essential process of establishing a reliable connection between a client and a server before any actual data transfer begins.
+- During this handshake, the machines follow a structured exchange to ensure both parties are ready to communicate:
+
+- Initiation: The client sends a packet to the server to request a connection.
+- Acknowledgement: The server responds to confirm that it is available and ready to connect.
+- Confirmation: Finally, the client sends a message back to the server's response, officially establishing the connection.
+
 ### 2. UDP
 - **fast**
 - unreliable delivery - some packets get lost.
@@ -44,7 +52,7 @@
 ### 1. HTTP : 
 #### Overview
 - HyperText Transfer Protocol
-- Provides a high-level abstraction on top of TCP,
+- Provides a high-level abstraction on top of TCP,  Inherited TCP.
 - Standard protocol for transferring text and data across the web.
 - Allows Structured-Request-Response that developers (java, python) use to build web applications.
 
@@ -53,14 +61,6 @@ TCP --> abstraction by HTTP/1
 TCP --> abstraction by HTTP/2
 QUIC --> abstraction by HTTP/3
 ```
-
-#### TCP Handshake
-- Essential process of establishing a reliable connection between a client and a server before any actual data transfer begins.
-- During this handshake, the machines follow a structured exchange to ensure both parties are ready to communicate:
-
-- Initiation: The client sends a packet to the server to request a connection.
-- Acknowledgement: The server responds to confirm that it is available and ready to connect.
-- Confirmation: Finally, the client sends a message back to the server's response, officially establishing the connection.
 
 #### REST vs HTTP:
 - REST is an architectural style for distributed systems,
