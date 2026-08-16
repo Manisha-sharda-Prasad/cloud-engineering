@@ -30,32 +30,6 @@
 
 ![img.png](img.png)
 
-```
-Root (.)
-│
-├── .com
-│   │
-│   ├── amazon.com
-│   │   ├── aws.amazon.com
-│   │   └── shop.amazon.com
-│   │
-│   ├── google.com
-│   │   ├── gmail.google.com
-│   │   ├── service1.google.com
-│   │   └── service2.google.com
-│   │
-│   ├── flipkart.com
-│   │
-│   └── apple.com
-│       ├── icloud.apple.com
-│       └── store.apple.com
-│
-├── .in
-│
-├── .gov
-│
-└── .org
-```
 
 ```mermaid
 sequenceDiagram
@@ -80,31 +54,6 @@ sequenceDiagram
 
     U->>Web: HTTP/HTTPS request to IP
     Web-->>U: Web response
-```
-
-```mermaid
-flowchart TD
-    R["Root DNS Server<br/>."]
-    
-    R --> COM[".com TLD DNS Servers"]
-    R --> IN[".in TLD DNS Servers"]
-    R --> GOV[".gov TLD DNS Servers"]
-    R --> ORG[".org TLD DNS Servers"]
-
-    COM --> AMAZON["amazon.com<br/>Authoritative DNS"]
-    COM --> GOOGLE["google.com<br/>Authoritative DNS"]
-    COM --> FLIPKART["flipkart.com<br/>Authoritative DNS"]
-    COM --> APPLE["apple.com<br/>Authoritative DNS"]
-
-    GOOGLE --> GMAIL["gmail.google.com"]
-    GOOGLE --> SERVICE1["service1.google.com"]
-    GOOGLE --> SERVICE2["service2.google.com"]
-
-    AMAZON --> AWS["aws.amazon.com"]
-    AMAZON --> SHOP["shop.amazon.com"]
-
-    APPLE --> ICLOUD["icloud.apple.com"]
-    APPLE --> STORE["store.apple.com"]
 ```
 
 
