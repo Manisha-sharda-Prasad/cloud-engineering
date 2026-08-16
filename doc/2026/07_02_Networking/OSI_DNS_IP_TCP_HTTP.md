@@ -28,6 +28,82 @@
   - If the IP isn't found, the query traverses the hierarchy—from root to TLD to authoritative server—to retrieve the correct destination IP address,
   - allowing your browser to connect to the site.
 
+```
+Root (.)
+│
+├── .com
+│   │
+│   ├── amazon.com
+│   │   ├── aws.amazon.com
+│   │   └── shop.amazon.com
+│   │
+│   ├── google.com
+│   │   ├── gmail.google.com
+│   │   ├── service1.google.com
+│   │   └── service2.google.com
+│   │
+│   ├── flipkart.com
+│   │
+│   └── apple.com
+│       ├── icloud.apple.com
+│       └── store.apple.com
+│
+├── .in
+│
+├── .gov
+│
+└── .org
+```
+
+```mermaid
+sequenceDiagram
+    participant U as 👤 User / Browser
+    participant R as 🟦 Recursive DNS Resolver
+    participant Root as 🟩 Root DNS Server
+    participant TLD as 🟨 .com TLD DNS Server
+    participant Auth as 🟧 google.com<br/>Authoritative DNS
+    participant Web as 🟥 service1.google.com<br/>Server
+
+    U->>R: Resolve service1.google.com
+    R->>Root: Where is .com?
+    Root-->>R: .com TLD DNS servers
+
+    R->>TLD: Where is google.com?
+    TLD-->>R: google.com Authoritative DNS
+
+    R->>Auth: What is the IP of service1.google.com?
+    Auth-->>R: IP address (e.g. 142.250.x.x)
+
+    R-->>U: service1.google.com → IP address
+
+    U->>Web: HTTP/HTTPS request to IP
+    Web-->>U: Web response
+```
+
+```mermaid
+flowchart TD
+    R["Root DNS Server<br/>."]
+    
+    R --> COM[".com TLD DNS Servers"]
+    R --> IN[".in TLD DNS Servers"]
+    R --> GOV[".gov TLD DNS Servers"]
+    R --> ORG[".org TLD DNS Servers"]
+
+    COM --> AMAZON["amazon.com<br/>Authoritative DNS"]
+    COM --> GOOGLE["google.com<br/>Authoritative DNS"]
+    COM --> FLIPKART["flipkart.com<br/>Authoritative DNS"]
+    COM --> APPLE["apple.com<br/>Authoritative DNS"]
+
+    GOOGLE --> GMAIL["gmail.google.com"]
+    GOOGLE --> SERVICE1["service1.google.com"]
+    GOOGLE --> SERVICE2["service2.google.com"]
+
+    AMAZON --> AWS["aws.amazon.com"]
+    AMAZON --> SHOP["shop.amazon.com"]
+
+    APPLE --> ICLOUD["icloud.apple.com"]
+    APPLE --> STORE["store.apple.com"]
+```
 
 
 ## 3 essential network protocols for system design : IP, TCP, and HTTP.
