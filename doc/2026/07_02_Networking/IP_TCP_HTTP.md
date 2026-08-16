@@ -1,5 +1,36 @@
-## 3 essential network protocols for system design : IP, TCP, and HTTP.
+## The OSI Model :
+- The OSI (Open Systems Interconnection) model is a theoretical, seven-layer blueprint designed to standardize how network communication should occur:
+- Application → Presentation → Session → Transport → Network → Data Link → Physical
+- Mnemonic: A P S T N D P — All People Seem To Need Data Processing.
 
+| Layer | Name             | Brief Description                                                                              | Examples                           |
+| ----: | ---------------- |------------------------------------------------------------------------------------------------| ---------------------------------- |
+| **7** | **Application**  | Provides network services directly to user applications(browsers).                             | HTTP, HTTPS, FTP, SMTP, DNS        |
+| **6** | **Presentation** | Translator, Handles **data format, encryption, compression, encoding**.                        | SSL/TLS, JPEG, JSON, XML           |
+| **5** | **Session**      | Establishes, manages, and terminates communication sessions.                                   | RPC, NetBIOS                       |
+| **4** | **Transport**    | Breaks data into packets, Provides **end-to-end delivery**,reliability, flow and segmentation. | TCP, UDP                           |
+| **3** | **Network**      | Handles **routing and logical addressing** between networks. Similar to a postal service.      | IP, ICMP, Routers                  |
+| **2** | **Data Link**    | Handles **frames, MAC addresses, and local network delivery**.                                 | Ethernet, Wi-Fi, Switches          |
+| **1** | **Physical**     | Transmits **raw data bits** over physical media.                                               | Cables, Fiber, Radio signals, Hubs |
+
+
+
+## Domain Name System (DNS)
+-  acts as the internet's directory, translating human-readable domain names (like youtube.com) into machine-readable IP addresses.
+- there are over 350 million registered domains, 
+- DNS is a distributed system rather than a single database to prevent overload and increase resilience against attacks.
+- DNS operates in three main levels to resolve queries:
+  - Root name servers: The foundation of the hierarchy; there are 13 globally.
+  - TLD (Top-Level Domain) name servers: Manage domains - .org or .com.
+  - Authoritative name servers: The final "source of truth" for a specific domain's IP records, holds most accurate and up-to-date information regarding the IP address.
+- The Query Process: 
+  - When you type URL, browser checks local caches (OS, router, ISP). 
+  - If the IP isn't found, the query traverses the hierarchy—from root to TLD to authoritative server—to retrieve the correct destination IP address,
+  - allowing your browser to connect to the site.
+
+
+
+## 3 essential network protocols for system design : IP, TCP, and HTTP.
 
 ### IP (Internet Protocol): 
 - Information is sent in IP packets, containing headers (source/destination address, size) and data. 
@@ -7,7 +38,7 @@
 ### TCP (Transmission Control Protocol): 
 - Built on top of IP, data is received in the correct order without damage. 
 - It requires a handshake to establish a connection between the client and server, before data transfer begins.
-- reliable delivery, but gets slow if 1 packet in streams is lost.
+
 ### HTTP (HyperText Transfer Protocol): 
 - Provides a high-level abstraction on top of TCP,
 - standard protocol for transferring text and data across the web.
@@ -37,17 +68,3 @@
 - HTTP/3 Solution via HTTP/2 + QUIC : Supports ORTTs (0 Round Trip Time), handles streams independently, If a packet in a stream is lost, only that stream is delayed—other streams does not stop.
 
 
-## The OSI Model : 
-- The OSI (Open Systems Interconnection) model is a theoretical, seven-layer blueprint designed to standardize how network communication should occur:
-- Application → Presentation → Session → Transport → Network → Data Link → Physical
-- Mnemonic: A P S T N D P — All People Seem To Need Data Processing.
-
-| Layer | Name             | Brief Description                                                                              | Examples                           |
-| ----: | ---------------- |------------------------------------------------------------------------------------------------| ---------------------------------- |
-| **7** | **Application**  | Provides network services directly to user applications(browsers).                             | HTTP, HTTPS, FTP, SMTP, DNS        |
-| **6** | **Presentation** | Translator, Handles **data format, encryption, compression, encoding**.                        | SSL/TLS, JPEG, JSON, XML           |
-| **5** | **Session**      | Establishes, manages, and terminates communication sessions.                                   | RPC, NetBIOS                       |
-| **4** | **Transport**    | Breaks data into packets, Provides **end-to-end delivery**,reliability, flow and segmentation. | TCP, UDP                           |
-| **3** | **Network**      | Handles **routing and logical addressing** between networks. Similar to a postal service.      | IP, ICMP, Routers                  |
-| **2** | **Data Link**    | Handles **frames, MAC addresses, and local network delivery**.                                 | Ethernet, Wi-Fi, Switches          |
-| **1** | **Physical**     | Transmits **raw data bits** over physical media.                                               | Cables, Fiber, Radio signals, Hubs |
