@@ -17,32 +17,39 @@
 ---
 ## 🔸Layer 3 protocol:
 ### 1. IP (Internet Protocol): 
-- Information is sent in IP packets, containing headers (source/destination address, size) and data. 
-- Packet size is limited, large files  broken into multiple packets.
+- **Network-layer-protocol**
+- Determines where packets should go.
+- **IP = Addressing + Routing Packets**, from one device to another across networks.
+- Information in IP packets, contains header(source/destination, size) and data. 
+- Packet **size is limited**, large files  broken into multiple packets.
+- **No guarantee delivery**.
 
 ---
 ## 🔸Layer 4 protocol:
 ### 1. TCP (Transmission Control Protocol): 
 - Built on top of IP,
-- reliable delivery - packets do not get lost:
-  - data is received in the correct order without damage. 
-- It requires a handshake to establish a **connection** between the client and server, before data transfer begins.
+- **Reliable delivery** - all packets arrive, and in order without damage.
+- Requires  **handshake** to establish a **connection** between  client <-> server, before data transfer begins.
 
 #### TCP Handshake :
-- Essential process of establishing a reliable connection between a client and a server before any actual data transfer begins.
-- During this handshake, the machines follow a structured exchange to ensure both parties are ready to communicate:
-- Initiation: The client sends a packet to the server to request a connection.
-- Acknowledgement: The server responds to confirm that it is available and ready to connect.
-- Confirmation: Finally, the client sends a message back to the server's response, officially establishing the connection.
+- Essential process of establishing a **reliable connection** between a client and a server before any actual data transfer begins.
+- During this handshake, the machines follow a **structured exchange** to ensure both parties are ready to communicate:
+- Initiation: Client sends a packet to the server to request a connection.
+- Acknowledgement: The server responds that it is available and ready to connect.
+- Confirmation: Finally, client sends a message back to the server's response, officially establishing the connection.
 
-### 2. UDP
+### 2. UDP (User Datagram Protocol) :
+- **connectionless** transport-layer protocol.
 - **fast**
-- unreliable delivery - some packets get lost.
-- **connectionless**
+- **Unreliable delivery** 
+- **No guarantee** - packets arrive or arrive in order.
+  Used when speed is more important than reliability.
+  Examples: DNS, video streaming, online gaming, 
+- 
 
 ### 3. QUIC (Quick UDP Internet Connections):
-- new modern, best mix of TCP & UDP.
-- built on top of UDP (User Datagram Protocol),  **hence fast**,
+- New **Modern**, best mix of TCP & UDP.
+- built on top of UDP (User Datagram Protocol), hence **fast**,
 - and TCP style **reliable delivery**
 - QUIC ---> abstraction by HTTP/3
 
@@ -51,7 +58,7 @@
 ### 1. HTTP : 
 #### Overview
 - HyperText Transfer Protocol
-- Provides a high-level abstraction on top of TCP,  Inherited TCP.
+- Provides a high-level abstraction on top of TCP,  **Inherited TCP**.
 - Standard protocol for transferring text and data across the web.
 - Allows Structured-Request-Response that developers (java, python) use to build web applications.
 
@@ -71,7 +78,7 @@ QUIC --> abstraction by HTTP/3
 - HTTP/2 : Solves  application-level HOL blocking, by Multiplexing, client can request data and download it simultaneously, transfers as many packets over a single TCP connections,
 - HTTP/3 Solution via HTTP/2 + QUIC : Supports ORTTs (0 Round Trip Time), handles streams independently, If a packet in a stream is lost, only that stream is delayed—other streams does not stop.
 
-### 2. Domain Name System (DNS)
+### 2. Domain Name System (DNS) :
 - Acts as the internet's directory, translating human-readable domain names (like youtube.com) into machine-readable IP addresses.
 - There are over 350 million registered domains,
 - DNS is a distributed system rather than a single database to prevent overload and increase resilience against attacks.
