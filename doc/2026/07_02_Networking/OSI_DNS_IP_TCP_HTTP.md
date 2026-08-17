@@ -44,8 +44,8 @@
 ### 2. UDP (User Datagram Protocol) :
 - **connectionless** transport-layer protocol.
 - **faster than > TCP**
-- **Unreliable delivery** 
-- **No guarantee** - packets arrive or arrive in order.
+- **Unreliable delivery** packets get lost.
+- **No guarantee** - packets arrive, or will arrive in order.
 - Examples: DNS, video streaming, online gaming, 
 
 
