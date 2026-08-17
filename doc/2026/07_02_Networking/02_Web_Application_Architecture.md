@@ -6,8 +6,8 @@
 *   **Traffic Management:** Utilizing **Nginx** for reverse proxying and **Load Balancers** to distribute traffic evenly (NLB - low-latency/high-performance; ALB - advanced path-based routing) .
 *   **CDN / Content Delivery:** Caching static assets at edge locations using services like **CloudFront** - minimize latency.
 *   **Security:** Using  **Web Application Firewall (WAF)** - filters out malicious traffic like SQL injection.
-*   **Data & Async Tasks:** Interaction with databases (**SQL/NoSQL**) and message queues like ** Kafka / SQS** for background processing.
-*   **Monitoring & Optimization:** Ongoing support through authentication services, caching (e.g., **Redis**), and monitoring tools like **CloudWatch**.
+*   **Data & Async Tasks:** Interaction with databases (**SQL/NoSQL**) and message queues like **Kafka/SQS** for background processing.
+*   **Monitoring & Optimization:** Ongoing support through authentication services, caching (e.g.**Redis**), and monitoring tools like **CloudWatch**.
 
 
 ![img_1.png](img_1.png)
