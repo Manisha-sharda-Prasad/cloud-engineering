@@ -76,21 +76,21 @@ QUIC --> abstraction by HTTP/3
 
 
 #### Key Issues Solved: Head-of-Line (HoL) Blocking :
-- HTTP/1.1 : Suffers HOL, client sends one request at one time over a TCP connection, if one completes than second can come. 
-- HTTP/2 : Solves  application-level HOL blocking, by Multiplexing, client can request data and download it simultaneously, transfers as many packets over a single TCP connections,
-- HTTP/3 Solution via HTTP/2 + QUIC : Supports ORTTs (0 Round Trip Time), handles streams independently, If a packet in a stream is lost, only that stream is delayed—other streams does not stop.
+- HTTP/1.1 : **Suffers HOL**, client sends one request at one time in TCP connection, if one completes than second can come. 
+- HTTP/2 : **Solves HOL** blocking, by **Multiplexing**, client can request and download data simultaneously, transfers as many packets over a single TCP connections,
+- HTTP/3 Solution via HTTP/2 + QUIC : **Supports ORTTs(0 Round Trip Time)**, handles streams independently, If a packet in a stream is lost, only that stream is delayed—other streams does not stop.
 
 ### 2. Domain Name System (DNS) :
-- Acts as the internet's directory, translating human-readable domain names (like youtube.com) into machine-readable IP addresses.
+- Acts as the **internet's directory**, translating **human-readable domain** names (like youtube.com) into machine-readable IP addresses.
 - There are over 350 million registered domains,
 - DNS is a distributed system rather than a single database to prevent overload and increase resilience against attacks.
 - DNS operates in three main levels to resolve queries:
-  - Root name servers: The foundation of the hierarchy; there are 13 globally.
-  - TLD (Top-Level Domain) name servers: Manage domains - .org or .com.
-  - Authoritative name servers: The final "source of truth" for a specific domain's IP records, holds most accurate and up-to-date information regarding the IP address.
+  - **Root name servers**: The foundation of the hierarchy; there are 13 globally.
+  - **TLD (Top-Level Domain) name servers**: Manage domains - .org or .com.
+  - **Authoritative name servers**: The final **source of truth** for a specific domain's IP records, holds **most accurate** and up-to-date information regarding the IP address.
 - The Query Process:
   - When you type URL, browser checks local caches (OS, router, ISP).
-  - If the IP isn't found, the query traverses the hierarchy—from root to TLD to authoritative server—to retrieve the correct destination IP address,
+  - If the IP isn't found, the query traverses the hierarchy from **Root>TLD> Authoritative Server**—to retrieve the correct destination IP address,
   - allowing your browser to connect to the site.
 
 ![img.png](img.png)
