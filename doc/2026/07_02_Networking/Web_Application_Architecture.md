@@ -1,5 +1,6 @@
+```mermaid
 flowchart LR
-A["👤 Client<br/>Browser / Mobile App"]
+    A["👤Client \n Browser / Mobile App"]
 
     B["🌐 DNS<br/>Domain → IP"]
 
@@ -49,4 +50,4 @@ A["👤 Client<br/>Browser / Mobile App"]
 
     D --> C
     C --> A
-
+```
