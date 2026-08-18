@@ -1,4 +1,5 @@
 # WGU BS Cloud Computing / Software Engineering Pre-Learning Roadmap
+- https://www.wgu.edu/online-it-degrees/software-engineering-masters-program/ai-engineering/program-guide.htmls
 ## Complete 10-Phase Study Plan & Markdown Index
 
 Welcome to the **WGU Pre-Learning Roadmap**. This repository contains detailed, phase-by-phase study guides designed to cover **100% of published WGU course competencies** while equipping you with real-world technical software engineering and AI capabilities.
