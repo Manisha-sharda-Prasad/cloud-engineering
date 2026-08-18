@@ -4,7 +4,7 @@
 
 ### Key Concepts:
 * **Cascading Failures:** 
-* single service failure can trigger a chain reaction, effects an entire ecosystem(e.g. cart failure >>payment).
+    * single service failure can trigger a chain reaction, effects an entire ecosystem(e.g. cart failure >>payment).
 
 * **Resilience Strategies:**
     * **Retry Pattern:** for **Transient Faults**, minor network glitches.
@@ -17,4 +17,4 @@
 
 ### Implementation:
 * **Resilience 4j:** 
-* as the modern standard for Java developers, providing a code example showing how to configure failure thresholds, wait durations, and test calls.
+    * as the modern standard for Java developers, providing a code example showing how to configure failure thresholds, wait durations, and test calls.
