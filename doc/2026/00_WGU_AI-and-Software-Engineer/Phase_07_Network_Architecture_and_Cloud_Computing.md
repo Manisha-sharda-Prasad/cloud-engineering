@@ -16,7 +16,14 @@
 ## 2. Comprehensive Study Topics
 
 ### 7.1 Networking Fundamentals
-- **OSI 7-Layer Model:** Physical $ightarrow$ Data Link $ightarrow$ Network (IP) $ightarrow$ Transport (TCP/UDP) $ightarrow$ Session $ightarrow$ Presentation $ightarrow$ Application (HTTP/DNS).
+- **OSI 7-Layer Model:** 
+- Physical 
+-  Data Link 
+-  Network (IP) 
+-  Transport (TCP/UDP) 
+-  Session 
+-  Presentation 
+-  Application (HTTP/DNS).
 - **TCP/IP Model:** Link, Internet, Transport, Application.
 - **IP Addressing & Subnetting:** IPv4, CIDR notation (e.g., `/24` = 256 IPs), Public vs. Private IP ranges (RFC 1918).
 - **Core Protocols:** TCP (connection-oriented, reliable), UDP (connectionless, low latency), DNS (port 53), HTTP/HTTPS (80/443), SSH (22).
@@ -40,7 +47,11 @@
   - Isolated Database Subnets (No internet route) for RDS/Databases.
 
 ### 7.4 Distributed Systems & Network Security
-- **Defense in Depth:** Perimeter Security $ightarrow$ Network Segmentation $ightarrow$ Host Security $ightarrow$ Identity & Access Management (IAM) $ightarrow$ Data Encryption (At-rest & In-transit).
+- **Defense in Depth:** Perimeter Security 
+-  Network Segmentation 
+-  Host Security 
+-  Identity & Access Management (IAM) 
+-  Data Encryption (At-rest & In-transit).
 - **CAP Theorem:** Consistency, Availability, Partition Tolerance (Choose 2 in a distributed system).
 - **Edge Computing & CDNs:** AWS CloudFront, AWS Route 53 latency routing, edge caching.
 
