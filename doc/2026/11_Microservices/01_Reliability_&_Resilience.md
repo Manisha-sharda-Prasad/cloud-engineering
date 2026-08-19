@@ -1,11 +1,11 @@
 # **Microservices Resilience Patterns :**
-- which are essential strategies for maintaining system stability when individual services fail.
-- In a microservices architecture, a failure in one service can lead to **cascading failures**
-- that bring down the entire system; these patterns help contain such issues.
+- Essential strategies for maintaining system stability when individual services fail.
+- In a microservices architecture, a failure in one service can lead to **cascading failures**, brings down the entire system.
 
-## **Top 5 Resilience Patterns:**
-* **Circuit Breaker :**  A safeguard Pattern, Stops requests to a failing service for specific duration and prevents system failures.
-* **Retry Pattern :** Automatically retries failed requests, using **Exponential Backoff** to avoid overwhelming the system.
+
+## **Top 5 Resilience Patterns & Strategies:**
+* **Circuit Breaker :** For **Persistent Faults:** uncertain errors;Stops requests to a failing service for specific duration and prevents system failures, safeguard Pattern.
+* **Retry Pattern :** For **Transient Faults:** network glitches; Automatically retries failed requests, using **Exponential Backoff** to avoid overwhelming the system.
 * **Fallback Pattern :** Provides an alternative for user, shows cached response when a service is unavailable.
 * **Bulkhead Pattern :** Isolates critical services into separate compartments, so that one service's failure doesn't impact others.
 * **Timeout Pattern :** Cancels requests that take too long to respond, ensuring the system remains responsive.
@@ -13,15 +13,10 @@
 
 
 ## **Circuit Breaker Pattern:**
-
 ### Key Concepts:
 * **Cascading Failures:** 
     * Single service failure can trigger a chain reaction, effects an entire ecosystem(e.g. cart failure >>payment).
 
-* **Resilience Strategies:**
-    * **Retry Pattern:** for **Transient Faults**, minor network glitches.(e.g.analogy- for-loop)
-    * **Circuit Breaker Pattern:** for **Persistent Faults** to prevent resource exhaustion and stop the uncertain errors.
-  
 * **Circuit Breaker States:**
     * **Closed:** Normal operation; requests flow freely while metrics are tracked.
     * **Open:** The circuit trips if failure are met; requests rejected immediately, prevents overwhelming a failing system.
