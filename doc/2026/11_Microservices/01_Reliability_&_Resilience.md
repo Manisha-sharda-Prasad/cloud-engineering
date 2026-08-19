@@ -25,7 +25,7 @@
 ### Resilience Implementation Tools (Netflix):
 * **Resilience 4j:** Modern standard for Java developers,provides code example - configure failure thresholds, wait durations, and test calls.
 *  **Hystrix:** as key libraries for implementing these patterns
-* **Chaos Monkey:** to test system for future failures.**Chaos engineering**- A practice intentionally injecting failures into  production environment. Primary function is to randomly terminate virtual machine instances and containers within a production environment.
+* **Chaos Monkey:** to test system for future failures.**Chaos engineering**- A practice intentionally injecting failures. It Randomly terminate VM instances and containers within a production environment.
 
 
 # **Idempotency and Intelligent Retry :**
