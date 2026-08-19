@@ -19,3 +19,17 @@
 * **Resilience 4j:** 
     * Modern standard for Java developers, 
     * provides code example, how to configure failure thresholds, wait durations, and test calls.
+
+
+
+# **Idempotency and Intelligent Retry :**
+
+### Idempotency keys :
+- Ensures system consistency in distributed networks where failures, network latency, and retries are common.
+- Serve as unique identifiers that allow systems to distinguish between different requests. 
+- By storing these keys alongside the operation results, the system can:
+
+* **Prevent Duplicate Transactions:** 
+  * If the same key is submitted multiple times, system recognizes duplication and avoids re-processing the payment. 
+* **Handle Retries Safely:** 
+  * If original request was processed but the response was lost, system return the previously stored result instead of creating new. 
