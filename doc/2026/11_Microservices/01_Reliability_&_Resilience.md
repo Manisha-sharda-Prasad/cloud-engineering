@@ -4,7 +4,7 @@
 
 
 ## **Top 5 Resilience Patterns & Strategies:**
-* **Circuit Breaker :** For **Persistent Faults:** uncertain errors;Stops requests to a failing service for specific duration and prevents system failures, safeguard Pattern.
+* **Circuit Breaker :** For **Persistent Faults:** uncertain errors; Safeguard Pattern, Stops requests to a failing service for specific duration and prevents system failures.
 * **Retry Pattern :** For **Transient Faults:** network glitches; Automatically retries failed requests, using **Exponential Backoff** to avoid overwhelming the system.
 * **Fallback Pattern :** Provides an alternative for user, shows cached response when a service is unavailable.
 * **Bulkhead Pattern :** Isolates critical services into separate compartments, so that one service's failure doesn't impact others.
