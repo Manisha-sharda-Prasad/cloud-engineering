@@ -82,10 +82,25 @@ flowchart LR
 - It is the VPC component that checks packet permissions for an Amazon EC2 instance. 
 
 ---
-## 5. Create an Internet Gateway and Route Traffic :-
-- First, create the internet gateway. Other-wise your users can't get to your resources. 
+## 5. Internet Gateway(IGW), Network Address Translation service(NAT) and Route Table:-
+- First, create the internet gateway. Other-wise users can't get to resources. 
 - Then, create route tables to route traffic,
 - It allows internet traffic in and local traffic out.
+
+
+### 5.1. Internet Gateway (IGW) :-
+- Horizontally scaled and highly available VPC component that allows communication between VPC and internet. 
+- Serves two purposes: provide target in  VPC route tables for internet-routable traffic, and performs NAT for instances (public IPv4 addresses).
+
+### 5.2. Network Address Translation service (NAT Gateway):-
+- instances in a private subnet can connect to services outside VPC, 
+- but external services cannot start a connection with those in private instances.
+- placed in public subnet with an Elastic IP (EIP)- enables private subnets to initiate outbound connections (for updates/patches) and blocking inbound traffic.
+
+### 5.3. Route Table :- 
+- contains set of rules called routes, used to know where network traffic from subnet/gateway is directed. 
+- Every VPC has a main route table, create custom route tables for specific subnets.
+
 
 ---
 ## 6. Three Edge networking services :-
@@ -125,3 +140,5 @@ flowchart LR
 - when lots of data needs to flow between corporate data centers and AWS. 
 - huge data transfers can take a long time over the public Internet, opt for Direct Connect instead.
 - use when need much higher bandwidth with a dedicated line like large data transfers between your on-premises network and AWS.
+
+

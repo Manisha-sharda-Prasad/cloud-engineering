@@ -28,8 +28,4 @@
   * Industry SaaS Products: Microsoft 365, Google Workspace, Salesforce, Slack, Dropbox.
 
 
-## **EC2 :**
-[02_module-ec2.md](../07_01_AWS_cloud_computing/02_module-ec2.md)
-## **AWS Lambda and ECS/EKS :**
-[03_module-compute-services.md](../07_01_AWS_cloud_computing/03_module-compute-services.md)
 
