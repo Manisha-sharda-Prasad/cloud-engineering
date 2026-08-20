@@ -59,34 +59,52 @@
 
 ## 3. VPC Network Architecture Blueprint
 
-```
-                     +-------------------------------------------------+
-                     |                 AWS Cloud VPC                   |
-                     |                 10.0.0.0/16                     |
-                     |                                                 |
-                     |   +-----------------------------------------+   |
-                     |   |        Public Subnet (10.0.1.0/24)     |   |
-                     |   |        +-----------------------+        |   |
-                     |   |        | Internet Gateway / ALB|        |   |
-                     |   |        +-----------+-----------+        |   |
-                     |   +--------------------|--------------------+   |
-                                              |                         
-                                              v                         
-                     |   +-----------------------------------------+   |
-                     |   |       Private Subnet (10.0.2.0/24)    |   |
-                     |   |        +-----------------------+        |   |
-                     |   |        | App EC2 / Lambda / ECS|        |   |
-                     |   |        +-----------+-----------+        |   |
-                     |   +--------------------|--------------------+   |
-                                              |                         
-                                              v                         
-                     |   +-----------------------------------------+   |
-                     |   |      Isolated DB Subnet (10.0.3.0/24)   |   |
-                     |   |        +-----------------------+        |   |
-                     |   |        |   RDS Postgres Instance|       |   |
-                     |   |        +-----------------------+        |   |
-                     |   +-----------------------------------------+   |
-                     +-------------------------------------------------+
+```mermaid
+flowchart TD
+    %% External Internet Layer
+    Internet(( Internet ))
+    
+    subgraph VPC ["AWS Cloud VPC (10.0.0.0/16)"]
+        direction TB
+        
+        IGW["Internet Gateway (IGW)"]
+        
+        subgraph PublicSubnet ["Public Subnet (10.0.1.0/24)"]
+            ALB["Application Load Balancer (ALB)"]
+            NAT["NAT Gateway"]
+        end
+        
+        subgraph PrivateSubnet ["Private Subnet (10.0.2.0/24)"]
+            App["App Tier<br/>(EC2 / ECS / Lambda)"]
+        end
+        
+        subgraph DBSubnet ["Isolated DB Subnet (10.0.3.0/24)"]
+            DB[("RDS PostgreSQL")]
+        end
+    end
+
+    %% Inbound / Downstream Traffic
+    Internet -->|HTTPS / Port 443| IGW
+    IGW -->|Inbound Traffic| ALB
+    ALB -->|Target Group HTTP/gRPC| App
+    App -->|SQL / Port 5432| DB
+
+    %% Outbound Traffic (Updates/Patches)
+    App -.->|Outbound Internet Access| NAT
+    NAT -.-> IGW
+
+    %% Styling
+    classDef vpc fill:#f8f9fa,stroke:#e95420,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef public fill:#e8f4f8,stroke:#2b7bb9,stroke-width:1.5px;
+    classDef private fill:#edf7ed,stroke:#2e7d32,stroke-width:1.5px;
+    classDef db fill:#fbe9e7,stroke:#c62828,stroke-width:1.5px;
+    classDef nodeStyle fill:#ffffff,stroke:#333333,stroke-width:1px,rx:5px,ry:5px;
+
+    class VPC vpc;
+    class PublicSubnet public;
+    class PrivateSubnet private;
+    class DBSubnet db;
+    class ALB,NAT,App,DB,IGW nodeStyle;
 ```
 
 ---

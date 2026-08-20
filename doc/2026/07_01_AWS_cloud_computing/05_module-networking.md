@@ -106,7 +106,7 @@ flowchart LR
 - ability to manage all the DNS records for domain names in single service.
 - register new domain names directly in Route 53. 
 
-### 6.2. Amazon CloudFront :-
+### 6.2. Amazon CloudFront / CDN :-
 - content delivery network (CDN) service, delivers your content with faster loading times,cost savings.
 - global network of delivery trucks that quickly brings web content to users around the world. 
 - stores copies of your content at locations closer to your users. 
