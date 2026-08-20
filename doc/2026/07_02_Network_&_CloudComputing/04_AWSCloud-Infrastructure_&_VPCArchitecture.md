@@ -1,26 +1,32 @@
 # Core AWS Building Blocks:
 
-## Compute: **EC2 :**
-[02_module-ec2.md](../07_01_AWS_cloud_computing/02_module-ec2.md)
+## Compute:
+> ec2, lambda, ECS, EKS
+- [02_module-ec2.md](../07_01_AWS_cloud_computing/02_module-ec2.md)
+- [03_module-compute-services.md](../07_01_AWS_cloud_computing/03_module-compute-services.md) | AWS Lambda and ECS/EKS
 
-## Compute: **AWS Lambda and ECS/EKS :**
-[03_module-compute-services.md](../07_01_AWS_cloud_computing/03_module-compute-services.md)
+---
+## Storage: 
+> S3, EBS, EFS, FSX
+- [06_module-storage.md](../07_01_AWS_cloud_computing/06_module-storage.md)
 
-## Storage: **S3, EBS, EFS and FSX:**
-[06_module-storage.md](../07_01_AWS_cloud_computing/06_module-storage.md)
+---
+## Database: 
+> RDS, DynamoDB
+- [07_module-database.md](../07_01_AWS_cloud_computing/07_module-database.md)
 
-## Database: **RDS and DynamoDB :**
-[07_module-database.md](../07_01_AWS_cloud_computing/07_module-database.md)
+---
+## Networking: 
+> VPC, Subnets, Internet Gateways(IGW), NAT Gateways, Route Tables, Security Groups,  NACLsb 
+- [05_module-networking.md](../07_01_AWS_cloud_computing/05_module-networking.md)
 
-## Networking: **VPC, Subnets, Internet Gateways(IGW), NAT Gateways, Route Tables, Security Groups,  and NACLsb :**
-[05_module-networking.md](../07_01_AWS_cloud_computing/05_module-networking.md)
-
-
-# VPC Isolation Design Pattern:
-
-## Public Subnets (IGW routed) for Load Balancers / Bastions.
-## Private Subnets (NAT Routed) for Application Compute / Microservices.
-## Isolated Database Subnets (No internet route) for RDS/Databases.
+### VPC Isolation Design Pattern:
+- Public Subnets (IGW routed) for Load Balancers / Bastions. 
+  - `todo`
+- Private Subnets (NAT Routed) for Application Compute / Microservices.
+  - `todo`
+- Isolated Database Subnets (No internet route) for RDS/Databases.
+  - `todo`
 
 ### VPC Tiering Structure:
 **Public Subnets Tier:**
