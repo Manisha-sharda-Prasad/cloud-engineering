@@ -5,6 +5,7 @@
 ## 1.AWS compute services :-
 ### 1.1. AWS Lambda :-
 - Serverless compute that automatically handles scaling, availability, and maintenance.
+- Function as a Service (FaaS) — Zero server management
 ### 1.2. Amazon ECS & EKS :-
 - Container orchestration services that simplify running and managing containerized apps.
 ### 1.3. AWS Elastic Beanstalk :-
@@ -22,10 +23,10 @@
 ---
 ## 3. AWS Lambda :-
 - Serverless compute service, that runs code(on demand) in response to events.
+- Pay per request and execution duration
 - handles execution, scaling, and resource allocation.
 - automatically manages the infrastructure, scaling resources based on the volume requests
-- 15 minutes max execution time per request
-- charged only for the compute time consumed.
+- Max Runtime:15 minutes per request.
 
 ### 3.1. Event-Driven :-
 - Set Triggers
@@ -63,8 +64,10 @@
 ## 5. Key AWS Container Orchestration Services :-
 ### 5.1. Amazon ECS :-
 - AWS’s native tool to scale and manage Docker containers.
+- integrated with native AWS services (like IAM, CloudWatch, and Route 53).
 ### 5.2. Amazon EKS :-
 - AWS’s managed service to run open-source Kubernetes.
+- hybrid/multi-cloud portability.
 ### 5.3. Amazon ECR :-
 - A secure repository to store and fully managed container registry that stores your container images.
 ### 5.4. AWS Fargate :-

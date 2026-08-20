@@ -1,5 +1,5 @@
 # Networking :-
-## 1. Inroduction :-
+## 1. Introduction :-
 ### 1.1.Subnets :-
 - used to organize resources, share resources publicly, or isolate resources to keep them private.
 

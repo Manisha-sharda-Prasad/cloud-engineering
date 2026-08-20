@@ -2,8 +2,11 @@
 ## 1. Amazon EC2 Overview :-
 - Provides on-demand virtual server capacity (virtual machines/VMs) in the cloud.
 - Faster,flexible, and cheaper than buying and maintaining physical servers on-premises.
+- Infrastructure as a Service (IaaS) — High admin overhead
+- Max Runtime: Continuous / Always-on.
 
 ### 1.1.Pay-as-You-Go Pricing :-
+- Pay by instance type per second/hour
 - You only pay while instances are actively running,no charges when stopped.
 
 ### 1.2.Multi-Tenancy & Isolation:-
