@@ -33,11 +33,11 @@
 - It operates on Port 22.
 
 ### SSH & Bastion Work Together:
-- In a secure AWS VPC architecture, most critical resources—like databases or internal application servers—are placed in Private Subnets. 
-- Because private, do not have public IP addresses so cannot be reached directly from the outside internet.
-- to access, run updates, manage files, or troubleshoot Bastion Host:
+- In a secure AWS VPC architecture, most critical resources — databases or application servers placed in - Private Subnets. 
+- Private - no public IP addresses, so cannot be reached directly from the outside internet.
+- Bastion Hosts > to access, run updates, manage files, or troubleshoot does:
   - First Jump: SSH from local computer into the Bastion Host using its public IP address.
-  - Second Jump: From inside the Bastion Host, initiate second SSH connection to your target EC2 instance in the private subnet using its private IP address.
+  - Second Jump: From inside the Bastion Host, initiate second SSH connection to target EC2 instance in private subnet using its private IP address.
 - Why Do We Need This?
   - For security: Minimizing attack surface, only expose /Tightly lock - Bastion Host. 
   - Exposing private servers to the internet is a security risk. 
