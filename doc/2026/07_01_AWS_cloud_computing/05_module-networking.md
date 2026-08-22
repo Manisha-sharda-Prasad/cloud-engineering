@@ -69,7 +69,7 @@ flowchart LR
 - Before a packet enter or exit from a subnet, it will run into several checks for permissions,
 - If permissions defined, ACLs indicate what is allowed or denied.
 
-### 4.1.  Network ACLs (Access Control Lists) :-
+### 4.1. NACLs ( Network Access Control Lists) :-
 - operate at the subnet level,
 - Virtual firewall controlling traffic
 - evaluating traffic before it enters or leaves a subnet,
@@ -85,7 +85,7 @@ flowchart LR
 - It is the VPC component that checks packet permissions for an Amazon EC2 instance. 
 
 ---
-## 5. Internet Gateway(IGW), Network Address Translation service(NAT) and Route Table:-
+## 5. IGW, NAT-GW and Route Table:-
 - First, create the internet gateway. Other-wise users can't get to resources. 
 - Then, create route tables to route traffic,
 - It allows internet traffic in and local traffic out.
@@ -99,9 +99,12 @@ flowchart LR
 - One VPC can only be attached to one IGW and vice versa.
 
 ### 5.2. Network Address Translation service (NAT Gateway):-
-- instances in a private subnet can connect to services outside VPC, 
-- but external services cannot start a connection with those in private instances.
-- placed in public subnet with an Elastic IP (EIP)- enables private subnets to initiate outbound connections (for updates/patches) and blocking inbound traffic.
+- AWS-managed NAT, higher bandwidth, high availability
+- created in a specific Availability Zone,
+- Requires an IGW (Private Subnet => NATGW => IGW)
+- instances in private subnet can connect to services outside VPC, but external services cannot start a connection
+- placed in public subnet with an Elastic IP (EIP)- private subnets can initiate outbound connections (for updates/patches) and blocking inbound traffic.
+- Must create multiple NAT-GW in multiple AZs for fault-tolerance
 
 ### 5.3. Route Table :- 
 - contains set of rules called routes, used to know where network traffic from subnet/gateway is directed. 
