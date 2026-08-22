@@ -30,10 +30,13 @@
 ---
 ## 3. More Ways to Connect to the AWS Cloud :-
 ### 3.1. AWS Direct Connect :-
-- is a private, dedicated AWS connection to your data center or office.
-- takes time to set up, physical wiring
-- not designed for remote worker.
+- private, dedicated AWS connection to your data center or office.
+- takes time to set up, physical wiring.
+- lots of data flow between corporate data centers and AWS.
+- huge data transfers take a long time over the public Internet, opt for Direct Connect instead.
+- not designed for remote worker
 - AWS vpc-1 <--> AWS Direct Connect <--> Client vpn-1
+- data transfers between your on-premises network and AWS.
 
 ```mermaid
 flowchart LR
@@ -89,8 +92,11 @@ flowchart LR
 
 
 ### 5.1. Internet Gateway (IGW) :-
-- Horizontally scaled and highly available VPC component that allows communication between VPC and internet. 
-- Serves two purposes: provide target in  VPC route tables for internet-routable traffic, and performs NAT for instances (public IPv4 addresses).
+- IGW on their own do not allow Internet access
+- Horizontally scaled and Highly Available VPC component that allows communication between VPC and Internet. 
+- Serves two purposes: Targets in  VPC route tables for internet-routable traffic, and performs NAT for instances (public IPv4 addresses).
+- Must be created separately from a VPC
+- One VPC can only be attached to one IGW and vice versa.
 
 ### 5.2. Network Address Translation service (NAT Gateway):-
 - instances in a private subnet can connect to services outside VPC, 
@@ -136,9 +142,7 @@ flowchart LR
 - e.g. Gaming company - lag free gameplay; Banking app - fastaccess to accounts.
 
 ---
-## 7. AWS Direct Connect :-
-- when lots of data needs to flow between corporate data centers and AWS. 
-- huge data transfers can take a long time over the public Internet, opt for Direct Connect instead.
-- use when need much higher bandwidth with a dedicated line like large data transfers between your on-premises network and AWS.
+
+
 
 

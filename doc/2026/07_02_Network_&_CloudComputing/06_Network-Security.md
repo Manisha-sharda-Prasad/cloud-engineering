@@ -3,6 +3,7 @@
 
 ---
 ## Network Segmentation
+- Same as VPC tiering
 
 ---
 ## Host Security
