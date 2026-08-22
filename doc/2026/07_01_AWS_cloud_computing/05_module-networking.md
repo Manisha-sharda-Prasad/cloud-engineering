@@ -69,13 +69,15 @@ flowchart LR
 ### 4.1. NACLs (Network Access Control Lists) :-
 - **Virtual firewall** controlling traffic, operate at the subnet level,
 - **Evaluate traffic** before it **enters/leaves subnet**,
-- perform **Stateless** packet filtering, remember nothing and check packets that cross the subnet border each way inbound and outbound.
+-  **Stateless: return traffic only allowed by rules**
+- **Remembers nothing** and check packets that cross the subnet border - inbound/outbout
 - Modify/add rules : When configuring VPC, use account’s default or create custom NACLs.
 - **Newly created NACLs deny everything** : great way of **blocking specific IP address** at the subnet level
 
 ### 4.2. Security groups :-
 - Operate at the **Instance level**, 
 - **Virtual firewall for EC2 instances**
+- **Stateful: return traffic is automatically allowed, regardless of rules**
 - **Control Inbound - Outbound traffic** 
 - custom rules are added, which traffic should be allowed.
 - It is the VPC component that checks packet permissions for an Amazon EC2 instance. 
