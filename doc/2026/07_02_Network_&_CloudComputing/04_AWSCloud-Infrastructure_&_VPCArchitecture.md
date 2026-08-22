@@ -17,22 +17,45 @@
 
 ---
 ## Networking: 
-> VPC, Subnets, Internet Gateways(IGW), NAT Gateways, Route Tables, Security Groups,  NACLsb 
+> VPC, Subnets, Internet Gateways(IGW), NAT Gateways, Route Tables, Security Groups,  NACLs
 - [05_module-networking.md](../07_01_AWS_cloud_computing/05_module-networking.md)
 
 
 ---
-### VPC Isolation Design Pattern:
+### Bastion Hosts:
+
+- A Bastion Host ("Jump Box") specialized EC2 instance placed in a Public Subnet. 
+- act as a secure gateway to access instances located in private subnets.
+
+### What is SSH?
+- SSH (Secure Shell) secure network protocol used to remotely log into a server over the internet.
+- SSH into an EC2 instance, opens an encrypted terminal session - allows to run commands and manage that server as if you were sitting right in front of it. 
+- It operates on Port 22.
+
+### SSh & Bastion Work Together:
+- In a secure AWS VPC architecture, most critical resources—like databases or internal application servers—are placed in Private Subnets. 
+- Because private, do not have public IP addresses so cannot be reached directly from the outside internet.
+- to access, run updates, manage files, or troubleshoot Bastion Host:
+  - First Jump: SSH from local computer into the Bastion Host using its public IP address.
+  - Second Jump: From inside the Bastion Host, initiate second SSH connection to your target EC2 instance in the private subnet using its private IP address.
+- Why Do We Need This?
+  - For security: Minimizing attack surface, only expose /Tightly lock - Bastion Host. 
+  - Exposing private servers to the internet is a security risk. 
+  - Allow SSH traffic from specific home /office IP address.
+
+---
+## VPC Isolation Design Pattern:
 Public Subnets (IGW routed) for Load Balancers / Bastions. 
-- `todo`
+- 
 
 Private Subnets (NAT Routed) for Application Compute / Microservices.
-- `todo`
+- 
 
 Isolated Database Subnets (No internet route) for RDS/Databases.
-- `todo`
+- 
 
-### VPC Tiering Structure:
+---
+## VPC Tiering Structure:
 
 ![img_2.png](img_2.png)
 
