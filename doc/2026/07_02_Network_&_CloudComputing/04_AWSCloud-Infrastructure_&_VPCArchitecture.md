@@ -27,12 +27,12 @@
 - A Bastion Host ("Jump Box") specialized EC2 instance placed in a Public Subnet. 
 - act as a secure gateway to access instances located in private subnets.
 
-### What is SSH?
+### SSH?
 - SSH (Secure Shell) secure network protocol used to remotely log into a server over the internet.
 - SSH into an EC2 instance, opens an encrypted terminal session - allows to run commands and manage that server as if you were sitting right in front of it. 
 - It operates on Port 22.
 
-### SSh & Bastion Work Together:
+### SSH & Bastion Work Together:
 - In a secure AWS VPC architecture, most critical resources—like databases or internal application servers—are placed in Private Subnets. 
 - Because private, do not have public IP addresses so cannot be reached directly from the outside internet.
 - to access, run updates, manage files, or troubleshoot Bastion Host:
