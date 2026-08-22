@@ -1,41 +1,40 @@
 # Networking :-
-## 1. Introduction :-
-### 1.1.Subnets :-
-- used to organize resources, share resources publicly, or isolate resources to keep them private.
 
-### Private subnets :-
+## 1.Subnets :-
+- To organize resources, share resources publicly, or isolate privately.
+
+### 1.1.Private subnets :-
+- **Isolated resources** that shouldn't be directly exposed to the public internet.
+- can Initiate **outbound connections (updates/patches)** and blocking inbound traffic.
 - e.g. database that contains customers’ personal information and order histories.
-- designed to isolate resources that shouldn't be directly exposed to the public internet.
   
-### Public subnets :-
+### 1.2.Public subnets :-
+- provide direct internet access to resources placed inside them.
 - e.g. online store’s website,
-- designed to provide direct internet access to resources placed inside them. 
-- allowing access, they are connected with an internet gateway.
+- allowing access, that are connected with an IGW.
 
-
-
+---
 ## 2. Boundaries around AWS resources :-
 ### 2.1.Amazon Virtual Private Cloud (VPC) :-
-- VPC is used to establish boundaries around your AWS resources.
-- solid box, and it represents your isolated, logically segmented network within AWS.
-- it helps you to control your network resources and security.
+- VPC is used to establish **boundaries around AWS resources**.
+- **Solid box**, and it represents your isolated, logically segmented network within AWS.
+- Helps to control network resources and security.
 
-### 2.2. Virtual private gateway :-
-- A virtual private gateway allows protected internet traffic to enter into the VPC.
+### 2.2. Virtual private gateway (VPG):-
+- Allows protected internet traffic to enter into the VPC.
 
 ### 2.3. Virtual private network(VPN) :-
-- A VPN encrypts your internet traffic,
-- helps protect it from anyone who might try to intercept or monitor it.
+- A VPN encrypts your internet traffic, protect it from anyone who might try to enter/monitor it.
 
 ---
 ## 3. More Ways to Connect to the AWS Cloud :-
 ### 3.1. AWS Direct Connect :-
-- private, dedicated AWS connection to your data center or office.
+- **private, dedicated AWS connection** to your data center or office.
 - takes time to set up, physical wiring.
 - lots of data flow between corporate data centers and AWS.
 - huge data transfers take a long time over the public Internet, opt for Direct Connect instead.
 - not designed for remote worker
-- AWS vpc-1 <--> AWS Direct Connect <--> Client vpn-1
+- AWS **vpc-1 <--> AWS Direct Connect <--> Client vpn-1**
 - data transfers between your on-premises network and AWS.
 
 ```mermaid
@@ -44,66 +43,61 @@ flowchart LR
     B --> C[☁️ AWS VPC]
     style B fill:yellow,color:black
 ```
-
 ### 3.2. AWS Client VPN :-
-- connects your remote workforce to AWS or on-premises with a VPN.
+- connects your **Remote workforce to AWS** or on-premises with a VPN.
 - ideal for a newly expanded worldwide remote workforce.
 
 ### 3.3. AWS Site-to-Site VPN :-
-- connect branch offices or data centers (fixed locations)
+- connect **branch offices/data centers** (fixed locations)
 - not ideal for remote workers.
-- is an encrypted network connection to your Amazon VPCs.
-- vpc-1 <--> site-2-site <--> vpc-2
+- is an **encrypted network connection** to your Amazon VPCs.
+- **vpc-1 <--> site-2-site <--> vpc-2**
 
 ### 3.4. AWS PrivateLink :-
-- private connectivity between VPCs, AWS services, and on-premises applications 
+- Private connectivity between VPCs, AWS services, and on-premises applications 
 - without exposing traffic to the public internet
 - connects your VPC privately to services and resources as though they were in your VPC.
-
 
 ---
 ## 4. Network traffic in a VPC :-
 - The movement of data packets traveling across a network
 - A packet is a unit of data sent over the internet or a network.
-- It enters into a VPC through an internet gateway. 
+- It enters into VPC through an IGW. 
 - Before a packet enter or exit from a subnet, it will run into several checks for permissions,
-- If permissions defined, ACLs indicate what is allowed or denied.
+- If permissions defined, **NACL indicates allowed or denied**.
 
-### 4.1. NACLs ( Network Access Control Lists) :-
-- operate at the subnet level,
-- Virtual firewall controlling traffic
-- evaluating traffic before it enters or leaves a subnet,
-- perform stateless packet filtering, remember nothing and check packets that cross the subnet border each way inbound and outbound.
-- When configuring your VPC, you can use your account’s default network ACL or create custom network ACLs.
-- you can modify it by adding your own rules.
+### 4.1. NACLs (Network Access Control Lists) :-
+- **Virtual firewall** controlling traffic, operate at the subnet level,
+- **Evaluate traffic** before it **enters/leaves subnet**,
+- perform **Stateless** packet filtering, remember nothing and check packets that cross the subnet border each way inbound and outbound.
+- Modify/add rules : When configuring VPC, use account’s default or create custom NACLs.
+- **Newly created NACLs deny everything** : great way of **blocking specific IP address** at the subnet level
 
 ### 4.2. Security groups :-
-- operate at the instance level, 
-- Virtual firewall for individual EC2 instances
-- Control inbound and outbound traffic 
-- add custom rules to configure which traffic should be allowed.
+- Operate at the **Instance level**, 
+- **Virtual firewall for EC2 instances**
+- **Control Inbound - Outbound traffic** 
+- custom rules are added, which traffic should be allowed.
 - It is the VPC component that checks packet permissions for an Amazon EC2 instance. 
 
 ---
 ## 5. IGW, NAT-GW and Route Table:-
-- First, create the internet gateway. Other-wise users can't get to resources. 
-- Then, create route tables to route traffic,
-- It allows internet traffic in and local traffic out.
-
+- First, create the IGW. Other-wise users can't get to resources. 
+- Then, create Route-Tables to route traffic,
 
 ### 5.1. Internet Gateway (IGW) :-
 - IGW on their own do not allow Internet access
-- Horizontally scaled and Highly Available VPC component that allows communication between VPC and Internet. 
+- **Horizontally scaled and Highly Available VPC component** that allows communication between VPC and Internet. 
 - Serves two purposes: Targets in  VPC route tables for internet-routable traffic, and performs NAT for instances (public IPv4 addresses).
 - Must be created separately from a VPC
 - One VPC can only be attached to one IGW and vice versa.
 
 ### 5.2. Network Address Translation service (NAT Gateway):-
 - AWS-managed NAT, higher bandwidth, high availability
-- created in a specific Availability Zone,
-- Requires an IGW (Private Subnet => NATGW => IGW)
+- created in a **specific Availability Zone**,
+- Requires an **IGW (Private Subnet => NATGW => IGW)**,
 - instances in private subnet can connect to services outside VPC, but external services cannot start a connection
-- placed in public subnet with an Elastic IP (EIP)- private subnets can initiate outbound connections (for updates/patches) and blocking inbound traffic.
+- placed in public subnet with an Elastic IP (EIP)- 
 - Must create multiple NAT-GW in multiple AZs for fault-tolerance
 
 ### 5.3. Route Table :- 
