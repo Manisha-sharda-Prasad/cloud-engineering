@@ -29,6 +29,9 @@
 ### 4.VPC Peering :-
 - Establishing **direct network connection between two VPCs**,
 - enabling traffic to be routed between them using - private IP addresses.
+- **Must not have overlapping CIDRs (of both VPC)**
+- must update route tables in each VPC’s subnets, it ensures EC2 instance can communicate with each other.
+- can create VPC Peering connection between VPCs in different AWS accounts/regions
 ---
 
 ## More Ways to Connect to the AWS Cloud :-
@@ -61,6 +64,7 @@ flowchart LR
 - Private connectivity between VPCs, AWS services, and on-premises applications 
 - without exposing traffic to the public internet
 - connects your VPC privately to services and resources as though they were in your VPC.
+
 
 ---
 ## Network traffic in a VPC :-
