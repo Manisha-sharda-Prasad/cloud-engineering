@@ -102,7 +102,7 @@ flowchart LR
 - Must be created separately from a VPC
 - One VPC can only be attached to one IGW and vice versa.
 
-### 2 Network Address Translation service (NAT Gateway):-
+### 2.Network Address Translation service (NAT Gateway):-
 - AWS-managed NAT, higher bandwidth, high availability
 - created in a **specific Availability Zone**,
 - Requires an **IGW (Private Subnet => NATGW => IGW)**,
