@@ -122,6 +122,10 @@ flowchart LR
 - Removes the need of IGW, NATGW, to access AWS Services.
 - In case of issues: Check DNS Setting Resolution in VPC and Route Tables
 - Scale horizontally
+- AWS PrivateLink vs VPC Endpoints:
+  - PrivateLink is the city's massive, underground water piping network.
+  - The VPC Endpoint is the faucet you install inside your specific house.
+  - install faucet (Endpoint) in house (your VPC), to securely access water system (PrivateLink).
 
 ---
 
