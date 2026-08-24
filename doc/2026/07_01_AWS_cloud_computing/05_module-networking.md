@@ -65,7 +65,6 @@ flowchart LR
 - without exposing traffic to the public internet
 - connects your VPC privately to services and resources as though they were in your VPC.
 
-
 ---
 ## Network traffic in a VPC :-
 - The movement of data packets traveling across a network
@@ -114,6 +113,15 @@ flowchart LR
 - contains set of rules called routes, used to know where network traffic from subnet/gateway is directed. 
 - Every VPC has a main route table, create custom route tables for specific subnets.
 
+
+---
+## VPC Endpoints (powered by- AWS PrivateLink) :-
+- AWS services are publicly exposed (public URL)
+- VPC Endpoints allows **connection to AWS services using private network,** instead of using the public Internet.
+- Connects with **AWS's private physical path "hard-wiring."**
+- Removes the need of IGW, NATGW, to access AWS Services.
+- In case of issues: Check DNS Setting Resolution in VPC and Route Tables
+- Scale horizontally
 ---
 
 ## DNS (Domain Name Server):-

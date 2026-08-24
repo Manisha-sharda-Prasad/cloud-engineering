@@ -103,7 +103,7 @@
 - split into Q Business (searches enterprise data repositories) and Q Developer (generates code and automates development).
 ---
 
-## 7. SageMaker JumpStart: 
+### SageMaker JumpStart: 
 - ML hub to quickly test, fine-tune, and deploy pre-trained foundation models with minimal expertise.
 - Rapid ML model deployments : Quickly deploy pre-trained models without extensive ML expertise.
 - Custom fine-tuned solutions : Fine-tune pre-trained FMs with your domain-specific data.
