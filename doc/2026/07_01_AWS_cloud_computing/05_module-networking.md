@@ -141,6 +141,7 @@ flowchart LR
 - needs two things to make the connection:
   - Destination Port: fixed port on the server (like Port 443 for secure HTTPS web traffic).
   - Source Port: port on your computer where the server can send its reply.
+  - 
 ---
 
 ## Edge Caching & Networking services :-
@@ -160,6 +161,7 @@ flowchart LR
 - Register new DN directly in Route 53. 
 - **Protocols Supported : DNS**
 
+
 #### Implementation / Storage / Cache : 
 ### 2.Amazon CloudFront / CDN :-
 - Actual network of servers that **performs Edge Caching**.
@@ -167,6 +169,7 @@ flowchart LR
 - **Stores copies of your content** at locations closer to your users.
 - e.g. Websites/Applications : streaming-Workout videos, Ecommerce-Shopping, Mobile-Map data loads faster.  
 - **Protocols Supported : HTTP / HTTPS / WebSockets**
+
 
 ####  Private / Uncongested Highway  :
 ### 3.AWS Global Accelerator :-
