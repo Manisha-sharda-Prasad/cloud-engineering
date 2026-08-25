@@ -23,7 +23,6 @@
 
 ---
 ### Bastion Hosts:
-
 - A Bastion Host ("Jump Box") specialized EC2 instance placed in a Public Subnet. 
 - act as a secure gateway to access instances located in private subnets.
 
@@ -51,7 +50,6 @@
 
 ---
 ## VPC Tiering Structure:
-
 ![img_2.png](img_2.png)
 
 **Public Subnets Tier:**

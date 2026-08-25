@@ -10,8 +10,8 @@ The CAP Theorem, distributed data store can only guarantee two out of the three 
 - **Partition Tolerance (P)**: The system operates despite network failures(Partitions), inevitable in real-world, always have P.
 
 Must choose between C or A:
-- **Prioritize Consistency (CP)**: Sacrifice A, stop serving Wrong/Stale data to the user. E.g. : Financial - Stocks, Bank
-- **Prioritize Availability (AP)**: Sacrifice C, risk serving data to the user which can be Stale/Wrong/Outdated/Chache data. E.g. : Streaming - Netflix, YouTube, Comments/likes
+- **Prioritize Consistency (CP)**: Sacrifice A, stop serving Wrong/Stale data to the user. E.g. Financial - Stocks, Bank.
+- **Prioritize Availability (AP)**: Sacrifice C, risk serving data to the user which can be Stale /Wrong /Outdated /Chache data. E.g. Streaming - Netflix, YouTube, Comments/likes
 
 ---
 ## PACELC-Theorem :-
