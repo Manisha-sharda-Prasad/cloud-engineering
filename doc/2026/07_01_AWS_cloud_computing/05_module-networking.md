@@ -143,32 +143,44 @@ flowchart LR
   - Source Port: port on your computer where the server can send its reply.
 ---
 
-## Edge networking services :-
-- important because organizations need lower latency,
-- fast access to their data and content.
-- tasks like caching data locally or closer to users, deliver faster.
+## Edge Caching & Networking services :-
+#### Concept / Strategy :
+- The business strategy/idea of  **Caching data locally.**
+- **Copies of actual files** directly to the **user's neighborhood**.
+- **Deliver faster**, Important for organizations when needing lower latency.
 
-### 1.Amazon Route 53 :-
-- Is DNS that provides a reliable and cost-effective way to route end users to internet applications.
-- connects user requests to infrastructure running in AWS, e.g.Amazon EC2 instances and load balancers. 
-- also routes to infrastructure outside of AWS.
-- ability to manage all the DNS records for domain names in single service.
-- register new domain names directly in Route 53. 
 
+#### Director / Dispatcher /GPS :
+### 1.Amazon Route 53 / DNS :-
+- It **does not store or cache files**. Instead, acts like intelligent **address book/ traffic cop**.
+- **DNS Lookup - direction to the fastest main server** - Route53 > CloudFront.
+- It is **a DNS Service**, provides a reliable-cost-effective way to route users to internet applications.
+- connects **requests to infrastructure running outside / inside of AWS** - EC2, Load balancers.
+- Manage **DNS records** for domain names in single service.
+- Register new DN directly in Route 53. 
+- **Protocols Supported : DNS**
+
+#### Implementation / Storage / Cache : 
 ### 2.Amazon CloudFront / CDN :-
-- content delivery network (CDN) service, delivers your content with faster loading times,cost savings.
-- global network of delivery trucks that quickly brings web content to users around the world. 
-- stores copies of your content at locations closer to your users. 
-- means websites, videos, images, and applications load much faster, no matter where your customers are located.
-- e.g. websites  streaming-workout videos, ecommerce-shopping, mobile-map data  
+- Actual network of servers that **performs Edge Caching**.
+- **Content Delivery Network (CDN) service**, Quickly delivers content with faster loading times.
+- **Stores copies of your content** at locations closer to your users.
+- e.g. Websites/Applications : streaming-Workout videos, Ecommerce-Shopping, Mobile-Map data loads faster.  
+- **Protocols Supported : HTTP / HTTPS / WebSockets**
 
+####  Private / Uncongested Highway  :
 ### 3.AWS Global Accelerator :-
-- uses intelligent traffic routing and fast failover if something goes wrong in your 1 application locations.
-- networking service that helps your applications run faster  across the globe. 
-- user requests through regular congested internet route, It creates express lane on the internet highway
-- getting users to your application faster and more reliably.
-- e.g. Gaming company - lag free gameplay; Banking app - fastaccess to accounts.
+- **Does not cache anything**. Instead, acts like a **high-speed express lane for data** that cannot be cached.
+- **Uses intelligent traffic routing (Route 53)**  and fast failover if something goes wrong in your 1 application locations.
+- If Requests comes through congested internet route, It creates express lane on the internet highway.
+- getting users to your application faster, more reliably.
+- e.g. Gaming company - lag free gameplay , Banking app - fastaccess to accounts.
+- **Protocols Supported : TCP / UDP (Any non-HTTP or HTTP traffic)**
 
+#### The Analogy Extended :
+* CloudFront (CDN): A local store where items already on the shelf (cached).
+* Route 53: The GPS app telling driver which route/ store to pick.
+* Global Accelerator: A private, high-speed underground subway, takes you straight to the main factory when item isn't in a local store (not cached).
 ---
 
 

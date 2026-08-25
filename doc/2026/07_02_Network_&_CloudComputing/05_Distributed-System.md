@@ -24,6 +24,6 @@ Extends CAP theorem, trade-offs in distributed systems not just during network f
 
 
 ---
-## Edge Computing :-
-- [AWS CloudFront-CDN]
+## Edge Computing & CDNs:-
+- [AWS CloudFront-CDN, Route 53 Latency, Edge Caching]
 - [05_module-networking.md](../07_01_AWS_cloud_computing/05_module-networking.md)
