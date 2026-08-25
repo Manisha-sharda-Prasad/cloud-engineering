@@ -45,14 +45,9 @@
 
 ---
 ## VPC Isolation Design Pattern:
-Public Subnets (IGW routed) for Load Balancers / Bastions. 
-- 
-
-Private Subnets (NAT Routed) for Application Compute / Microservices.
-- 
-
-Isolated Database Subnets (No internet route) for RDS/Databases.
-- 
+- Public Subnets (IGW routed) for Load Balancers / Bastions.
+- Private Subnets (NAT Routed) for Application Compute / Microservices.
+- Isolated Database Subnets (No internet route) for RDS/Databases.
 
 ---
 ## VPC Tiering Structure:
