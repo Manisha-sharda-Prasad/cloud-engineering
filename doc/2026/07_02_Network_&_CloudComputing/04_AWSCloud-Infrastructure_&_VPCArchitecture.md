@@ -60,10 +60,10 @@ Isolated Database Subnets (No internet route) for RDS/Databases.
 ![img_2.png](img_2.png)
 
 **Public Subnets Tier:**
-* Has a direct route (0.0.0.0/0) to the IGW. Hosts edge ingress components like Application Load Balancers (ALBs) and Bastion Hosts.
+* Has a direct route (0.0.0.0/0) to the **IGW**. Hosts edge ingress components like Application Load Balancers (ALBs) and Bastion Hosts.
 
 **Private Subnets Tier:** 
-* Routes outbound internet traffic (0.0.0.0/0) to a NAT Gateway (no direct IGW route). Hosts application servers and microservices.
+* Routes outbound internet traffic (0.0.0.0/0) to a **NAT Gateway** (no direct IGW route). Hosts application servers and microservices.
 
 **Isolated Database Tier:**
-* Has no route to the internet, keeping databases strictly isolated from external access.
+* Has **no route to the internet**, keeping databases strictly isolated from external access.
