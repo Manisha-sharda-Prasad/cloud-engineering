@@ -114,15 +114,22 @@ flowchart LR
 - Every VPC has a main route table, create custom route tables for specific subnets.
 
 ---
+## DNS (Domain Name Server):-
+- Translates domain names to the IP addresses.
+- DNS is like the phone book of the internet.
+- DNS is the process of translating a domain name to an IP address.
+- Customer enters web address and able to access the website, because of DNS resolution.
+
+---
 
 ## VPC Endpoints (powered by- AWS PrivateLink) :-
 - AWS services are publicly exposed (public URL)
 - VPC Endpoints allows **connection to AWS services using private network,** instead of using the public Internet.
 - Connects with **AWS's private physical path "hard-wiring."**
-- Removes the need of IGW, NATGW, to access AWS Services.
+- **Removes the need of IGW, NATGW,** to access AWS Services.
 - In case of issues: Check DNS Setting Resolution in VPC and Route Tables
 - Scale horizontally
-- AWS PrivateLink vs VPC Endpoints:
+- AWS PrivateLink vs VPC Endpoints Analogy:
   - PrivateLink is the city's massive, underground water piping network.
   - The VPC Endpoint is the faucet you install inside your specific house.
   - install faucet (Endpoint) in house (your VPC), to securely access water system (PrivateLink).
@@ -134,13 +141,6 @@ flowchart LR
 - needs two things to make the connection:
   - Destination Port: fixed port on the server (like Port 443 for secure HTTPS web traffic).
   - Source Port: port on your computer where the server can send its reply.
-
----
-## DNS (Domain Name Server):-
-- Translates domain names to the IP addresses.
-- DNS is like the phone book of the internet.
-- DNS is the process of translating a domain name to an IP address.
-- Customer enters web address and able to access the website, because of DNS resolution.
 ---
 
 ## Edge networking services :-
