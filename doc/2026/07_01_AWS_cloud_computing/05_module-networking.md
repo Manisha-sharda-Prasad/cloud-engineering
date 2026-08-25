@@ -46,8 +46,8 @@
 
 ```mermaid
 flowchart LR
-    A[🏢 On-Premises<br/>Data Center] -->|Dedicated Private Connection| B[AWS Direct Connect]
-    B --> C[☁️ AWS VPC]
+    A[On-Premises<br/>Data Center] -->|Dedicated Private Connection| B[AWS Direct Connect]
+    B --> C[AWS VPC]
     style B fill:yellow,color:black
 ```
 ### 2.AWS Client VPN :-
