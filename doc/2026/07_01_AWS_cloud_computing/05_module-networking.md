@@ -128,7 +128,14 @@ flowchart LR
   - install faucet (Endpoint) in house (your VPC), to securely access water system (PrivateLink).
 
 ---
+## Ephemeral Ports :-
+- Computer talks to dozen of website at the same time, can't use a fixed port for everything.
+- **OS(client) grabs a temporary random, available high-numbered port —an ephemeral(short-lived) port,** uses it for single connection.
+- needs two things to make the connection:
+  - Destination Port: fixed port on the server (like Port 443 for secure HTTPS web traffic).
+  - Source Port: port on your computer where the server can send its reply.
 
+---
 ## DNS (Domain Name Server):-
 - Translates domain names to the IP addresses.
 - DNS is like the phone book of the internet.
