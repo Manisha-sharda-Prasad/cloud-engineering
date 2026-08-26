@@ -176,8 +176,7 @@ flowchart LR
 - **Does not cache anything**. Instead, acts like a **high-speed express lane for data** that cannot be cached.
 - **Uses intelligent traffic routing (Route 53)**  and fast failover if something goes wrong in your 1 application locations.
 - If Requests comes through congested internet route, It creates express lane on the internet highway.
-- getting users to your application faster, more reliably.
-- e.g. Gaming company - lag free gameplay , Banking app - fastaccess to accounts.
+- e.g. Gaming company - lag free gameplay , Banking app - fast access to accounts.
 - **Protocols Supported : TCP / UDP (Any non-HTTP or HTTP traffic)**
 
 #### The Analogy Extended :
