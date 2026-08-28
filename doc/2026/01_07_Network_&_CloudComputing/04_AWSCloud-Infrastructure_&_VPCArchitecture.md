@@ -2,23 +2,23 @@
 
 ## Compute:
 > Ec2, lambda, ECS, EKS
-- [02_module-ec2.md](../07_01_AWS_cloud_computing/02_module-ec2.md)
-- [03_module-compute-services.md](../07_01_AWS_cloud_computing/03_module-compute-services.md) | AWS Lambda and ECS/EKS
+- [02_module-ec2.md](../00_AWS_Cloud_Practitioner/02_module-ec2.md)
+- [03_module-compute-services.md](../00_AWS_Cloud_Practitioner/03_module-compute-services.md) | AWS Lambda and ECS/EKS
 
 ---
 ## Storage: 
 > S3, EBS, EFS, FSX
-- [06_module-storage.md](../07_01_AWS_cloud_computing/06_module-storage.md)
+- [06_module-storage.md](../00_AWS_Cloud_Practitioner/06_module-storage.md)
 
 ---
 ## Database: 
 > RDS, DynamoDB
-- [07_module-database.md](../07_01_AWS_cloud_computing/07_module-database.md)
+- [07_module-database.md](../00_AWS_Cloud_Practitioner/07_module-database.md)
 
 ---
 ## Networking: 
 > VPC, Subnets, Internet Gateways(IGW), NAT Gateways, Route Tables, Security Groups,  NACLs
-- [05_module-networking.md](../07_01_AWS_cloud_computing/05_module-networking.md)
+- [05_module-networking.md](../00_AWS_Cloud_Practitioner/05_module-networking.md)
 
 
 ---
