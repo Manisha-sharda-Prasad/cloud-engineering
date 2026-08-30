@@ -31,9 +31,9 @@ Core mechanics, **Time and Space Complexity**:
 ## Quick Sort: ⭐️⭐️
 - Another **divide and conquer** method that uses a **pivot** element to **partition array**.
 - 'pivot' moves other so **lower values - Left**, and **higher - Right** of it.
-- **Implementation**: 
+- Implementation: 
   - **'quickSort' method** calls itself (**Recursion**)
-  - **'partition' method** receives **sub-array**, moves values, **swaps pivot into sub**, **returns index where next split in sub-array** happens.
+  - **'partition' method** receives **sub-array**, moves values, **swaps pivot into sub**, **returns index** where **next split** in **sub-array** happens.
 - Average complexity is `$O(n \log n)$.`
 
 ## Heap Sort: ⭐️⭐️
@@ -41,7 +41,13 @@ Core mechanics, **Time and Space Complexity**:
 - Complexity is `$O(n \log n)$.`
 
 ## Counting Sort: ⭐️⭐️
-- Sorts integers by **counting the number of times each value occurs**.
+- Works on **non negative integers**(0,1,2,3../ >= 0).
+- Sorts integers by **counting** the **number of times** each **value occurs**.
+- Implementation:
+  - **'countingSort' method**  receives **array of integers**.
+  - Array inside method, **count values**.
+  - **loop** inside  method, **counts - removes values**, by **incrementing** elements in the **counting array**.
+  - Methods used: **max(),enumerate(),extend(),countingSort.**
 - Complexity is `$O(n + k)$.`
 
 ## Tim Sort: 
