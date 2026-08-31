@@ -51,9 +51,9 @@ flowchart TD
 ---
 
 ## Merge Sort: ⭐️⭐️
-- A **divide and conquer** algorithm, first **breaking** it down into **many smaller arrays**,
-- then merge **sub-arrays** together the correct way, 
-- values from each **sub-array are compared**, so that the **lowest value comes first**.
+- A **Divide - Conquer** algorithm, first **Breaking** it down into **many Smaller arrays**,
+- then merge **Sub-Arrays** together the correct way, 
+- values from each **sub-array are Compared**, so that the **Lowest value comes First**.
 - Complexity is `$O(n log n)$.`
 
 ```mermaid
@@ -76,8 +76,8 @@ flowchart TD
 ---
 
 ## Quick Sort: ⭐️⭐️
-- Another **divide and conquer** method that uses a **pivot** element to **partition array**.
-- 'pivot' moves other so **lower values - Left**, and **higher - Right** of it.
+- Another **Divide and Conquer** method that uses a **Pivot** element to **Partition array**.
+- **Pivot** moves other **Lower values <-- Left**, **Higher --> Right** of it.
 - Implementation: 
   - **quickSort()** calls itself (**Recursion**)
   - **partition()** receives **sub-array**, moves values, **swaps pivot into sub**, 
@@ -113,7 +113,7 @@ flowchart TD
 
 ---
 ## Counting Sort: ⭐️⭐️
-- Works on **non-negative integers**(0,1,2,3../ >= 0).
+- Works on **Non-Negative Integers**`(0,1,2,3../ >= 0)`.
 - Sorts integers by counting **number of times** each **value occurs**.
 - Implementation:
   - **countingSort()**  receives **array of integers**.
@@ -144,8 +144,8 @@ flowchart LR
 ---
 
 ## Radix Sort:⭐️⭐️
-- Works with **non-negative integers**.
-- Process numbers **digit-by-digit**, data like numbers/specific patterns.
+- Works with **Non-Negative Integers**.
+- Process numbers **digit-by-digit**, data like **Numbers / Specific Patterns**.
 - E.g. if `437` is the highest number in array that needs to be sorted, must sort three times, once for each digit.
 - Time complexity depends on the base and the number of digits `($O(d \cdot (n+b))$)`.
 
