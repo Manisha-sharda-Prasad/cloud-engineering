@@ -9,16 +9,16 @@ Core mechanics, **Time and Space Complexity**:
 ```mermaid
 flowchart TD
 
-Start([Start Pass]) --> Loop[Compare adjacent arr[j] and arr[j+1]]
-Loop --> Cond{arr[j] > arr[j+1]?}
-Cond -- Yes --> Swap[Swap arr[j] and arr[j+1]]
+Start([Start Pass]) --> Loop["Compare adjacent arr[j] and arr[j+1]"]
+Loop --> Cond{"arr[j] > arr[j+1]?"}
+Cond -- Yes --> Swap["Swap arr[j] and arr[j+1]"]
 Cond -- No --> NoSwap[Keep order]
 Swap --> More{More elements in pass?}
 NoSwap --> More
 More -- Yes --> Loop
 More -- No --> CheckSwaps{Any swaps made this pass?}
 CheckSwaps -- Yes --> Start
-CheckSwaps -- No --> Done([Array is fully sorted])
+CheckSwaps -- No --> Done(["Array is fully sorted"])
 ```
 ---
 ## Selection Sort: ⭐️
@@ -29,14 +29,14 @@ CheckSwaps -- No --> Done([Array is fully sorted])
 
 ```mermaid
   flowchart TD
-  Start([Set i = 0 to n - 1]) --> FindMin[Scan unsorted part arr[i...n-1] to find min_index]
+  Start([Set i = 0 to n - 1]) --> FindMin["Scan unsorted part arr[i...n-1] to find min_index"]
   FindMin --> Check{min_index != i?}
-  Check -- Yes --> Swap[Swap arr[i] with arr[min_index]]
+  Check -- Yes --> Swap["Swap arr[i] with arr[min_index]"]
   Check -- No --> Next[i = i + 1]
   Swap --> Next
   Next --> DoneCheck{i < n - 1?}
   DoneCheck -- Yes --> FindMin
-  DoneCheck -- No --> Done([Array is fully sorted])
+  DoneCheck -- No --> Done(["Array is fully sorted"])
 ```
 ---
 
@@ -49,7 +49,7 @@ CheckSwaps -- No --> Done([Array is fully sorted])
 
 ```mermaid
   flowchart TD
-  Start([Pick next element: key = arr[i]]) --> Compare{j >= 0 and arr[j] > key?}
+  Start(["Pick next element: key = arr[i]"]) --> Compare{j >= 0 and arr[j] > key?}
   Compare -- Yes --> Shift[Shift arr[j] right to arr[j+1]]
   Shift --> Decrement[j = j - 1]
   Decrement --> Compare
@@ -124,7 +124,7 @@ Concat --> ReturnSorted([Return Sorted Array])
 ```mermaid
 flowchart TD
     Start([Input Array & Find Max Value K]) --> Init[Initialize Count array of size K + 1 with 0s]
-    Init --> Freq[Iterate input array: increment Count[x]]
+    Init --> Freq["Iterate input array: increment Count[x]"]
     Freq --> Reconstruct[Iterate Count array from 0 to K]
     Reconstruct --> Append[Append each value x freq times into Output Array]
     Append --> Done([Return Output Array])
