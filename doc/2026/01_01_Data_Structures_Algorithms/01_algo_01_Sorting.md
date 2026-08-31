@@ -48,15 +48,36 @@ CheckSwaps -- No --> Done(["Array is fully sorted"])
 - Complexity is `$O(n^2)$.`
 
 ```mermaid
-  flowchart TD
-  Start(["Pick next element: key = arr[i]"]) --> Compare{j >= 0 and arr[j] > key?}
-  Compare -- Yes --> Shift[Shift arr[j] right to arr[j+1]]
-  Shift --> Decrement[j = j - 1]
-  Decrement --> Compare
-  Compare -- No --> Insert[Insert key at arr[j+1]]
-  Insert --> NextElem{More elements left?}
-  NextElem -- Yes --> NextI[i = i + 1] --> Start
-  NextElem -- No --> Done([Array is fully sorted])
+flowchart TD
+%% Define standard node shapes for clarity
+  StartNode(["Start Pass: key = arr[i], j = i-1"])
+DecideBoundary{j >= 0?}
+DecideValue{"arr[j] > key?"}
+ActionShift["Shift arr[j] to arr[j+1]"]
+ActionDec[j = j - 1]
+ActionInsert["Insert key at arr[j+1]"]
+DecideMore{More elements i?}
+ActionNextI[i = i + 1]
+EndNode([Done: Array Sorted])
+
+%% Define corrected logical flow
+StartNode --> DecideBoundary
+
+%% The inner comparison loop
+DecideBoundary -- Yes --> DecideValue
+DecideValue -- Yes --> ActionShift
+ActionShift --> ActionDec
+ActionDec --> DecideBoundary
+
+%% Exit paths from the inner loop (both go to Insert)
+DecideBoundary -- No --> ActionInsert
+DecideValue -- No --> ActionInsert
+
+%% The outer loop
+ActionInsert --> DecideMore
+DecideMore -- Yes --> ActionNextI
+ActionNextI --> StartNode
+DecideMore -- No --> EndNode
 ```
 ---
 
