@@ -7,18 +7,13 @@ Core mechanics, **Time and Space Complexity**:
 - It has a worst-case complexity of `$O(n^2)$.`
 
 ```mermaid
-flowchart TD
-
-Start([Start Pass]) --> Loop["Compare adjacent arr[j] and arr[j+1]"]
-Loop --> Cond{"arr[j] > arr[j+1]?"}
-Cond -- Yes --> Swap["Swap arr[j] and arr[j+1]"]
-Cond -- No --> NoSwap[Keep order]
-Swap --> More{More elements in pass?}
-NoSwap --> More
-More -- Yes --> Loop
-More -- No --> CheckSwaps{Any swaps made this pass?}
-CheckSwaps -- Yes --> Start
-CheckSwaps -- No --> Done(["Array is fully sorted"])
+flowchart LR
+    subgraph Pass1["Bubble Sort: Adjacent Swaps"]
+        direction TB
+        S1["[ 5 | 1 | 4 | 2 ]"] -->|"Swap (5 > 1)"| S2["[ 1 | 5 | 4 | 2 ]"]
+        S2 -->|"Swap (5 > 4)"| S3["[ 1 | 4 | 5 | 2 ]"]
+        S3 -->|"Swap (5 > 2)"| S4["[ 1 | 4 | 2 | (5) ]"]
+    end
 ```
 ---
 ## Selection Sort: ⭐️
@@ -28,15 +23,10 @@ CheckSwaps -- No --> Done(["Array is fully sorted"])
 - Complexity is `$O(n^2)$.`
 
 ```mermaid
-  flowchart TD
-  Start([Set i = 0 to n - 1]) --> FindMin["Scan unsorted part arr[i...n-1] to find min_index"]
-  FindMin --> Check{min_index != i?}
-  Check -- Yes --> Swap["Swap arr[i] with arr[min_index]"]
-  Check -- No --> Next[i = i + 1]
-  Swap --> Next
-  Next --> DoneCheck{i < n - 1?}
-  DoneCheck -- Yes --> FindMin
-  DoneCheck -- No --> Done(["Array is fully sorted"])
+flowchart TD
+    A["[ 4 | 3 | 1 | 5 ]"] -->|"Find min (1) & Swap with index 0"| B["[(1) | 3 | 4 | 5]"]
+    B -->|"Find min in unsorted (3) -> No swap"| C["[(1 | 3) | 4 | 5]"]
+    C -->|"Find min in unsorted (4) -> No swap"| D["[(1 | 3 | 4 | 5)] (Sorted)"]
 ```
 ---
 
@@ -49,35 +39,9 @@ CheckSwaps -- No --> Done(["Array is fully sorted"])
 
 ```mermaid
 flowchart TD
-%% Define standard node shapes for clarity
-  StartNode(["Start Pass: key = arr[i], j = i-1"])
-DecideBoundary{j >= 0?}
-DecideValue{"arr[j] > key?"}
-ActionShift["Shift arr[j] to arr[j+1]"]
-ActionDec[j = j - 1]
-ActionInsert["Insert key at arr[j+1]"]
-DecideMore{More elements i?}
-ActionNextI[i = i + 1]
-EndNode([Done: Array Sorted])
-
-%% Define corrected logical flow
-StartNode --> DecideBoundary
-
-%% The inner comparison loop
-DecideBoundary -- Yes --> DecideValue
-DecideValue -- Yes --> ActionShift
-ActionShift --> ActionDec
-ActionDec --> DecideBoundary
-
-%% Exit paths from the inner loop (both go to Insert)
-DecideBoundary -- No --> ActionInsert
-DecideValue -- No --> ActionInsert
-
-%% The outer loop
-ActionInsert --> DecideMore
-DecideMore -- Yes --> ActionNextI
-ActionNextI --> StartNode
-DecideMore -- No --> EndNode
+    A["[(4) | 3 | 1 | 2]"] -->|"Insert 3 before 4"| B["[(3 | 4) | 1 | 2]"]
+    B -->|"Shift (3, 4) right, Insert 1"| C["[(1 | 3 | 4) | 2]"]
+    C -->|"Shift (3, 4) right, Insert 2"| D["[(1 | 2 | 3 | 4)]"]
 ```
 ---
 
@@ -94,15 +58,21 @@ DecideMore -- No --> EndNode
 
 ```mermaid
 flowchart TD
-    Start([merge_sort arr]) --> Base{len arr <= 1?}
-    Base -- Yes --> ReturnArr([Return arr])
-    Base -- No --> Split[Split into Left and Right halves]
-    Split --> RecurseLeft[merge_sort Left]
-    Split --> RecurseRight[merge_sort Right]
-    RecurseLeft --> Merge[Merge sorted Left and Right into one array]
-    RecurseRight --> Merge
-    Merge --> ReturnMerged([Return Merged Array])
-```    
+    A["[ 4 | 2 | 1 | 3 ]"]
+    A -->|"Divide"| B1["[ 4 | 2 ]"]
+    A -->|"Divide"| B2["[ 1 | 3 ]"]
+    
+    B1 --> C1["[ 4 ]"]
+    B1 --> C2["[ 2 ]"]
+    B2 --> C3["[ 1 ]"]
+    B2 --> C4["[ 3 ]"]
+    
+    C1 & C2 -->|"Merge & Sort"| D1["[ 2 | 4 ]"]
+    C3 & C4 -->|"Merge & Sort"| D2["[ 1 | 3 ]"]
+    
+    D1 & D2 -->|"Merge & Sort"| E["[ 1 | 2 | 3 | 4 ]"]
+```
+   
 ---
 
 ## Quick Sort: ⭐️⭐️
@@ -116,15 +86,24 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-Start([quick_sort arr]) --> Base{len arr <= 1?}
-Base -- Yes --> ReturnArr([Return arr])
-Base -- No --> Pivot[Choose Pivot element]
-Pivot --> Partition[Partition array into:<br/>Left: < Pivot<br/>Mid: == Pivot<br/>Right: > Pivot]
-Partition --> RecurseLeft[quick_sort Left]
-Partition --> RecurseRight[quick_sort Right]
-RecurseLeft --> Concat[Combine Left + Mid + Right]
-RecurseRight --> Concat
-Concat --> ReturnSorted([Return Sorted Array])
+    Root["[ 4 | 2 | 5 | 1 | 3 ]<br>(Pivot: 3)"]
+    
+    Root --> L1["Left: [ 2 | 1 ]<br>(Pivot: 1)"]
+    Root --> Mid1["Pivot: [ 3 ]"]
+    Root --> R1["Right: [ 4 | 5 ]<br>(Pivot: 5)"]
+    
+    L1 --> LL1["[ ]"]
+    L1 --> LM1["[ 1 ]"]
+    L1 --> LR1["[ 2 ]"]
+    
+    R1 --> RL1["[ 4 ]"]
+    R1 --> RM1["[ 5 ]"]
+    R1 --> RR1["[ ]"]
+
+    LL1 & LM1 & LR1 --> JoinedLeft["[ 1 | 2 ]"]
+    RL1 & RM1 & RR1 --> JoinedRight["[ 4 | 5 ]"]
+
+    JoinedLeft & Mid1 & JoinedRight --> Result["[ 1 | 2 | 3 | 4 | 5 ]"]
 ```
 
 ---
@@ -142,13 +121,25 @@ Concat --> ReturnSorted([Return Sorted Array])
   - **loop** inside  method **counts and remove values**, by **incrementing** elements in the **counting array**.
   - Methods used: **max(),enumerate(),extend(),countingSort.**
 - Complexity is `$O(n + k)$.`
+
 ```mermaid
-flowchart TD
-    Start([Input Array & Find Max Value K]) --> Init[Initialize Count array of size K + 1 with 0s]
-    Init --> Freq["Iterate input array: increment Count[x]"]
-    Freq --> Reconstruct[Iterate Count array from 0 to K]
-    Reconstruct --> Append[Append each value x freq times into Output Array]
-    Append --> Done([Return Output Array])
+flowchart LR
+    subgraph Step1["1. Input Array"]
+        In["[ 2 | 0 | 2 | 1 | 1 ]"]
+    end
+    
+    subgraph Step2["2. Tally Frequency"]
+        direction TB
+        F0["Index 0: (1)"]
+        F1["Index 1: (2)"]
+        F2["Index 2: (2)"]
+    end
+
+    subgraph Step3["3. Rebuild Array"]
+        Out["[ 0 | 1 | 1 | 2 | 2 ]"]
+    end
+
+    In --> Step2 --> Out
 ```
 ---
 
@@ -160,13 +151,12 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    Start([Find maximum number to get total digits d]) --> SetExp[Set exp = 1 least significant digit]
-    SetExp --> Loop{max_val / exp > 0?}
-    Loop -- No --> Done([Array is fully sorted])
-    Loop -- Yes --> Distribute[Distribute elements into 0-9 buckets using current digit]
-    Distribute --> Collect[Flatten buckets back into array]
-    Collect --> NextDigit[exp = exp * 10]
-    NextDigit --> Loop
+    Input["Input: [ 170 | 045 | 075 | 090 | 002 | 024 ]"]
+    
+    Input -->|"1. Sort by 1s digit"| D1["[ 170 | 090 | 002 | 024 | 045 | 075 ]"]
+    D1 -->|"2. Sort by 10s digit"| D2["[ 002 | 024 | 045 | 170 | 075 | 090 ]"]
+    D2 -->|"3. Sort by 100s digit"| D3["[ 002 | 024 | 045 | 075 | 090 | 170 ]"]
+    D3 --> Output["Sorted: [ 2 | 24 | 45 | 75 | 90 | 170 ]"]
 ```
 
 ---
