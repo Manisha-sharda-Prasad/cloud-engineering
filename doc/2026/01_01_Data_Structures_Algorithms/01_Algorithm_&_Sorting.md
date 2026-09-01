@@ -4,7 +4,7 @@ Core mechanics, **Time and Space Complexity**:
 ## Bubble Sort: ⭐️
 - Simplest algorithm, repeatedly **Swapping Adjacent** elements if they are in the wrong order. 
 - If not swapped **break** the iteration.
-- It has a worst-case complexity of `$O(n^2)$.`
+- It has a worst-case complexity of $O(n^2)$.
 
 ```mermaid
 flowchart LR
@@ -20,7 +20,7 @@ flowchart LR
 - **Divides the list** into **sorted and unsorted parts**.
 - Picks the **smallest** from **unsorted** side, moves it to **front** of the array.
 - Instead of all the shifting, **swap the lowest value**.
-- Complexity is `$O(n^2)$.`
+- Complexity is $O(n^2)$.
 
 ```mermaid
 flowchart TD
@@ -35,7 +35,7 @@ flowchart TD
 - sort array one item at a time, **(organizing playing cards, in left-middle-right)**.
 - avoids **shift operation**, only when necessary.
 - **break** loop, no need to compare when **correct place** for **current value** is found.
-- Complexity is `$O(n^2)$.`
+- Complexity is $O(n^2)$.
 
 [Untitled-2026-08-31-1316.excalidraw](Untitled-2026-08-31-1316.excalidraw)
 
@@ -49,14 +49,14 @@ flowchart TD
 
 ## Shell Sort:
 - An optimized version of insertion sort that uses specific intervals to partially sort data before finalizing.
-- Worst-case is `$O(n^2)$.`
+- Worst-case is $O(n^2)$.
 ---
 
 ## Merge Sort: ⭐️⭐️
 - A **Divide - Conquer** algorithm, first **Breaking** it down into **many Smaller arrays**,
 - then merge **Sub-Arrays** together the correct way, 
 - values from each **sub-array are Compared**, so that the **Lowest value comes First**.
-- Complexity is `$O(n log n)$.`
+- Complexity is $O(n log n)$.
 
 ```mermaid
 flowchart TD
@@ -84,7 +84,7 @@ flowchart TD
   - **quickSort()** calls itself (**Recursion**)
   - **partition()** receives **sub-array**, moves values, **swaps pivot into sub**, 
   - returns **index** where next **split** in **sub-array** happens.
-- Average complexity is `$O(n log n)$.`
+- Average complexity is $O(n log n)$.
 
 ```mermaid
 flowchart TD
@@ -111,7 +111,7 @@ flowchart TD
 ---
 ## Heap Sort: ⭐️⭐️
 - Leverages a tree-based "Max Heap" data structure to efficiently sort elements.
-- Complexity is `$O(n log n)$.`
+- Complexity is $O(n log n)$.
 
 ---
 ## Counting Sort: ⭐️⭐️
@@ -122,7 +122,7 @@ flowchart TD
   - Array inside method, **count values**.
   - **loop** inside  method **counts and remove values**, by **incrementing** elements in the **counting array**.
   - Methods used: **max(),enumerate(),extend(),countingSort.**
-- Complexity is `$O(n + k)$.`
+- Complexity is $O(n + k)$.
 
 ```mermaid
 flowchart LR
@@ -164,7 +164,7 @@ flowchart TD
 ---
 ## Tim Sort: 
 - A hybrid of insertion and merge sort, notably used in *Python*.
-- Complexity is `$O(n log n)$.`
+- Complexity is $O(n log n)$.
 
 ---
 ## Other Terms:

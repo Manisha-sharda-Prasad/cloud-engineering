@@ -1,6 +1,29 @@
 # Cloud engineer
 - [2026](doc/2026)
 
+
+## Python
+
+```bash
+# one time
+python3 --version
+# create virtual machine where our python will be running...
+python3 -m venv .venv
+```
+
+```bash
+# Activate venv... do it everytime
+source .venv/bin/activate
+```
+
+```bash
+# run scripts from root location ❇️
+cd /Users/manishaprasad/lekhraj/git/cloud-engineering;
+python3 src/DSA/Algorithm/bubbleSort.py
+
+# python3 -m src/DSA/Algorithm/bubbleSort
+```
+---
 ## YouTube Learning Agent :: UI
 Run :
 
