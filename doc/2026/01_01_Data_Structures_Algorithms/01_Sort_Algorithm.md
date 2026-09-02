@@ -167,6 +167,8 @@ flowchart TD
 - Complexity is $O(n log n)$.
 
 ---
+
+
 ## Other Terms:
 ### Hidden memory shifts: 
 - You will not see shifting operations happening in the code if  using high-level programming language such as Python or JavaScript, 
