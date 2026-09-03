@@ -18,7 +18,7 @@ source .venv/bin/activate
 
 ```bash
 # run scripts from root location ❇️
-cd /Users/manishaprasad/lekhraj/git/cloud-engineering;
+cd /Users/manishaprasad/lekhraj/git/cloud-engineering
 python3 src/DSA/Algorithm/bubbleSort.py
 
 # python3 -m src/DSA/Algorithm/bubbleSort
