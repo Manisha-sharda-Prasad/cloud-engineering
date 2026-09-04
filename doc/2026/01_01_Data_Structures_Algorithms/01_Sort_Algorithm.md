@@ -1,5 +1,7 @@
 # The Sorting Algorithms :
-Core mechanics, **Time and Space Complexity**:
+
+## Reference
+- [exercise](../02_python/exercise) | python exercise
 
 ## Bubble Sort: ⭐️
 - Simplest algorithm, repeatedly **Swapping Adjacent** elements if they are in the wrong order. 
@@ -15,6 +17,9 @@ flowchart LR
         S3 -->|"Swap (5 > 2)"| S4["[ 1 | 4 | 2 | (5) ]"]
     end
 ```
+
+@[code:1-5](exercise/bubbleSort.py)
+
 ---
 ## Selection Sort: ⭐️
 - **Divides the list** into **sorted and unsorted parts**.
@@ -37,7 +42,7 @@ flowchart TD
 - **break** loop, no need to compare when **correct place** for **current value** is found.
 - Complexity is $O(n^2)$.
 
-[Untitled-2026-08-31-1316.excalidraw](Untitled-2026-08-31-1316.excalidraw)
+[01_insertion-sort.excalidraw](draw/01_insertion-sort.excalidraw)
 
 ```mermaid
 flowchart TD
