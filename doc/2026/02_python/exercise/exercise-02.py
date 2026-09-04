@@ -1,12 +1,12 @@
 # Run with this: python3 src/PythonBasics/exercise-02.py
 
-# 08  Solid Square / Rectangle
+# 08  Solid Square / Rectangle (not recommended)
 def print_solid_square_rectangle():
     n = 4
     for x in range(0,n):
         print("*" * n)
 
-# 08
+# 08  Solid Square / Rectangle
 def print_solid_square_rectangle_v2():
     n = 5
     for i in range(0,n):

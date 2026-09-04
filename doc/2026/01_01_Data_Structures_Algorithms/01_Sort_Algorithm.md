@@ -17,7 +17,9 @@ flowchart LR
         S3 -->|"Swap (5 > 2)"| S4["[ 1 | 4 | 2 | (5) ]"]
     end
 ```
-
+```bash 
+python3 doc/2026/01_01_Data_Structures_Algorithms/exercise/bubbleSort.py
+```
 @[code:1-5](exercise/bubbleSort.py)
 
 ---
