@@ -1,5 +1,7 @@
 # Python Loops: Hands-On Practice Checklist
 ```bash
+cd /Users/manishaprasad/lekhraj/git/cloud-engineering;
+source .venv/bin/activate;
 python3 doc/2026/02_python/exercise/exercise-02.py
 ```
 
@@ -21,7 +23,8 @@ Requirements:
 * Outer loop → rows.
 * Inner loop → columns.
 
-@[code:10-15](exercise-02.py)
+@[code:section::section-8](exercise-02.py)
+
 ---
 
 ## 9. Hollow Square / Rectangle
@@ -39,7 +42,7 @@ Example:
 
 The inside should remain hollow.
 
-@[code:19-30](exercise-02.py)
+@[code:section::section-9](exercise-02.py)
 
 ---
 
@@ -55,7 +58,7 @@ Example:
 * * *
 * * * *
 ```
-
+@[code:section::section-10](exercise-02.py)
 ---
 
 ## 11. Inverted Left-Aligned Triangle
@@ -70,7 +73,7 @@ Example:
 * *
 *
 ```
-
+@[code:section::section-11](exercise-02.py)
 ---
 
 ## 12. Mirrored (Right-Aligned) Right Triangle
@@ -87,7 +90,7 @@ Example:
   * * *
 * * * *
 ```
-
+@[code:section::section-12](exercise-02.py)
 ---
 
 ## 13. Full Equilateral Pyramid
@@ -102,6 +105,8 @@ Example:
  *****
 *******
 ```
+
+@[code:section::section-13](exercise-02.py)
 
 ---
 

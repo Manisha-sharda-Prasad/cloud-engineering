@@ -25,9 +25,15 @@ python3 src/DSA/Algorithm/bubbleSort.py
 ```
 ---
 ## YouTube Learning Agent :: UI
-Run :
-
+Run
 ```bash
 cd /Users/manishaprasad/lekhraj/git/AI-Engineer/src/y2026/youtube_agent_2/frontend; 
 npm run dev -- --host 0.0.0.0
+```
+
+update new change
+```bash
+cd ../AI-Engineer
+git switch 2026
+git pull origin 2026
 ```

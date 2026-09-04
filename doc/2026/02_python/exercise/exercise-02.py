@@ -1,21 +1,24 @@
 # Run with this: python3 src/PythonBasics/exercise-02.py
+# or Copy path reference - content root
 
-# 08  Solid Square / Rectangle (not recommended)
+# section::section-8::start
+# 08 Solid Square / Rectangle (not recommended)
 def print_solid_square_rectangle():
-    n = 4
+    n = 5
     for x in range(0,n):
-        print("*" * n)
+        print(" * " * n)
 
-# 08  Solid Square / Rectangle
+# Solid Square / Rectangle
 def print_solid_square_rectangle_v2():
     n = 5
     for i in range(0,n):
         print("", end="\n")
         for j in range(0,n):
             print("*", end=" ")
-
+# section::section-8::end
 
 # 09 Hollow Square / Rectangle
+# section::section-9::start
 def print_hollow_square_rectangle():
     n = 5
     for i in range(0,n):
@@ -35,24 +38,30 @@ def print_hollow_square_rectangle():
                 else:
                     print(" ", end=" ")
                 """
+# section::section-9::end
 
 # 10 Left-Aligned Right Triangle
+# section::section-10::start
 def print_left_aligned_right_triangle():
     n = 5
     for i in range(0,n):
         print("", end="\n")
         for j in range(0,i):
                 print("*", end=" ")
+# section::section-10::end
 
 # 11 Inverted Left-Aligned Triangle
+# section::section-11::start
 def print_inverted_left_aligned_triangle():
     n = 5
     for i in range(0,n):
         print("", end="\n")
         for j in range(0,n-i):
             print("*", end=" ")
+# section::section-11::end
 
 # 12 Mirrored (Right-Aligned) Right Triangle
+# section::section-12::start
 def print_mirrored_right_aligned_right_triangle():
     n = 5
     for i in range(0,n):
@@ -62,9 +71,11 @@ def print_mirrored_right_aligned_right_triangle():
                 print(" ", end=" ")
             else:
                 print("*", end=" ")
+# section::section-12::end
 
 
 # 00 Right-Aligned Left Triangle
+# section::section-00::start
 def print_right_aligned_left_triangle():
     n = 5
     for i in range(0,n):
@@ -74,8 +85,21 @@ def print_right_aligned_left_triangle():
                 print(" ", end=" ")
             else:
                 print("*", end=" ")
+# section::section-00::end
 
 
+# 13. Full Equilateral Pyramid
+# section::section-13::start
+def print_full_equilateral_pyramid(n: int):
+    midIndex = (n-1)/2
+    for i in range(0,n):
+        print("", end="\n")
+        for j in range(0,n):
+            if (midIndex - i) <= j <= (midIndex + i): # if j == midIndex:
+                print("*", end="")
+            else:
+                print(" ", end="")
+# section::section-13::end
 
 
 
@@ -93,3 +117,6 @@ print('\n------------------')
 print_mirrored_right_aligned_right_triangle()
 print('\n------------------')
 print_right_aligned_left_triangle()
+print('\n------------------')
+print_full_equilateral_pyramid(7) # even
+print_full_equilateral_pyramid(8) # odd
