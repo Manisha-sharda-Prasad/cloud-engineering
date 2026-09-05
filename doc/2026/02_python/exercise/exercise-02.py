@@ -92,7 +92,8 @@ def print_right_aligned_left_triangle():
 # section::section-13::start
 def print_full_equilateral_pyramid(n: int):
     midIndex = (n-1)/2
-    for i in range(0,n):
+    max_row = int((n/2)+1)
+    for i in range(0,max_row):
         print("", end="\n")
         for j in range(0,n):
             if (midIndex - i) <= j <= (midIndex + i): # if j == midIndex:
