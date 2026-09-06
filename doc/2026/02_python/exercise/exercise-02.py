@@ -17,6 +17,18 @@ def print_solid_square_rectangle_v2():
             print("*", end=" ")
 # section::section-8::end
 
+# section::section-8-console::start
+"""
+ *  *  *  *  * 
+ *  *  *  *  * 
+ *  *  *  *  * 
+ *  *  *  *  * 
+ *  *  *  *  * 
+"""
+# section::section-8-console::end
+
+
+
 # 09 Hollow Square / Rectangle
 # section::section-9::start
 def print_hollow_square_rectangle():
@@ -102,6 +114,74 @@ def print_full_equilateral_pyramid(n: int):
                 print(" ", end="")
 # section::section-13::end
 
+# ============= Derived ============
+
+# 14. Inverted Full Equilateral Pyramid
+# section::section-14::start
+print("print_inverted_full_equilateral_pyramid")
+def print_inverted_full_equilateral_pyramid(n: int):
+    midIndex = (n-1)/2
+    max_row = int((n/2)+1) # 4
+    for i in range(max_row-1,-1,-1): # 3,-1,-1 🔸🔸
+        print("", end="\n")
+        for j in range(0,n):
+            if (midIndex - i) <= j <= (midIndex + i): # if j == midIndex:
+                print("*", end="")
+            else:
+                print(" ", end="")
+# section::section-14::end
+
+# 15. Diamond
+# section::section-15::start
+def print_diamond(n: int):
+    midIndex = (n-1)/2
+    max_row = int((n/2)+1)
+
+    # combine above 2 program 🔸
+    for i in range(0,max_row):
+        print("", end="\n")
+        for j in range(0,n):
+            if (midIndex - i) <= j <= (midIndex + i): # if j == midIndex:
+                print("*", end="")
+            else:
+                print(" ", end="")
+
+    for i in range(max_row-1,-1,-1): # 3,-1,-1
+        print("", end="\n")
+        for j in range(0,n):
+            if (midIndex - i) <= j <= (midIndex + i): # if j == midIndex:
+                print("*", end="")
+            else:
+                print(" ", end="")
+
+# section::section-15::end
+
+# 16. Hourglass
+# section::section-16::start
+def print_hourglass(n: int):
+    midIndex = (n-1)/2
+    max_row = int((n/2)+1)
+
+    # combine above 2 program  (but changed the order)🔸
+    for i in range(max_row-1,-1,-1): # 3,-1,-1
+        print("", end="\n")
+        for j in range(0,n):
+            if (midIndex - i) <= j <= (midIndex + i): # if j == midIndex:
+                print("*", end="")
+            else:
+                print(" ", end="")
+
+    for i in range(0,max_row):
+        print("", end="\n")
+        for j in range(0,n):
+            if (midIndex - i) <= j <= (midIndex + i): # if j == midIndex:
+                print("*", end="")
+            else:
+                print(" ", end="")
+
+
+# section::section-16::end
+
 
 
 #======== main ========
@@ -120,4 +200,31 @@ print('\n------------------')
 print_right_aligned_left_triangle()
 print('\n------------------')
 print_full_equilateral_pyramid(7) # even
-print_full_equilateral_pyramid(8) # odd
+#print_full_equilateral_pyramid(8) # odd
+print('\n------------------')
+print_inverted_full_equilateral_pyramid(7)
+print('\n------------------')
+print_diamond(7)
+print('\n------------------')
+print_hourglass(7)
+
+"""
+print("")
+for i in [0,1,2,3,4,5,6]:
+    print(i, end=" | ")
+print("")
+for i in [6,5,4,3,2,1,0]:
+    print(i, end=" | ")
+
+print("")
+for i in range(0,7,2):
+    print(i, end=" | ")
+
+print("")
+for i in range(7,0,-2): # 3 arg : start, end, step
+    print(i, end=" | ")
+    """
+
+n =10
+for i in range(1,n,2):
+    print(i, end=" | ")

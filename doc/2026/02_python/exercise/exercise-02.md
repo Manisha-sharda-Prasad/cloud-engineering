@@ -23,7 +23,7 @@ Requirements:
 * Outer loop → rows.
 * Inner loop → columns.
 
-@[code:section::section-8](exercise-02.py)
+@[code:section::section-8,section-8-console](exercise-02.py)
 
 ---
 
@@ -106,7 +106,7 @@ Example:
 *******
 ```
 
-@[code:section::section-13](exercise-02.py)
+@[code:section::section-13,section-14,section-15,section-16](exercise-02.py)
 
 ---
 
@@ -215,4 +215,4 @@ Work through the problems in this order:
 ---
 
 ## Answer sheet
-@[code](exercise-02.py)
+@[code:1-](exercise-02.py)
