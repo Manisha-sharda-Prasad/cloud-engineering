@@ -1,4 +1,4 @@
-# Run with this: python3 src/PythonBasics/exercise-02.py
+# Run with this: python3 doc/2026/02_Python/exercise/exercise-02.py
 # or Copy path reference - content root
 
 # section::section-8::start

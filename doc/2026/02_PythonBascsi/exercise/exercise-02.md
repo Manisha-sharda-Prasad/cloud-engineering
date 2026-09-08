@@ -2,7 +2,7 @@
 ```bash
 cd /Users/manishaprasad/lekhraj/git/cloud-engineering;
 source .venv/bin/activate;
-python3 doc/2026/02_python/exercise/exercise-02.py
+python3 doc/2026/02_Python/exercise/exercise-02.py
 ```
 
 ## 8. Solid Square / Rectangle

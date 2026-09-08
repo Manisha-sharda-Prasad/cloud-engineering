@@ -1,4 +1,4 @@
-# Run with this: python3 doc/2026/02_python/exercise/exercise-00.py
+# Run with this: python3 doc/2026/02_Python/exercise/exercise-00.py
 
 data = [60, 64, 34, 25, 12, 22, 11]
 

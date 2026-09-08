@@ -1,7 +1,7 @@
 # The Sorting Algorithms :
 
 ## Reference
-- [exercise](../02_python/exercise) | python exercise
+- [exercise](../02_PythonBascsi/exercise) | python exercise
 
 ## Bubble Sort: ⭐️
 - Simplest algorithm, repeatedly **Swapping Adjacent** elements if they are in the wrong order. 
