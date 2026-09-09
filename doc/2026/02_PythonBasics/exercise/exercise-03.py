@@ -1,6 +1,6 @@
 # :::::Strings Functions/ Methods:::::
 
-#Types() ---> type(), str()
+#🔸Convert Datatypes: Types() ---> type(), str()---------------------------
 #type()
 text = "Hello"
 numb = 20
@@ -22,7 +22,7 @@ numb = str(numb)                                #Converts 'numb' to str()
 print(type(numb))                               #Now type() shows 'str'
 
 
-#Math ---> len(), count()
+#🔸Measure/Calculations: Math ---> len(), count()---------------------------
 #len()
 print(len(text))                                #'5'
 
@@ -43,7 +43,7 @@ print(statement.count("Py-thon"))            #count() not considering lowercase/
 
 
 
-#Transformations /Modify strings---> upper(), lower(), strip(), replace(), '+', f-string, split(), '*', '[0]', '[start:end]', '[start:end:step]'
+#🔸Transformations /Modify---> upper(), lower(), strip(), replace(), '+', f-string, split(), '*', '[0]', '[start:end]', '[start:end:step]'---------------------------
 
 #upper(), lower()
 print(password.upper())
@@ -110,7 +110,7 @@ print(reverse_string[: :-1])
 
 
 
-#Cleaning/conversion (white spaces)---> lsript(), rstrip(), strip(), upper(), lower()
+#🔸Cleaning/Conversion (white spaces)---> lsript(), rstrip(), strip(), upper(), lower()---------------------------
 #lstrip()
 field = "    Engineering".lstrip()
 print(field)
@@ -140,7 +140,8 @@ print(search == data)
 
 
 
-#Search---> startswith(), endswith(), find(), in
+
+#🔸Search---> startswith(), endswith(), find(), 'in'---------------------------
 #startswith()
 contact = "+1655-5667-45"
 print(contact.startswith("+164"))
@@ -162,7 +163,8 @@ print(contact[contact.find("-")+1:])  # '5667-45'   ['find(index)' '+' print aft
 
 
 
-#Validation---> isalpha(), isnumeric()
+
+#🔸Validation content---> isalpha(), isnumeric()---------------------------
 #isalpha() (alphabetic :checks if string has letters)
 country = "USA!1]"
 print(country.isalpha())            #False as '!1]'
