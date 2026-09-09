@@ -2,7 +2,7 @@
 ```bash
 cd /Users/manishaprasad/lekhraj/git/cloud-engineering;
 source .venv/bin/activate;
-python3 doc/2026/02_Python/exercise/exercise-02.py
+python3 doc/2026/02_Python/exercise/ForLoops.py
 ```
 
 ## 8. Solid Square / Rectangle
@@ -23,7 +23,7 @@ Requirements:
 * Outer loop → rows.
 * Inner loop → columns.
 
-@[code:section::section-8,section-8-console](exercise-02.py)
+@[code:section::section-8,section-8-console](ForLoops.py)
 
 ---
 
@@ -42,7 +42,7 @@ Example:
 
 The inside should remain hollow.
 
-@[code:section::section-9](exercise-02.py)
+@[code:section::section-9](ForLoops.py)
 
 ---
 
@@ -58,7 +58,7 @@ Example:
 * * *
 * * * *
 ```
-@[code:section::section-10](exercise-02.py)
+@[code:section::section-10](ForLoops.py)
 ---
 
 ## 11. Inverted Left-Aligned Triangle
@@ -73,7 +73,7 @@ Example:
 * *
 *
 ```
-@[code:section::section-11](exercise-02.py)
+@[code:section::section-11](ForLoops.py)
 ---
 
 ## 12. Mirrored (Right-Aligned) Right Triangle
@@ -90,7 +90,7 @@ Example:
   * * *
 * * * *
 ```
-@[code:section::section-12](exercise-02.py)
+@[code:section::section-12](ForLoops.py)
 ---
 
 ## 13. Full Equilateral Pyramid
@@ -106,7 +106,7 @@ Example:
 *******
 ```
 
-@[code:section::section-13,section-14,section-15,section-16](exercise-02.py)
+@[code:section::section-13,section-14,section-15,section-16](ForLoops.py)
 
 ---
 
@@ -215,4 +215,4 @@ Work through the problems in this order:
 ---
 
 ## Answer sheet
-@[code:1-](exercise-02.py)
+@[code:1-](ForLoops.py)
