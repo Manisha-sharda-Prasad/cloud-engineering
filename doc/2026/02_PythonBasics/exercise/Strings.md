@@ -1,3 +1,3 @@
-# py notes
-## Strings Functions 
+# Python
+## Strings: 
 @[code:1-](Strings.py)
