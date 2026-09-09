@@ -1,25 +1,19 @@
-# :::::Strings Functions/ Methods:::::
+# ::::: Strings Functions/ Methods :::::
+# Methods are Functions, belong to object/classes : value.method_name()
 
 #🔸Convert Datatypes: Types() ---> type(), str()---------------------------
 #type()
 text = "Hello"
 numb = 20
-
 print(type(text))
 print(type(numb))
 
 #str()
 print("Your number is: " + str(numb))           #Converts to string
 
-#Methods are Functions, belong to object/classes : value.method_name()
-#.upper()
-print(text.upper())                             #Method of <class str>
-
-#.bit_length()
-print(numb.bit_length())                        #Method of <class int>
-
 numb = str(numb)                                #Converts 'numb' to str()
 print(type(numb))                               #Now type() shows 'str'
+
 
 
 #🔸Measure/Calculations: Math ---> len(), count()---------------------------
@@ -42,8 +36,9 @@ print(statement.count("Py-thon"))            #count() not considering lowercase/
 
 
 
-
 #🔸Transformations /Modify---> upper(), lower(), strip(), replace(), '+', f-string, split(), '*', '[0]', '[start:end]', '[start:end:step]'---------------------------
+
+# password = "  1238pas"
 
 #upper(), lower()
 print(password.upper())
