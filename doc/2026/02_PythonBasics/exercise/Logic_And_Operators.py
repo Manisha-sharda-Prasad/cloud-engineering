@@ -1,29 +1,9 @@
 # ::::: Logic & Operators ::::::
 from pyspark.sql.functions import char
 
-# Control Flow : Control Flow Statements, Boolean Expressions :
+# Control Flow : Boolean Expressions, Control Flow Statements  :
 
-#🔸1.Control Flow Statements:
-# ▪️if, else, elif,
-# ▪️for, while, break, continue, and pass.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#🔸2.Boolean Expressions:
+#🔸1.Boolean Expressions:
 # ▪️Values: True, False,
 # ▪️Functions: bool(), any(), all(), isinstance(),
 # ▪️Comparison Operators: ==, !=, <, >, >=, <=,
@@ -39,7 +19,6 @@ print(bool("yes"))
 print(bool(0))
 print(bool(""))
 print(bool(None))
-
 
 
 #any()
@@ -156,3 +135,10 @@ print(isinstance(username, str) and username is not None and len(username) > int
 print((userOne == "Admin" or "Moderator") and adminUser == "Banned" or "Verified email")
 print((userTwo == "Admin" or "Moderator") and moderatorUser == "Verified email" or "Banned")
 
+
+
+
+
+#🔸2.Control Flow Statements:
+# ▪️if, else, elif,
+# ▪️for, while, break, continue, and pass.
