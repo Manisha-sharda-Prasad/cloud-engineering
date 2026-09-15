@@ -1,8 +1,9 @@
 # :::::  Loops  ::::::
+from itertools import count
 
 # For Loop, While Loop
 
-# 🔸'For Loop': Go through values and aggregate data - summing, counting, averaging:
+# 🔸'For Loop': Go through values and aggregate data - summing, counting, averaging/Loop over 'Fixed Sequence'::::::::::::::::::::::::::::::::
 # ▪️ Nested Loop, Break, Continue, Pass :
 
 print('----Looping within List/sequence----')
@@ -51,7 +52,6 @@ for d in data:
 
 # ▪️Nested Loop: (Outer - Inner forloop)
 print("-----Nested-loop:--(Compare Pairs: Adjacent)-----")
-
 for x in range(3):              #(0,1,2)
     for y in range(2):          #(0,1)
         print(f"Comparing x {[x]} with y {[y]}")
@@ -62,7 +62,6 @@ alphabet = ["a", "b", "c", "d"]
 for x in alphabet:
     for y in alphabet:
         print(f" x{[x]} with y{[y]}")
-
 
 
 print("-----Nested-loop-(Pyramid)-----")
@@ -136,7 +135,47 @@ for n in names:
 print("-------- pass --------")
 for n in names:
     if n == "":
-        pass                      #e.g. later: you can use n = n.replace("", unknown)
+        pass                            #e.g. later: you can use n = n.replace("", unknown)
     print(f"Name = {n}")
 
+
+
+
+# 🔸'While Loop': Repeats  block of code - over and over as long as condition true::::::::::::::::::::::::::::::::::::
+
+#▪️While Condition(Exists Normally)
+print("-------- While Loop-Condition--------")
+answer = ""
+while answer != "yes":
+    answer = input("Do you agree? yes/no: ")
+print("Thank You")
+
+
+#▪️While True(Must have extra if+break)
+print("-------- While Loop-True--------")
+while True:
+    ans = input("Do you agree? yes/no: ")
+    if ans == "yes":                    #if we are not fulfilling, python will keep asking
+        break
+print("Thank You")
+
+
+
+#challenge
+print("-------- While Loop-True challenge--------")
+strikes = 0
+while True:
+    ans = input("Do you agree with me? yes/no: ").strip().lower()
+    if ans == "yes":
+        print("Glad we are on the same page!😊")
+        break
+    elif ans == "no":
+        print("Let's try again.😒")
+        strikes += 1
+    else:
+        print("Let's try again, yes or no?🧐")
+        strikes += 1
+    if strikes >= 3:
+        print("3 strikes you are out!!🥺")
+        break
 
