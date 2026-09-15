@@ -1,8 +1,9 @@
 # :::::  Loops  ::::::
 
-# 🔸For Loop, While Loop
+# For Loop, While Loop
 
-# 'For Loop': Go through values and aggregate data - summing, counting, averaging:
+# 🔸'For Loop': Go through values and aggregate data - summing, counting, averaging:
+# ▪️break, continue, pass
 print('----Looping within List/sequence----')
 for i in (1,2,3,4,5):
     print(f"Round: {i}")
@@ -60,6 +61,7 @@ for d in digits:
 
 #better way
 print("-----Multiplication with range-----")
+numb = 7
 n = 11
 m = 0
 for r in range(1,n):
@@ -74,3 +76,42 @@ for r in range(1,n + 1):
     for s in range(0,r):
         print("*", end="")
     print("")
+
+
+# ▪️break::: stop immediately- critical problems
+print("-------- break --------")
+names = ["Raj","Vir","Rey","","Ian",""]
+for n in names:
+    if n == "":
+        print("'' Detected")
+        break
+    print(f"{n}")
+
+# break: use it with 'else' statement
+print("-------- break-else--------")
+items = [1,5,3,2,9,4]
+for i in items:
+    if i % 2 == 0:
+        print("Even number found")
+        break
+else:
+    print("All numbers are Odd")
+
+
+
+# ▪️continue::: skip iteration - noncritical
+print("-------- continue --------")
+for n in names:
+    if n == "":
+        print("Unknown")
+        continue
+    print(f"{n}")
+
+
+# ▪️pass::: Do nothing
+print("-------- pass --------")
+for n in names:
+    if n == "":
+        pass                      #e.g. later: you can use n = n.replace("", unknown)
+    print(f"Name = {n}")
+
