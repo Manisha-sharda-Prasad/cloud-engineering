@@ -3,24 +3,28 @@
 # For Loop, While Loop
 
 # 🔸'For Loop': Go through values and aggregate data - summing, counting, averaging:
-# ▪️break, continue, pass
+# ▪️ Nested Loop, Break, Continue, Pass :
+
 print('----Looping within List/sequence----')
 for i in (1,2,3,4,5):
     print(f"Round: {i}")
 
 
+
+print('----Looping within object----')
 scores = [60,30,80,50]
 total = 0
-print('----Looping within object----')
 for score in scores:
     total += score
     print("Current Total :", total)
 print("** Final Total :", total)
 
 
+# strip(),lower(),replace
 # right order : Clean --> Transform
-files = [" Report.csv   ", "DATA.csv   ", " final.TXT"]
 print("----Looping with 'strip','lower','replace'---")
+
+files = [" Report.csv   ", "DATA.csv   ", " final.TXT"]
 for file in files:
     file = file.strip().lower().replace(".txt", ".csv")
     print(f"Processing {file}")
@@ -32,8 +36,8 @@ for num in range(4,10,2):
     print(f"Count: {num}")
 
 
-data = [60, 64, 34, 25, 12, 22, 11]
 print('----Looping with Conditions (if)----')
+data = [60, 64, 34, 25, 12, 22, 11]
 for d in data:
     if d >= 34:
         print(f"Greater or Equal to '34':{d}")   # 64 34 90
@@ -45,18 +49,34 @@ for d in data:
         print(d)
 
 
-print("-----Compare Pairs: Adjacent comparison-----")
-letters = ["A", "B", "C"]
-for r in range (len(letters)):             # 'list' object '(letters)' cannot be interpreted as an integer
-    for s in range (r + 1, len(letters)):
-        print(f"Comparing {[r]} with {[s]}")
+# ▪️Nested Loop: (Outer - Inner forloop)
+print("-----Nested-loop:--(Compare Pairs: Adjacent)-----")
+
+for x in range(3):              #(0,1,2)
+    for y in range(2):          #(0,1)
+        print(f"Comparing x {[x]} with y {[y]}")
+
+
+print("--------Nested-loop---------")
+alphabet = ["a", "b", "c", "d"]
+for x in alphabet:
+    for y in alphabet:
+        print(f" x{[x]} with y{[y]}")
 
 
 
-digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-numb = 7
+print("-----Nested-loop-(Pyramid)-----")
+n = 7
+for r in range(1,n+1):
+    for s in range(0,r):
+        print("*", end="")
+    print("")
+
+
 print("-----Multiplication-----")
-for d in digits:
+digit = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numb = 7
+for d in digit:
     print(f"{numb} * {d} = ", d * numb)
 
 #better way
@@ -69,13 +89,6 @@ for r in range(1,n):
     print(f"{numb} * {r} = {m}")
 
 
-
-n = 7
-print("-----Nested-for-loop-(pyramid-exercise)-----")
-for r in range(1,n + 1):
-    for s in range(0,r):
-        print("*", end="")
-    print("")
 
 
 # ▪️break::: stop immediately- critical problems
@@ -98,6 +111,17 @@ else:
     print("All numbers are Odd")
 
 
+#check duplicate files
+print("-------- break-else--------")
+
+file_list = ["report.csv","data.xlsx","summary.docx","report.csv","data.csv"]
+for f in file_list:
+    if f * 2  or f * 3  or f * 4:
+        print("Duplicate files found")
+        break
+else:
+    print("All files are unique")
+
 
 # ▪️continue::: skip iteration - noncritical
 print("-------- continue --------")
@@ -114,4 +138,5 @@ for n in names:
     if n == "":
         pass                      #e.g. later: you can use n = n.replace("", unknown)
     print(f"Name = {n}")
+
 
