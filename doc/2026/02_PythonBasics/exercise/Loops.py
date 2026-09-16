@@ -161,21 +161,16 @@ print("Thank You")
 
 
 
-#challenge
-print("-------- While Loop-True challenge--------")
+#challenge - if '3' strikes, and not fulfilling condition print a message.
+print("-------- While Loop-Else challenge--------")
 strikes = 0
-while True:
+while strikes < 3:
     ans = input("Do you agree with me? yes/no: ").strip().lower()
     if ans == "yes":
         print("Glad we are on the same page!😊")
         break
-    elif ans == "no":
-        print("Let's try again.😒")
-        strikes += 1
-    else:
-        print("Let's try again, yes or no?🧐")
-        strikes += 1
-    if strikes >= 3:
-        print("3 strikes you are out!!🥺")
-        break
+    strikes += 1                          #input ++
+else:
+    print("3 strikes you are out!!🥺")
+
 
