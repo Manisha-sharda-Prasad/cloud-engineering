@@ -1,8 +1,10 @@
 #Data Structures: Lists Fundamentals, List Advanced, Other DS
 
-#🔸Lists Fundamentals : Create Lists, Access & Read, Unpacking , Explore & Analyze, Change, Soring
+#🔸Lists Fundamentals : Create Lists, Access & Read, Unpacking , Explore & Analyze, Changing, Soring
 
-#▪️Create Lists[] - Lists, Nested Lists - Matrix:::::::::
+
+#▪️Create Lists[] ::::::::::::::::::::::::::::::::::::::::::
+#Lists, Nested Lists - Matrix
 
 #Create lists
 print("-------------------Create-:-Lists[]---------------------")
@@ -28,9 +30,11 @@ print(type(mixed_mat))
 
 
 
-#▪️Access & Read - indexing[], Nested Lists(Matrix), slicing():::::::::::::
 
-#indexing️[] -(Get Single item)
+#▪️Access & Read :::::::::::::::::::::::::::::::::::::::::::
+#Indexing[], Nested Lists(Matrix), slicing()
+
+#Indexing️[] -(Get Single item)
 print("--------------Access-&-Read-:-Indexing[]-------------------")
 lsts = ['a','b','c','d']
 print(lsts[0], lsts[-1])
@@ -54,12 +58,13 @@ print(matrix[-1][:2])   #targeting [[],[], ['i','j']]
 
 
 
-#▪️Unpacking - Unpacking Rules, lists[], Asterisk*, underscore "_" :::::::::::
-# Unpacking Rules
+
+#▪️Unpacking - ::::::::::::::::::::::::::::::::::::::::::
+# Lists[], Asterisk*, underscore "_"
+# Unpacking Rules:
 # 1.Num of Var == match Num of the values - not less, more
 # 2.Asterisk collects leftovers, fine if there are none
 # 3.Use '*' or '*_' using multiple'_,_,_' takes time
-
 
 #lists[]
 print("-----------------Unpacking-:-lists[]-----------------------")
@@ -90,7 +95,9 @@ print(fullname)
 print(state)
 
 
-#▪️Explore & Analyze :::::::::::::::
+
+
+#▪️Explore & Analyze ::::::::::::::::::::::::::::::::::::::::::
 # max,min,sum,len,all,any,count,index
 
 print("---------------Explore-&-Analyze-:-max,min,sum,len------------")
@@ -112,3 +119,40 @@ print("--------------Explore-&-Analyze-:-count,index-----------------")
 print("Count : ", nums.count(5))
 print("index : ", nums.index(4))
 
+print("------------Check-&-Analyze-:-Operators(==,>,<)--------------")
+n = [1,3,4,6,8]
+print( nums == n)
+print( nums < n)
+print( nums is n)    #both pointing at same data? no-false
+
+
+
+
+#▪️Changing Lists[] ::::::::::::::::::::::::::::::::::::::::::
+#Change lists: Append, Insert, Clear
+
+print("----------Changing-:-Append,Insert,Remove,Clear,Pop--------------")
+alpha = ['a','b','c','d']
+
+alpha.append('E')
+alpha.append('F')
+print("Append : ",alpha)
+
+alpha.insert(0,'X')
+alpha.insert(1,'Y')
+print("Insert : ",alpha)
+
+alpha.remove('Y')
+alpha.remove('X')
+print("Remove : ",alpha)
+
+alpha.pop(-1)
+alpha.pop()
+print("Pop : ",alpha)
+
+removed = alpha.pop()
+print("Removed Item(pop):", removed)
+print(alpha)
+
+alpha.clear()
+print("Clear : ",alpha)
