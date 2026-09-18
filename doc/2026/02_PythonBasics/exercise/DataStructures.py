@@ -3,7 +3,7 @@ import copy
 from math import comb
 
 #🔸Lists Fundamentals :
-# Create Lists, Access & Read, Unpack, Explore & Analyze, Changing, Order, Copy, Testing, Combine
+# Create, Access & Read, Unpack, Explore & Analyze, Change, Order, Copy, Test, Combine, Iterate, Filter, Transform
 
 
 #▪️Create Lists[] ::::::::::::::::::::::::::::::::::::::::::
@@ -101,7 +101,7 @@ print(state)
 
 
 #▪️Explore & Analyze ::::::::::::::::::::::::::::::::::::::::::
-# max,min,sum,len,all,any,count,index
+# max,min,sum,len,all,any,count,index,operators
 
 print("---------------Explore-&-Analyze-:-max,min,sum,len------------")
 nums =[1,3,4,6,8]
@@ -122,7 +122,7 @@ print("--------------Explore-&-Analyze-:-count,index-----------------")
 print("Count : ", nums.count(5))
 print("index : ", nums.index(4))
 
-print("------------Check-&-Analyze-:-Operators(==,>,<)--------------")
+print("------------Check-&-Analyze-:-Operators(==,>,<,is)--------------")
 onn = [1, 3, 4, 6, 8]
 print(nums == onn)
 print(nums < onn)
@@ -177,10 +177,10 @@ let_matrix = [
     ['x','u','v','w']
 ]
 
-letter.sort()                                           #sort -'ascending' (low-high)
+letter.sort()                                           #'sort()' -ascending (low-high)
 print("Sort: ",letter)
 
-let_matrix.sort()                                       #sorts 'first' item of every[0][0][0] in matrix lists[[]]
+let_matrix.sort()                                       #sort 'first' item of every[[0,][0,]] in matrix lists[]
 print("Sort: ",let_matrix)
 
 letter.sort(reverse= True)                              #sort with 'reverse=True'- 'descending' (high-low)
@@ -189,13 +189,13 @@ print("Reverse Sort: ",letter)
 let_matrix.sort(reverse= True)
 print("Reverse Sort: ",let_matrix)
 
-new_letter = sorted(letter)                             #Returns 'Sorted()'-' new[]' without changing 'original[]'
+new_letter = sorted(letter)                             #returns 'Sorted()' new[] without changing original[]
 print("Sorted: ", new_letter)
 
 new_letter.reverse()                                    #'Reverse()'- Flips list
 print("Reverse(): ", new_letter)
 
-new_let_matrix = reversed(let_matrix)           #'Reversed()' - Returns 'new reversed []'
+new_let_matrix = reversed(let_matrix)           #'Reversed()'- Returns new reversed []
 print("Reversed original[]: ", let_matrix)
 print("Reversed new[]: ", new_let_matrix)
 
@@ -257,4 +257,38 @@ print("Extend : ",onn)
 
 combine3 = list(zip(mon, onn))               #'Zip()' assigns each[0] with other [0] in lists tuple[(0,0), (1,1)]
 print("Zip : ",combine3)
+
+
+
+
+#▪️ Iterate Lists[] ::::::::::::::::::::::::::::::::::::::::::
+# Enumerate,Reverse,Zip,Map
+print("--------------------Iterate-:-Enumerate,Reverse,Zip,Map--------------------")
+
+let = ['c','d','a','b','','/']
+nr = [1, 3, 4, 6, 8]
+new_let =[]
+
+for l in let:
+    new_let.append(l.upper())
+    print("Iterate : ",new_let)
+
+#print(enumerate(let))
+print("Enumerate : ",list(enumerate(let)))      #assigns index (0, 'c'), (1, 'd')
+print("Enumerate : ",list(enumerate(let, start= 1)))
+#better way
+for index, value in enumerate(let, start= 1):
+    print("Enumerate for: ",index, value)
+
+
+print("Reversed : ",list(reversed(let)))
+#better way
+for l in reversed(let):
+    print("Reversed for: ",l)
+
+
+print("Zip : ",list(zip(let, nr)))
+#better way
+for l, n in zip(let,nr):
+    print("Zip for: ", l, n)
 
