@@ -1,6 +1,9 @@
 #Data Structures: Lists Fundamentals, List Advanced, Other DS
+import copy
+from math import comb
 
-#🔸Lists Fundamentals : Create Lists, Access & Read, Unpacking , Explore & Analyze, Changing, Sorting
+#🔸Lists Fundamentals :
+# Create Lists, Access & Read, Unpack, Explore & Analyze, Changing, Order, Copy, Testing, Combine
 
 
 #▪️Create Lists[] ::::::::::::::::::::::::::::::::::::::::::
@@ -59,7 +62,7 @@ print(matrix[-1][:2])   #targeting [[],[], ['i','j']]
 
 
 
-#▪️Unpacking - ::::::::::::::::::::::::::::::::::::::::::
+#▪️Unpack - ::::::::::::::::::::::::::::::::::::::::::
 # Lists[], Asterisk*, underscore "_"
 # Unpacking Rules:
 # 1.Num of Var == match Num of the values - not less, more
@@ -67,13 +70,13 @@ print(matrix[-1][:2])   #targeting [[],[], ['i','j']]
 # 3.Use '*' or '*_' using multiple'_,_,_' takes time
 
 #lists[]
-print("-----------------Unpacking-:-lists[]-----------------------")
+print("-----------------Unpack-:-lists[]-----------------------")
 person = ["Manisha", 30, "Fashion Stylist", "USA"]
 name, age, role, country = person              #order of variables should be right
 print(name, age)
 
 #Rest Collector -Asterisk * : (first, *rest , last)
-print("------------Unpacking-:-Rest-Collector-Asterisk*-----------")
+print("------------Unpack-:-Rest-Collector-Asterisk*-----------")
 namee, *details, place = person
 print(namee)
 print(details)        #Collected Unnecessary stuff using '*'
@@ -84,7 +87,7 @@ print(rest)
 print(places)
 
 # unpacking and skipping with underscore "_" : (not assigning unnecessary vars)
-print("---------------Unpacking-:-Underscore'_'--------------------")
+print("---------------Unpack-:-Underscore'_'--------------------")
 info = ["Lekh", 30, "Stylist", "123", "New York"]
 user, _, ids, _, _ = info
 print(user, ids)
@@ -120,18 +123,18 @@ print("Count : ", nums.count(5))
 print("index : ", nums.index(4))
 
 print("------------Check-&-Analyze-:-Operators(==,>,<)--------------")
-n = [1,3,4,6,8]
-print( nums == n)
-print( nums < n)
-print( nums is n)    #both pointing at same data? no-false
+onn = [1, 3, 4, 6, 8]
+print(nums == onn)
+print(nums < onn)
+print(nums is onn)    #both pointing at same data? no-false
 
 
 
 
-#▪️Changing Lists[] ::::::::::::::::::::::::::::::::::::::::::
+#▪️Change Lists[] ::::::::::::::::::::::::::::::::::::::::::
 #Change lists: Append, Insert, Remove, Clear, Pop, Update
 
-print("----------Changing-:-Append,Insert,Remove,Clear,Pop,Update-----------")
+print("----------Change-:-Append,Insert,Remove,Clear,Pop,Update-----------")
 alpha = ['a','b','c','d']
 
 alpha.append('E')
@@ -162,10 +165,10 @@ print("Clear : ",alpha)
 
 
 
-#▪️Sorting Lists[] ::::::::::::::::::::::::::::::::::::::::::
+#▪️Order Lists[] ::::::::::::::::::::::::::::::::::::::::::
 #Sort, Reverse=, Sorted, Reverse(), Reversed
 
-print("----------Sorting-:-Sort,Reverse=,Sorted,Reverse(),Reversed-----------")
+print("----------Order-:-Sort,Reverse=,Sorted,Reverse(),Reversed-----------")
 letter = ['c','d','a','b']
 
 let_matrix = [
@@ -197,4 +200,61 @@ print("Reversed original[]: ", let_matrix)
 print("Reversed new[]: ", new_let_matrix)
 
 
+
+#▪️Copy Lists[] ::::::::::::::::::::::::::::::::::::::::::
+# Copy=, Shallow-Copy(), DeepCopy(),Copy.copy(),
+print("----------Copy-:-Copy=,ShallowCopy,DeepCopy,Copy.copy-----------")
+data =  ['x','u','v','w']
+
+copy_data = data                                         #Risky copying data by '=' , but changes 'original[]'
+print(data)
+print("Copy=: ",copy_data)
+
+copy_new_data = copy.copy(data)                          #Shallow '.copy()' for simple lists ('import copy' module)
+print("Shallow Copy: ",copy_new_data)
+
+
+copy_new_data = copy.deepcopy(data)                      #'Deepcopy' for nested lists ('import copy' module)
+data.pop()
+data.append('K')
+data.insert(0,'P')
+print("Original data[]: ",data)
+print("Deep Copy: ",copy_new_data)                      #Doesn't affect the copy as used - '.deepcopy()'
+
+
+
+#▪️Test Lists[] ::::::::::::::::::::::::::::::::::::::::::
+#Is =
+
+print("--------------------Test-:-Is=--------------------")
+
+copy_new_data = data
+print("Is=: ",data is copy_new_data)                    #Referencing to the same [] ? True
+
+copy2 = data.copy()                                     #'copy()'
+print("Is copy: ",data is copy2)
+
+
+
+#▪️Combine Lists[] ::::::::::::::::::::::::::::::::::::::::::
+# (+),(*),(,), extend(),zip()
+print("--------------------Combine-:- (+),(*),(,),Extend,Zip,--------------------")
+
+mon = ['O', 'P', 'Q', 'R']
+onn = [1, 2, 3, 4, 5]
+
+combine = mon + onn                                   # '+' [ [][] ] - Simple combine
+print(combine)
+print( "Multiplier * : ", mon * 2)                    # *
+
+combine2 = [mon, onn]                                 # ',' [ [],[] ] - Nested lists,
+print(combine2)
+
+mon.extend(onn)                                       #'.extend()' - extending[ , ] by another without creating new[]
+print("Extend : ",mon)
+print("Extend : ",onn)
+
+
+combine3 = list(zip(mon, onn))               #'Zip()' assigns each[0] with other [0] in lists tuple[(0,0), (1,1)]
+print("Zip : ",combine3)
 
