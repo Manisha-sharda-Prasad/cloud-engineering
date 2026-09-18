@@ -1,6 +1,6 @@
 #Data Structures: Lists Fundamentals, List Advanced, Other DS
 import copy
-from math import comb
+
 
 #🔸Lists Fundamentals :
 # Create, Access & Read, Unpack, Explore & Analyze, Change, Order, Copy, Test, Combine, Iterate, Filter, Transform
@@ -78,7 +78,7 @@ print(name, age)
 #Rest Collector -Asterisk * : (first, *rest , last)
 print("------------Unpack-:-Rest-Collector-Asterisk*-----------")
 namee, *details, place = person
-print(namee)
+print(namee, type(details))
 print(details)        #Collected Unnecessary stuff using '*'
 print(place)
 
@@ -96,7 +96,6 @@ fullname, *_ = info
 *_, state = info
 print(fullname)
 print(state)
-
 
 
 
@@ -121,6 +120,7 @@ print("Any : ", any([0,None,0]))
 print("--------------Explore-&-Analyze-:-count,index-----------------")
 print("Count : ", nums.count(5))
 print("index : ", nums.index(4))
+
 
 print("------------Check-&-Analyze-:-Operators(==,>,<,is)--------------")
 onn = [1, 3, 4, 6, 8]
@@ -177,10 +177,10 @@ let_matrix = [
     ['x','u','v','w']
 ]
 
-letter.sort()                                           #'sort()' -ascending (low-high)
+letter.sort()                                           #'sort()' -ascending (low-high), doesnt return
 print("Sort: ",letter)
 
-let_matrix.sort()                                       #sort 'first' item of every[[0,][0,]] in matrix lists[]
+let_matrix.sort()    # n = sorted(let_matrix)           #sort 'first' item of every[[0,][0,]] in matrix lists[]
 print("Sort: ",let_matrix)
 
 letter.sort(reverse= True)                              #sort with 'reverse=True'- 'descending' (high-low)
@@ -192,7 +192,7 @@ print("Reverse Sort: ",let_matrix)
 new_letter = sorted(letter)                             #returns 'Sorted()' new[] without changing original[]
 print("Sorted: ", new_letter)
 
-new_letter.reverse()                                    #'Reverse()'- Flips list
+new_letter.reverse()                                    #'Reverse()'- Flips list- doesnt return
 print("Reverse(): ", new_letter)
 
 new_let_matrix = reversed(let_matrix)           #'Reversed()'- Returns new reversed []
@@ -204,13 +204,13 @@ print("Reversed new[]: ", new_let_matrix)
 #▪️Copy Lists[] ::::::::::::::::::::::::::::::::::::::::::
 # Copy=, Shallow-Copy(), DeepCopy(),Copy.copy(),
 print("----------Copy-:-Copy=,ShallowCopy,DeepCopy,Copy.copy-----------")
-data =  ['x','u','v','w']
+data =  ['x','u','v','w'] # "data" is object created from class "List" | type(data) == List class
 
-copy_data = data                                         #Risky copying data by '=' , but changes 'original[]'
+copy_data = data                                         #Risky copy/assigning data by '=' , but changes 'original[]'
 print(data)
 print("Copy=: ",copy_data)
 
-copy_new_data = copy.copy(data)                          #Shallow '.copy()' for simple lists ('import copy' module)
+copy_new_data = copy.copy(data)                          #Shallow 'copy.copy()' for simple lists ('import copy' module)
 print("Shallow Copy: ",copy_new_data)
 
 
@@ -225,7 +225,6 @@ print("Deep Copy: ",copy_new_data)                      #Doesn't affect the copy
 
 #▪️Test Lists[] ::::::::::::::::::::::::::::::::::::::::::
 #Is =
-
 print("--------------------Test-:-Is=--------------------")
 
 copy_new_data = data
