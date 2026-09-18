@@ -22,6 +22,11 @@
       </option>
     </inspection_tool>
     <inspection_tool class="PyStringConversionWithoutDunderMethodInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredTypes">
+        <list>
+          <option value="typing.Iterator" />
+        </list>
+      </option>
       <option name="reportedTypes">
         <list>
           <option value="object" />

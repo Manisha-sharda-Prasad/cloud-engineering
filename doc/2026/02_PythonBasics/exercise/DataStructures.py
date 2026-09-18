@@ -1,6 +1,6 @@
 #Data Structures: Lists Fundamentals, List Advanced, Other DS
 
-#🔸Lists Fundamentals : Create Lists, Access & Read, Unpacking , Explore & Analyze, Changing, Soring
+#🔸Lists Fundamentals : Create Lists, Access & Read, Unpacking , Explore & Analyze, Changing, Sorting
 
 
 #▪️Create Lists[] ::::::::::::::::::::::::::::::::::::::::::
@@ -129,9 +129,9 @@ print( nums is n)    #both pointing at same data? no-false
 
 
 #▪️Changing Lists[] ::::::::::::::::::::::::::::::::::::::::::
-#Change lists: Append, Insert, Clear
+#Change lists: Append, Insert, Remove, Clear, Pop, Update
 
-print("----------Changing-:-Append,Insert,Remove,Clear,Pop--------------")
+print("----------Changing-:-Append,Insert,Remove,Clear,Pop,Update-----------")
 alpha = ['a','b','c','d']
 
 alpha.append('E')
@@ -154,5 +154,47 @@ removed = alpha.pop()
 print("Removed Item(pop):", removed)
 print(alpha)
 
+alpha[0],alpha[1] = 'A', 'B'
+print("Update : ",alpha)
+
 alpha.clear()
 print("Clear : ",alpha)
+
+
+
+#▪️Sorting Lists[] ::::::::::::::::::::::::::::::::::::::::::
+#Sort, Reverse=, Sorted, Reverse(), Reversed
+
+print("----------Sorting-:-Sort,Reverse=,Sorted,Reverse(),Reversed-----------")
+letter = ['c','d','a','b']
+
+let_matrix = [
+    ['c','d','a','b'],
+    ['a','b','c','d'],
+    ['x','u','v','w']
+]
+
+letter.sort()                                           #sort -'ascending' (low-high)
+print("Sort: ",letter)
+
+let_matrix.sort()                                       #sorts 'first' item of every[0][0][0] in matrix lists[[]]
+print("Sort: ",let_matrix)
+
+letter.sort(reverse= True)                              #sort with 'reverse=True'- 'descending' (high-low)
+print("Reverse Sort: ",letter)
+
+let_matrix.sort(reverse= True)
+print("Reverse Sort: ",let_matrix)
+
+new_letter = sorted(letter)                             #Returns 'Sorted()'-' new[]' without changing 'original[]'
+print("Sorted: ", new_letter)
+
+new_letter.reverse()                                    #'Reverse()'- Flips list
+print("Reverse(): ", new_letter)
+
+new_let_matrix = reversed(let_matrix)           #'Reversed()' - Returns 'new reversed []'
+print("Reversed original[]: ", let_matrix)
+print("Reversed new[]: ", new_let_matrix)
+
+
+
