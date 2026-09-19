@@ -135,10 +135,8 @@ print(nums is onn)    #both pointing at same data? no-false
 #Change lists: Append, Insert, Remove, Clear, Pop, Update
 
 print("----------Change-:-Append,Insert,Remove,Clear,Pop,Update-----------")
-alpha = ['a','b','c','d']
+alpha  = ['a', 'b', 'c', 'd', 'E', 'F']
 
-alpha.append('E')
-alpha.append('F')
 print("Append : ",alpha)
 
 alpha.insert(0,'X')
@@ -239,8 +237,8 @@ print("Is copy: ",data is copy2)
 # (+),(*),(,), extend(),zip()
 print("--------------------Combine-:- (+),(*),(,),Extend,Zip,--------------------")
 
-mon = ['O', 'P', 'Q', 'R']
-onn = [1, 2, 3, 4, 5]
+mon: list[str] = ['O', 'P', 'Q', 'R']
+onn: list[int] = [1, 2, 3, 4, 5]
 
 combine = mon + onn                                   # '+' [ [][] ] - Simple combine
 print(combine)
@@ -249,8 +247,10 @@ print( "Multiplier * : ", mon * 2)                    # *
 combine2 = [mon, onn]                                 # ',' [ [],[] ] - Nested lists,
 print(combine2)
 
-mon.extend(onn)                                       #'.extend()' - extending[ , ] by another without creating new[]
+
+mon.extend(onn)                                      #'.extend()' - extending[ , ] by another without creating new[]
 print("Extend : ",mon)
+#onn.extend(mon)
 print("Extend : ",onn)
 
 
