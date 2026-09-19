@@ -322,3 +322,15 @@ print("Map Lambda: ",list(map(lambda p: float(p.replace('$','')),prices)))
 price2 = [120, 23, 67, 80]
 
 print("Filter Lambda: ",list(filter(lambda p: p >= 67,price2)))
+
+
+#filter()
+student = [['Mani', 90],
+           ['Roopa', 60],
+           ['Malini', 70]]
+
+print("Filter Lambda: ",list(filter(lambda row: row[1] > 70, student)))
+
+print(student[0][0].startswith('M'))
+#better way
+print("Filter Lambda: ",list(filter(lambda row : row[0].startswith('M'),student)))
