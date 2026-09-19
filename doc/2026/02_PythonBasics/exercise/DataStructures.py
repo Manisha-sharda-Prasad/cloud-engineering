@@ -3,7 +3,7 @@ import copy
 
 
 #🔸Lists Fundamentals :
-# Create, Access & Read, Unpack, Explore & Analyze, Change, Order, Copy, Test, Combine, Iterate, Filter, Transform
+# Create, Access & Read, Unpack, Explore & Analyze, Change, Order, Copy, Test, Combine, Iterate
 
 
 #▪️Create Lists[] ::::::::::::::::::::::::::::::::::::::::::
@@ -261,10 +261,10 @@ print("Zip : ",combine3)
 
 
 #▪️ Iterate Lists[] ::::::::::::::::::::::::::::::::::::::::::
-# Enumerate,Reverse,Zip,Map
-print("--------------------Iterate-:-Enumerate,Reverse,Zip,Map--------------------")
+# Enumerate,Reverse,Zip,Map,Filter
+print("--------------------Iterate/Transform-:-Enumerate,Reverse,Zip,Map,Filter--------------------")
 
-let = ['c','d','a','b','','/']
+let = ['c ','d','a',' b','',' /']
 nr = [1, 3, 4, 6, 8]
 new_let =[]
 
@@ -291,3 +291,34 @@ print("Zip : ",list(zip(let, nr)))
 for l, n in zip(let,nr):
     print("Zip for: ", l, n)
 
+
+#Map:clean way to data transformation-
+#upper()
+print("Map : ",list(map(str.upper,let)))     #transform list items to 'Upper' in 'str' class
+print("Map : ",list(map(str, nr)))           #transform list 'int' items to method 'str' and casting to list[]
+
+#strip()
+for l in map(str.strip, let):
+    print("Map with Strip: ",l)
+
+
+#Filter:
+#None/Bool
+obj = ['cat', 'Tan', 'Bat', None, '5', False]
+print("Filter: ", list(filter(None, obj)))   #Use 'Bool' or 'None' = Both False
+
+#isapha()
+obj2 = ['cat', 'Tan', 'Bat','5']
+print("Filter: ", list(filter(str.isalpha, obj2)))   #'isalpha()' does not work if items has false/true/none
+
+
+#➡️LAMBDA
+#Data transform with 'Map' & Lambda:
+prices = ['$12.40', '$9.03', '$4', '$16']
+
+print("Map Lambda: ",list(map(lambda p: float(p.replace('$','')),prices)))
+
+#Data transform with 'Filter' & Lambda:
+price2 = [120, 23, 67, 80]
+
+print("Filter Lambda: ",list(filter(lambda p: p >= 67,price2)))
