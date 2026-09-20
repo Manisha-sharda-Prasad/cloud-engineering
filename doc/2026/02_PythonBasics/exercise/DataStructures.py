@@ -1,8 +1,8 @@
-#Data Structures: Lists Fundamentals, List Advanced, Other DS
+#Data Structures: Lists Fundamentals, List Comprehension, List Advanced, Other DS
 import copy
 
 
-#🔸Lists Fundamentals :
+#🔸Lists Fundamentals :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # Create, Access & Read, Unpack, Explore & Analyze, Change, Order, Copy, Test, Combine, Iterate
 
 
@@ -122,12 +122,12 @@ print("Count : ", nums.count(5))
 print("index : ", nums.index(4))
 
 
-print("------------Check-&-Analyze-:-Operators(==,>,<,is)--------------")
+print("------------Check-&-Analyze-:-Operators(==,>,<,is,in)--------------")
 onn = [1, 3, 4, 6, 8]
 print(nums == onn)
 print(nums < onn)
-print(nums is onn)    #both pointing at same data? no-false
-
+print(nums is onn)     #both pointing at same data? no-false
+print(1 and 3 in onn)
 
 
 
@@ -212,7 +212,7 @@ copy_new_data = copy.copy(data)                          #Shallow 'copy.copy()' 
 print("Shallow Copy: ",copy_new_data)
 
 
-copy_new_data = copy.deepcopy(data)                      #'Deepcopy' for nested lists ('import copy' module)
+copy_new_data = copy.deepcopy(data)                      #'Deepcopy' for nested/Isolated lists('import copy' module)
 data.pop()
 data.append('K')
 data.insert(0,'P')
@@ -292,7 +292,7 @@ for l, n in zip(let,nr):
     print("Zip for: ", l, n)
 
 
-#Map:clean way to data transformation-
+#Map: clean way to data transformation- use functions on items
 #upper()
 print("Map : ",list(map(str.upper,let)))     #transform list items to 'Upper' in 'str' class
 print("Map : ",list(map(str, nr)))           #transform list 'int' items to method 'str' and casting to list[]
@@ -302,7 +302,7 @@ for l in map(str.strip, let):
     print("Map with Strip: ",l)
 
 
-#Filter:
+#Filter: keeping item fulfilling conditions
 #None/Bool
 obj = ['cat', 'Tan', 'Bat', None, '5', False]
 print("Filter: ", list(filter(None, obj)))   #Use 'Bool' or 'None' = Both False
@@ -334,3 +334,22 @@ print("Filter Lambda: ",list(filter(lambda row: row[1] > 70, student)))
 print(student[0][0].startswith('M'))
 #better way
 print("Filter Lambda: ",list(filter(lambda row : row[0].startswith('M'),student)))
+
+
+
+
+
+
+# 🔸List Comprehension: (Data transform > Loop > Map/Filter)::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+domains = ['www.google.com',
+           'openAI.com',
+           'www.MANIPLAY.com',
+           'localhost']
+
+cleaned = [
+            d.lower().replace('www.', '')   #'transform'
+            for d in domains                #'loop'
+            if '.' in d                     #'filtering' / localhost item out
+]
+
+print("List Comprehension: ", cleaned)
