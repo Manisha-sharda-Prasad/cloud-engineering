@@ -1,10 +1,31 @@
-#Data Structures: Lists Fundamentals, List Comprehension, List Advanced, Other DS
+# ⭐️ Data Structure:
+# List[] :- List Characteristics, Lists Fundamentals, List Comprehension
 import copy
 
 
-#🔸Lists Fundamentals :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-# Create, Access & Read, Unpack, Explore & Analyze, Change, Order, Copy, Test, Combine, Iterate
+# 🔸List [] Characteristics: (Ordered,️Duplicate,Indexed,Mutable)::::::::::::::::::::::::::::::::::::::::::::
+print("--------------------Ordered/️Duplicate/Indexed/Mutable--------------------")
 
+#▪️Ordered - Gives right Order:::::::
+mylist = [120, 23, 67, 120]
+print("Ordered: ",mylist)
+
+#▪️Duplicate - Repetition/Duplicates:::::::
+print("️Duplicate: ",mylist)
+
+#▪️Indexed - Position No.to Access:::::::
+print("Indexed: ",mylist[1])
+
+#▪️Mutable - Replaces Item with new:::::::
+mylist[1] = 89
+print("mutable: ",mylist[1])
+
+
+
+
+#🔸Lists [] Fundamentals :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+# Create, Access & Read, Unpack, Explore & Analyze, Change, Order, Copy, Test, Combine, Iterate
 
 #▪️Create Lists[] ::::::::::::::::::::::::::::::::::::::::::
 #Lists, Nested Lists - Matrix
@@ -175,7 +196,7 @@ let_matrix = [
     ['x','u','v','w']
 ]
 
-letter.sort()                                           #'sort()' -ascending (low-high), doesnt return
+letter.sort()                                           #'sort()' -ascending (low-high), does not return
 print("Sort: ",letter)
 
 let_matrix.sort()    # n = sorted(let_matrix)           #sort 'first' item of every[[0,][0,]] in matrix lists[]
@@ -339,8 +360,8 @@ print("Filter Lambda: ",list(filter(lambda row : row[0].startswith('M'),student)
 
 
 
-
-# 🔸List Comprehension: (Data transform > Loop > Map/Filter)::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# 🔸List [] Comprehension: (Data transform > Loop > Map/Filter)::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+print("-------List Comprehension:(Data transform>Loop>Map/Filter------------")
 domains = ['www.google.com',
            'openAI.com',
            'www.MANIPLAY.com',
