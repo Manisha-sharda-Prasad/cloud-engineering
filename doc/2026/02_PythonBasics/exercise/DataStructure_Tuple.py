@@ -1,5 +1,5 @@
 # ⭐️ Data Structure:
-#Tuple() :-
+#Tuple () :-
 
 # 🔸Tuple () Characteristics: (Ordered,️Duplicate,Indexed,Immutable)::::::::::::::::::::::::::::::::::::::::::::
 print("--------------------Ordered/️Duplicate/Indexed/Immutable--------------------")
