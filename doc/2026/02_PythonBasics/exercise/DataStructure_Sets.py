@@ -1,5 +1,5 @@
 # ⭐️ Data Structure:
-#Sets {} :- Sets Characteristics, Sets Fundamentals, Sets Math Methods
+#Sets {} :- Sets Characteristics, Fundamentals, Math Methods, Relationship Methods
 
 
 # 🔸Sets {} Characteristics: (Unordered,️No Duplicates,Not Indexed,Mutable)::::::::::::::::::::::::::
@@ -18,6 +18,7 @@ print("️No Duplicates: ", my_sets)
 #my_sets[1] = 89     # Does not support item assignment
 my_sets.remove(23)
 print("Mutable: ", my_sets)
+
 
 
 # 🔸Sets {} Fundamentals methods::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -42,19 +43,50 @@ print("sorted: ", sorted(x))                                             # retur
 
 
 
+
 # 🔸Sets {} Math Methods::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-#union,Operators,intersection
-# union (merging 'Unique' values from 'All Sets' into 'New Set')
+#Union, Operators, Intersection, Difference, Symmetric_difference
+
 print("--------------------Set-Math-Methods --------------------")
 a = {120, 23, 67, 120, 40}
 b = {121, 24, 68, 121, 40}
 c = {122, 25, 69, 122, 40}
 
+# union (merging all 'Unique' items from 'All Sets' into 'New Set'):
 print("Union:",a.union(b.union(c)))
 print("Operators:",a | b | c)
 print("[Union] Sorted():",sorted(a.union(b.union(c))))                      #[] 'sorted()' - optional
 
-print("Intersection value:",a.intersection(b.intersection(c)))              #intersecting/appearing/repeating value in each sets
+#intersection (only shared items, appearing/repeating value in each set):
+print("Intersection value:",a.intersection(b.intersection(c)))
 
+
+#difference (present in one set and not in oter):
 print("Difference:",a.difference(b))                                        #returns in 'a',not in 'b'
+print("Operators:",a - b)                                                                #same '-' as 'difference'
 print("Difference:",b.difference(c))                                        ##returns in 'b',not in 'c'
+print("Operators:",b - c)
+
+#symmetric_difference (opposite of 'difference' non-shared items):
+print("Symmetric_Difference:", a.symmetric_difference(b))                   #what not appeared in other set
+print( "Operators:",a ^ b)                                                               #same '^' as 'symmetric_difference'
+
+
+
+# 🔸Sets {} Relationship Methods::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#issubset, issuperset, isdisjoint
+p = {120, 23, 40, 67}
+q = {120, 23, 40,}
+
+#issubset (check same items appearing in sets?)
+print("Is Subset: ", p.issubset(q))
+print("Is Subset: ", q.issubset(p))
+
+#issuperset (check includes 'All' items of other set?)
+print("Is superset: ", p.issuperset(q))
+print("Is superset: ", q.issuperset(p))
+
+#isdisjoint
+print("Is disjoint: ",p.isdisjoint(q))
+print("Is disjoint: ",q.isdisjoint(p))
+
