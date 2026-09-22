@@ -3,8 +3,10 @@
 import copy
 
 
-# 🔸List [] Characteristics: (Ordered,️Duplicate,Indexed,Mutable)::::::::::::::::::::::::::::::::::::::::::::
-print("--------------------Ordered/️Duplicate/Indexed/Mutable--------------------")
+# 🔸List [] Characteristics::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# Ordered,️Duplicate,Indexed,Mutable
+
+print("----------------List[]-Characteristics:---------------------")
 
 #▪️Ordered - Gives right Order:::::::
 mylist = [120, 23, 67, 120]
@@ -23,15 +25,14 @@ print("mutable: ",mylist[1])
 
 
 
-#🔸Lists [] Fundamentals :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
+#🔸Lists [] Fundamentals :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # Create, Access & Read, Unpack, Explore & Analyze, Change, Order, Copy, Test, Combine, Iterate
 
 #▪️Create Lists[] ::::::::::::::::::::::::::::::::::::::::::
 #Lists, Nested Lists - Matrix
 
 #Create lists
-print("-------------------Create-:-Lists[]---------------------")
+print("-------------------Create-:-Lists[]------------------------")
 empty = list()
 print(empty)
 
@@ -42,7 +43,7 @@ numbers = list(range(5))                #printing range
 print(numbers)
 
 #Nested Lists - Matrix
-print("--------------Create-:-Nested-Lists-Matrix---------------")
+print("---------------Create-:-Nested-Lists-Matrix----------------")
 mat = [[1,2,3,4],
       [5,6,7,8]]
 print(mat)
@@ -64,7 +65,7 @@ lsts = ['a','b','c','d']
 print(lsts[0], lsts[-1])
 
 #Nested Lists(Matrix) -(Rows of [items])
-print("------------Access-&-Read-:-Nested-Lists-Matrix------------")
+print("------------Access-&-Read-:-Nested-Lists-Matrix-------------")
 matrix = [
             ['a','b','c','d'],
             ['e','f','g','h'],
@@ -75,7 +76,7 @@ print(matrix[-1][-1])
 print(matrix[0][2])
 
 #Slicing [start:end] -(Get Multiple items)
-print("-----------Access-&-Read-:-Slicing-[start:end]-------------")
+print("-----------Access-&-Read-:-Slicing-[start:end]--------------")
 print(matrix[:])        #printing all
 print(matrix[0:2])      #index [[0],[2]]
 print(matrix[-1][:2])   #targeting [[],[], ['i','j']]
@@ -143,7 +144,7 @@ print("Count : ", nums.count(5))
 print("index : ", nums.index(4))
 
 
-print("------------Check-&-Analyze-:-Operators(==,>,<,is,in)--------------")
+print("-----------Check-&-Analyze-:-Operators(==,>,<,is,in)----------")
 onn = [1, 3, 4, 6, 8]
 print(nums == onn)
 print(nums < onn)
@@ -155,7 +156,7 @@ print(1 and 3 in onn)
 #▪️Change Lists[] ::::::::::::::::::::::::::::::::::::::::::
 #Change lists: Append, Insert, Remove, Clear, Pop, Update
 
-print("----------Change-:-Append,Insert,Remove,Clear,Pop,Update-----------")
+print("--------Change-:-Append,Insert,Remove,Clear,Pop,Update--------")
 alpha  = ['a', 'b', 'c', 'd', 'E', 'F']
 
 print("Append : ",alpha)
@@ -187,7 +188,7 @@ print("Clear : ",alpha)
 #▪️Order Lists[] ::::::::::::::::::::::::::::::::::::::::::
 #Sort, Reverse=, Sorted, Reverse(), Reversed
 
-print("----------Order-:-Sort,Reverse=,Sorted,Reverse(),Reversed-----------")
+print("---------Order-:-Sort,Reverse=,Sorted,Reverse(),Reversed----------")
 letter = ['c','d','a','b']
 
 let_matrix = [
@@ -244,7 +245,7 @@ print("Deep Copy: ",copy_new_data)                      #Doesn't affect the copy
 
 #▪️Test Lists[] ::::::::::::::::::::::::::::::::::::::::::
 #Is =
-print("--------------------Test-:-Is=--------------------")
+print("----------------------Test-:-Is=----------------------------")
 
 copy_new_data = data
 print("Is=: ",data is copy_new_data)                    #Referencing to the same [] ? True
@@ -256,7 +257,7 @@ print("Is copy: ",data is copy2)
 
 #▪️Combine Lists[] ::::::::::::::::::::::::::::::::::::::::::
 # (+),(*),(,), extend(),zip()
-print("--------------------Combine-:- (+),(*),(,),Extend,Zip,--------------------")
+print("-----------Combine-:-(+),(*),(,),Extend,Zip----------------")
 
 mon: list[str] = ['O', 'P', 'Q', 'R']
 onn: list[int] = [1, 2, 3, 4, 5]
@@ -281,9 +282,9 @@ print("Zip : ",combine3)
 
 
 
-#▪️ Iterate Lists[] ::::::::::::::::::::::::::::::::::::::::::
+#▪️ Iterate/Trasform Lists[] :::::::::::::::::::::::::::::
 # Enumerate,Reverse,Zip,Map,Filter
-print("--------------------Iterate/Transform-:-Enumerate,Reverse,Zip,Map,Filter--------------------")
+print("----------Iterate-:-Enumerate,Reverse,Zip,Map,Filter----------")
 
 let = ['c ','d','a',' b','',' /']
 nr = [1, 3, 4, 6, 8]
@@ -360,8 +361,10 @@ print("Filter Lambda: ",list(filter(lambda row : row[0].startswith('M'),student)
 
 
 
-# 🔸List [] Comprehension: (Data transform > Loop > Map/Filter)::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-print("-------List Comprehension:(Data transform>Loop>Map/Filter------------")
+# 🔸List [] Comprehension::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# Data transform > Loop > Map/Filter
+
+print("----------List Comprehension:(Data transform>Loop>Map/Filter------------")
 domains = ['www.google.com',
            'openAI.com',
            'www.MANIPLAY.com',
@@ -372,5 +375,4 @@ cleaned = [
             for d in domains                #'loop'
             if '.' in d                     #'filtering' / localhost item out
 ]
-
 print("List Comprehension: ", cleaned)

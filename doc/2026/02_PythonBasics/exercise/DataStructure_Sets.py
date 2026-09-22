@@ -2,8 +2,10 @@
 #Sets {} :- Sets Characteristics, Fundamentals, Math Methods, Relationship Methods
 
 
-# 🔸Sets {} Characteristics: (Unordered,️No Duplicates,Not Indexed,Mutable)::::::::::::::::::::::::::
-print("----------Unordered/️NoDuplicate/NotIndexed/Mutable---------")
+# 🔸Sets {} Characteristics:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# Unordered,️No Duplicates,Not Indexed,Mutable
+
+print("-----------------Sets{}-Characteristics------------------")
 #▪️Unordered - Gives but gives right Order (stored in 'Hashtable' for 'Fast' access 'Hash f()' used):::::::
 my_sets = {120, 23, 67, 120}
 print("Unordered: ", my_sets)
@@ -21,9 +23,9 @@ print("Mutable: ", my_sets)
 
 
 
-# 🔸Sets {} Fundamentals methods::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# 🔸Sets {} Fundamentals methods::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # add,update,operators,remove,discard,pop:
-print("---------------Set-Fundamental-(methods) ----------------")
+print("----------------Set-Fundamental-(methods)-----------------")
 x = {120, 23, 67, 120}
 
 x.add(50)
@@ -44,7 +46,7 @@ print("sorted: ", sorted(x))                                             # retur
 
 
 
-# 🔸Sets {} Math Methods::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# 🔸Sets {} Math Methods::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 #Union, Operators, Intersection, Difference, Symmetric_difference
 
 print("--------------------Set-Math-Methods --------------------")
@@ -55,26 +57,27 @@ c = {122, 25, 69, 122, 40}
 # union (merging all 'Unique' items from 'All Sets' into 'New Set'):
 print("Union:",a.union(b.union(c)))
 print("Operators:",a | b | c)
-print("[Union] Sorted():",sorted(a.union(b.union(c))))                      #[] 'sorted()' - optional
+print("[Union] Sorted():",sorted(a.union(b.union(c))))                    #[] 'sorted()' - optional
 
 #intersection (only shared items, appearing/repeating value in each set):
 print("Intersection value:",a.intersection(b.intersection(c)))
 
 
 #difference (present in one set and not in oter):
-print("Difference:",a.difference(b))                                        #returns in 'a',not in 'b'
-print("Operators:",a - b)                                                                #same '-' as 'difference'
-print("Difference:",b.difference(c))                                        ##returns in 'b',not in 'c'
+print("Difference:",a.difference(b))                                      # returns in 'a',not in 'b'
+print("Operators:",a - b)                                                 # same '-' as 'difference'
+print("Difference:",b.difference(c))                                      # returns in 'b',not in 'c'
 print("Operators:",b - c)
 
 #symmetric_difference (opposite of 'difference' non-shared items):
-print("Symmetric_Difference:", a.symmetric_difference(b))                   #what not appeared in other set
-print( "Operators:",a ^ b)                                                               #same '^' as 'symmetric_difference'
+print("Symmetric_Difference:", a.symmetric_difference(b))                 # what not appeared in other set
+print( "Operators:",a ^ b)                                                # same '^' as 'symmetric_difference'
 
 
 
-# 🔸Sets {} Relationship Methods::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# 🔸Sets {} Relationship Methods:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 #issubset, issuperset, isdisjoint
+print("---------------Set-Relationship-Methods ----------------")
 p = {120, 23, 40, 67}
 q = {120, 23, 40,}
 

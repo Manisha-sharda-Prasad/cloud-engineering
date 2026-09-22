@@ -1,8 +1,10 @@
 # ⭐️ Data Structure:
 #Tuple () :-
 
-# 🔸Tuple () Characteristics: (Ordered,️Duplicate,Indexed,Immutable)::::::::::::::::::::::::::::::::::::::::::::
-print("--------------------Ordered/️Duplicate/Indexed/Immutable--------------------")
+# 🔸Tuple () Characteristics:::::::::::::::::::::::::::::::::::::::::::::
+# Ordered,️Duplicate,Indexed,Immutable
+
+print("-----------------Tuple()-Characteristics---------------------")
 #▪️Ordered - Gives right Order:::::::
 my_tuple = (120, 23, 67, 120)
 print("Ordered: ", my_tuple)
