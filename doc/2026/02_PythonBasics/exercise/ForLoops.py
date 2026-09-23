@@ -1,5 +1,7 @@
-# Run with this: python3 doc/2026/02_Python/exercise/ForLoops.py
-# or Copy path reference - content root
+# ⭐️:::::: For loops - Exercise::::::::::
+
+# Run with this: python3 doc/2026/02_Python/exercise/ForLoops.py  /or Copy path reference - content root
+
 
 # section::section-8::start
 # 08 Solid Square / Rectangle (not recommended)

@@ -1,9 +1,10 @@
-# :::::  Loops  ::::::
 from itertools import count
+# ⭐️ ::::: Loops  ::::::
+# Loops :- For Loop, While Loop
 
-# For Loop, While Loop
+# 🔸'For Loop': :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# Go through values and aggregate data -summing,counting,Loop over 'Fixed Sequence':
 
-# 🔸'For Loop': Go through values and aggregate data - summing, counting, averaging/Loop over 'Fixed Sequence'::::::::::::::::::::::::::::::::
 # ▪️ Nested Loop, Break, Continue, Pass :
 
 print('----Looping within List/sequence----')
@@ -141,7 +142,8 @@ for n in names:
 
 
 
-# 🔸'While Loop': Repeats  block of code - over and over as long as condition true::::::::::::::::::::::::::::::::::::
+# 🔸'While Loop': ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#Repeats  block of code - over and over as long as condition true
 
 #▪️While Condition(Exists Normally)
 print("-------- While Loop-Condition--------")

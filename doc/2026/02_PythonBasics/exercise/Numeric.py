@@ -1,9 +1,14 @@
-# ::::: Numeric Types : Math Operators, Rounding :::::
+#  ⭐️::::::: Numeric :::::::
+
+# Types : Math Operators, Rounding
 import math
 from math import floor, ceil, trunc
 from random import random
 
-#🔸Types(): ---> type(), int() , float(), complex()---------------------------
+# 🔸Numeric Types Functions():::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# type(), int() , float(), complex()
+print("-------------Numeric-Types-Functions()------------------")
+
 #type()
 x = 5
 y = 5.7
@@ -28,7 +33,10 @@ q = 5           #imaginary
 print(complex(p,q))
 
 
-#🔸Math Operators: ---> + , - , * , / , // , % , ** , = , += , -=, *= ---------------------------
+# 🔸Math Operators :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#+ , - , * , / , // , % , ** , = , += , -=, *=
+print("----------------------Math-Operators--------------------------")
+
 # / , // , % , **
 print(7 / 2)
 print(7 // 2)                               #removes .0
@@ -47,7 +55,10 @@ o *= 2                                      # o = o * 2 (5*2=10)
 print(o)
 
 
-#🔸Rounding: ---> abs(), round(), ceil(), floor(), trunc() ---------------------------
+# 🔸Rounding :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# abs(), round(), ceil(), floor(), trunc()
+print("-----------------------Rounding----------------------------")
+
 #abs()
 print(2 - 10)           #-8
 print(abs(2 - 10))      # 8
@@ -71,7 +82,10 @@ print(trunc(price))                           # removes decimal, whole number re
 #print(int(price))                            # or
 
 
-#🔸Random: ---> random(), randint()  ---------------------------
+# 🔸Random::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# random(), randint()
+print("-----------------------Random---------------------------")
+
 #random()                                       #return float 0.0 and 1.0/ fake data fill
 import random
 print(random.random())
@@ -87,7 +101,10 @@ print(checkEven)
 
 
 
-#🔸Validation: ---> is_integer(), isinstance()  ---------------------------
+# 🔸Validation:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# is_integer(), isinstance()
+print("------------------------Validation--------------------------")
+
 #is_integer()                                    #checks float .0(can be whole int) or .1(float)...
 m = 7.0
 n = 7.1
@@ -101,5 +118,6 @@ print(isinstance(m, float))                     # True
 
 
 
-#🔸Advances Math: ---> sqrt(), sin(), cos(), log()  ---------------------------
+#🔸Advances Math::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# sqrt(), sin(), cos(), log()
 
