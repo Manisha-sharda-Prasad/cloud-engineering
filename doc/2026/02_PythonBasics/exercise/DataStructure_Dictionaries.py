@@ -1,12 +1,11 @@
 # ⭐️ Data Structure:
-# Dictionaries:- Dictionaries Characteristics, Methods
+# Dictionaries:- Dictionaries Characteristics, Methods, Comprehensions
 
 
 # 🔸 Dictionaries {} Characteristics::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-# Ordered,️Duplicate,NotIndexed,Mutable
+# Ordered, ️Duplicate ,NotIndexed(Keyed), Mutable
 
 print("----------------Dictionaries{}-Characteristics:---------------------")
-
 mylist = {
           'a': 120,
           #'a': 10,
@@ -33,7 +32,7 @@ print("New my_list::",mylist)
 
 
 # 🔸 Dictionaries {} Methods:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-# get(), in, keys(), values(), items()
+# get(), in, keys(), values(), items(), dict.fromkeys()
 
 print("--------------------Dictionaries{}-Methods--------------------------")
 user = {
@@ -42,7 +41,7 @@ user = {
     'city':"Berlin"
 }
 
-#Access - 'get()'- returns 'None' if key 'value' missing
+# Access - 'get()'- returns 'None' if key 'value' missing
 print(user["city"])
 print("get(): ",user.get("NAME"))
 
@@ -59,20 +58,21 @@ print("values(): ",user.values())
 # View objects - 'items()' in 'dictionary' - helps in looping, transforming, compare data[]
 print("items(): ",user.items())
 #same
-print(user)
+print("user : ",user)
 
-#Looping with items()
+# Looping with items()
 for key, value in user.items():
-    print("Key:Value :",key,":",value)
+    print("items() :",key,":",value)
 
 # add, update, pop(), popitem()
-user["name"] = "John"                                               #add
-user["age"] = 55                                                    #update
-user.update({"age":55, "city": "Irvine" })                          #update()
-print(user)
+user["name"] = "John"                                                   #add
+user["id"] = 0                                                          #update
 
-user = user.pop("salary", "NOT FOUND")                              #pop() - if not present ("", "show message")
-print("Removed Item pop():", user)
+user.update({"id":105, "city": "Irvine" })                              #update()
+print("update() :",user)
+
+user = user.pop("salary", "NOT FOUND")                                  #pop() - if not present ("", "show message")
+print("pop():", user)
 
 #user.pop()
 #user.popitem()
@@ -85,7 +85,13 @@ users = {
     'city': None
 }
 
-#Creation - 'fromkeys()' builds 'new dict{}' keys get same 'default value'
+# Creation - 'dict.fromkeys()' builds 'new dict{}' keys get same 'default value'
 users = dict.fromkeys(["id", 'name','age','city'])
 print("fromkeys():", users)
+
+
+
+
+# 🔸 Dictionaries {} Comprehensions:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# 3 Components: key value expression, loop, optional condition
 
