@@ -93,5 +93,16 @@ print("fromkeys():", users)
 
 
 # 🔸 Dictionaries {} Comprehensions:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-# 3 Components: key value expression, loop, optional condition
+# 3 Components: key-value Expression, Loop, Condition (optional)
+
+#keep only string values & Convert them to UpperCase:
+
+info = {'id': 10, 'name':"John", 'age':23, 'city':"Berlin" }
+
+str_info = {
+    key.upper() : value.upper()                 #Expression
+    for key, value in info.items()              #Loop
+    if isinstance(value, str)                   #Filter
+}
+print(str_info)
 
