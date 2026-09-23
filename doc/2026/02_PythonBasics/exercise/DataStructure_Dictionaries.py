@@ -1,5 +1,5 @@
 # ⭐️ Data Structure:
-# Dictionaries:- Dictionaries Characteristics, Methods, Comprehensions
+# Dictionaries {} :- Dictionaries Characteristics, Methods, Comprehensions
 
 
 # 🔸 Dictionaries {} Characteristics::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
