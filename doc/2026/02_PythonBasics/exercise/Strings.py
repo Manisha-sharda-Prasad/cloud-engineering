@@ -87,7 +87,7 @@ value_is = "Manu-89-USA"
 print(value_is.split("-"))                  #split() - separates values
 
 #Repeat/ multiply'*'
-print("=" * 30)
+print("=" * 20)
 
 #Index & Slicing with Extraction [ ], [ : ], [ : : ]
 word = "Python"                            #[0,1,2,3,4,5] or [-6,-5,-4,-3,-2,-1]

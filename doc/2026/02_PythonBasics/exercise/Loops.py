@@ -24,7 +24,7 @@ print("** Final Total :", total)
 
 # strip(),lower(),replace
 # right order : Clean --> Transform
-print("----Looping with 'strip','lower','replace'---")
+print("----Looping with:strip(),lower(),replace()---")
 
 files = [" Report.csv   ", "DATA.csv   ", " final.TXT"]
 for file in files:
@@ -33,26 +33,26 @@ for file in files:
 
 
 
-print("----Looping with range() and 'step'----")
+print("----Looping with:range() and step----")
 for num in range(4,10,2):
     print(f"Count: {num}")
 
 
-print('----Looping with Conditions (if)----')
+print('----Looping with:Conditions (if)----')
 data = [60, 64, 34, 25, 12, 22, 11]
 for d in data:
     if d >= 34:
         print(f"Greater or Equal to '34':{d}")   # 64 34 90
 
 
-print('----Looping with Even Numbers----')
+print('----Looping with:Even Numbers----')
 for d in data:
     if d % 2 == 0:
         print(d)
 
 
 # ▪️Nested Loop: (Outer - Inner forloop)
-print("-----Nested-loop:--(Compare Pairs: Adjacent)-----")
+print("-----Nested-loop:Compare Pairs/Adjacent-----")
 for x in range(3):              #(0,1,2)
     for y in range(2):          #(0,1)
         print(f"Comparing x {[x]} with y {[y]}")
@@ -65,7 +65,7 @@ for x in alphabet:
         print(f" x{[x]} with y{[y]}")
 
 
-print("-----Nested-loop-(Pyramid)-----")
+print("-----Nested-loop-:Pyramid-----")
 n = 7
 for r in range(1,n+1):
     for s in range(0,r):
