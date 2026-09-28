@@ -96,11 +96,13 @@ print('-----------------Action Functions------------------')
 # with, open(), "a" append, as, write(), file
 
 def write_log(message):
-    with open(r"C:\Users\manishaprasad\Documents\try\app.log", "a") as file:             # r "specify not special chars"
+    with open("/Users/manishaprasad/Documents/try/app.log", "a") as file:
         file.write(message + "\n")
 
-write_log("App Started..")
+#write_log("App Started")                            #commit otherwise: will run each time you run whole program
+#write_log("User Logged in")
 
 
-
-
+#note:
+#For Windows - (r "C:\Users\manishaprasad\Documents\try\app.log") as file:    Windows file paths starts with C:\, r"specifies not special chars"
+#For macOS - ("/Users/manishaprasad/Documents/try/app.log", "a") as file:     uses / forward slash
