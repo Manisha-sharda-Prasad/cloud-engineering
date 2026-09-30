@@ -4,7 +4,7 @@ import math
 from math import ceil, floor, trunc
 
 # 🔸 Math Module ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-#ceil(),floor(),trunc(),factorial(),sqrt()
+#ceil(),floor(),trunc(),factorial(),sqrt(), hypot()
 
 print('------------ceil(),floor(),trunc()--------------')
 print(math.ceil(3.6))   #4
@@ -52,3 +52,20 @@ print(math.sqrt(4))      #2.0
 print(math.sqrt(9))      #3.0
 print(math.sqrt(16))     #4.0
 print(math.sqrt(100))    #10.0
+
+
+#hypot() - Hypotenuse to find the longest side, if you have right-angle triangle and know lengths of 2 shortest sides.
+print('--------------------hypot()-------------------')
+print(math.hypot(6,8))                  #10.0
+
+print(math.hypot(9,11))                 #14.212670403551895
+print(math.hypot(9,11).__ceil__())      #15
+
+print(math.hypot(3,4))                  #5.0
+print(math.hypot(3,4).__floor__())      #5
+
+print(math.hypot(5,6))                  #7.810249675906654
+print(math.hypot(5,6).__trunc__())      #7
+
+print(math.hypot(5,7))                  #8.602325267042627
+print(math.hypot(5,7).__trunc__())      #8
