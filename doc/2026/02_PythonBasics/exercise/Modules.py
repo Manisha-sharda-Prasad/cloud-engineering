@@ -141,3 +141,18 @@ print(platform.python_version())                        #3.13.5
 #python_version_tuple() - does not return any string unlike others(), instead Py version as 'Tuple' with 3 items
 print(platform.python_version_tuple())                  #('3', '13', '5') - 3.13.5
 
+
+
+# 🔸 Exercise - Module ::::::::::::::::::::::::::
+#import random
+
+#random.sample() + random.choice() problem:
+def generate_tickets(ticket_count, max_number):
+    #Generate the unique numbers:
+    tickets = random.sample(range(max_number), ticket_count)
+    winning_ticket = random.choice(tickets)
+
+    return tickets, winning_ticket
+
+#Means: random.sample(range(10), 5) sample(..., 5) randomly selects 5 unique numbers.:
+print(generate_tickets(5, 10))
