@@ -2,7 +2,7 @@
 
 # 🔸 Math Module ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 import math
-from math import ceil, floor, trunc
+
 #ceil(),floor(),trunc(),factorial(),sqrt(), hypot()
 
 print('------------ceil(),floor(),trunc()--------------')
