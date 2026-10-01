@@ -81,7 +81,7 @@ print(random.random())
 print(random.random())
 print(random.random())
 
-#seed() - starts from '0.'
+#seed() - starts from '0.' provides a starting no. to initialize random generation
 print('-----------------seed()----------------------')
 random.seed(0)
 print(random.random())
@@ -100,7 +100,7 @@ print(random.choice(names))
 print(random.choice(names))
 
 
-#sample() - randomly selects the given unique items (unique indexes), doesn't verify whether items at these indexes are unique.
+#sample() - randomly selects the given items (unique indexes), doesn't verify returning items are unique.
 print('-----------------sample()----------------------')
 name = ["Nashi","Rashi","Phi","Nhi"]
 
@@ -143,9 +143,10 @@ print(platform.python_version_tuple())                  #('3', '13', '5') - 3.13
 
 
 
-# 🔸 Exercise - Module ::::::::::::::::::::::::::
-#import random
+# 🔸 Exercise -::::::::::::::::::::::::::
+print('-----------------Exercise--------------------')
 
+#import random
 #random.sample() + random.choice() problem:
 def generate_tickets(ticket_count, max_number):
     #Generate the unique numbers:
@@ -156,3 +157,19 @@ def generate_tickets(ticket_count, max_number):
 
 #Means: random.sample(range(10), 5) sample(..., 5) randomly selects 5 unique numbers.:
 print(generate_tickets(5, 10))
+
+
+
+#import math
+true_or_false = math.trunc(3.4) != math.ceil(3.4)    # 3 != 4   : 1
+#  print(math.trunc(3.4)) : 3
+#  print(math.ceil(3.4))  : 4
+
+# 3 != to 4   : true_or_false = True
+print(int(true_or_false))       #int(True) : 1  | int(False) : 0 | remaining answer : 1
+
+
+# output of the following code? exact cannot be predicted
+#import random
+for i in range(2):
+    print(random.random())
