@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
-""" list_utils.py is a sample Python module that exposes list utility functions """
+#!/usr/bin/env python3                                                                     #instructs the OS to use Python3, to interpret this file
+""" list_utils.py is a sample Python module that exposes list utility functions """        #docstring
 
-__usage_counter = 0
+__usage_counter = 0                                                                         #var is a counter that counts
 
 def sum_elements(user_list):
     global __usage_counter
