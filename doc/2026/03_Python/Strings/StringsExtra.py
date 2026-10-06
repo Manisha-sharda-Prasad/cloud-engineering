@@ -38,21 +38,31 @@ print(len(multi_line))              #counts empty space too
 
 #🔸Searching inside Strings:
 print('-----------------Searching-in-strings--------------------')
+
 #index
 print('ILoveMyself'.index('M'))
 
 #find
 text = 'I Love Myself The Most'
-print(text.find('are'))   #-1
-print(text.find('Lov'))   #2
-print(text.find('Lov '))  #-1
+print(text.find('are'))         #-1
+print(text.find('Lov'))         #2
+print(text.find('Lov '))        #-1
+print(text.find('The', 10))     #14
+print(text.find('The', 14))     #14
+print(text.find('Love', 2, 6))  #2
 
-print(text.find('The', 10))  #14
-print(text.find('The', 14))  #14
+#rfind
+print(text.rfind('The'))        #-1
+print(text.rfind('Mys'))        #7
 
+#isalnum (returns boolean, if num-&-string)
+print('Mani'.isalnum())         #True
+print('mani30'.isalnum())       #T
+print('Mani_30'.isalnum())      #F
 
-print(text.find('Love', 14, 15))  #14
+#isalpha, isdigit
+print('mani'.isalpha())
+print('Mani2'.isdigit())
 
-
-
+#islower(), issupper(), isspace()
 
