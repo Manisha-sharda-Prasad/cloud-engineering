@@ -39,30 +39,45 @@ print(len(multi_line))              #counts empty space too
 #🔸Searching inside Strings:
 print('-----------------Searching-in-strings--------------------')
 
-#index
+#index()
 print('ILoveMyself'.index('M'))
 
-#find
-text = 'I Love Myself The Most'
-print(text.find('are'))         #-1
-print(text.find('Lov'))         #2
-print(text.find('Lov '))        #-1
-print(text.find('The', 10))     #14
-print(text.find('The', 14))     #14
-print(text.find('Love', 2, 6))  #2
+#find()
+greater = 'I Love Myself The Most'
+print(greater.find('are'))         #-1
+print(greater.find('Lov'))         #2
+print(greater.find('Lov '))        #-1
+print(greater.find('The', 10))     #14
+print(greater.find('The', 14))     #14
+print(greater.find('Love', 2, 6))  #2
 
-#rfind
-print(text.rfind('The'))        #-1
-print(text.rfind('Mys'))        #7
+#rfind()
+print(greater.rfind('The'))        #-1
+print(greater.rfind('Mys'))        #7
 
-#isalnum (returns boolean, if num-&-string)
+#isalnum() : returns boolean, if num-&-string
 print('Mani'.isalnum())         #True
 print('mani30'.isalnum())       #T
 print('Mani_30'.isalnum())      #F
 
-#isalpha, isdigit
+#isalpha(), isdigit()
 print('mani'.isalpha())
 print('Mani2'.isdigit())
 
-#islower(), issupper(), isspace()
+#islower(), issupper(), isspace(), join(), split(), sorted(), sort(),
 
+
+#🔸Comparing Strings:
+print('-----------------Comparing-Strings--------------------')
+# uppercase letters have lower numerical values than lowercase letters,  ord('P') is 80 and ord('p') is 112.
+greater = 'Py' > 'py'
+print(greater)                #False: 80 is smaller than 112
+
+great = 'Python' > 'Z'
+print(great)                  #False: Z bigger than P
+
+equal = 'Python' == 'Python'
+print(equal)
+
+less = '8' < '20'
+print(less)                   #False: 8 is greater than 2 (0 index)
