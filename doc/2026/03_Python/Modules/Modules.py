@@ -4,7 +4,6 @@
 import math
 
 #ceil(),floor(),trunc(),factorial(),sqrt(), hypot()
-
 print('------------ceil(),floor(),trunc()--------------')
 print(math.ceil(3.6))   #4
 print(math.floor(3.6))  #3
