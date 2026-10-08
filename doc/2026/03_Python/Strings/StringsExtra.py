@@ -75,14 +75,25 @@ print('Mani_30'.isalnum())      #F
 
 #isalpha(), isdigit()
 print('----------isalpha,isdigit-------')
-print('mani'.isalpha())
-print('Mani2'.isdigit())
+print('mani'.isalpha())        #T
+print('Mani2'.isdigit())       #F
 
-#islower(), issupper(), isspace(), join(), split(), sorted(), sort(), min() max()
+#min() max()
 print('----------min,max-------')
-print(min('watashiwaadoriandesu'))
-print(max('watashiwaadoriandesu'))
+print(min('watashiwadoriandesu'))             # a
+print(max('watashiwadoriandesu'))             # w
 
+
+#sort(),sorted()
+print('----------sort,sorted-------')
+data = [20,40,9,0,32,1]
+data.sort()                 # Wrong way - print(data.sort()) : None
+print(data)
+
+data2 = [2,4,9,0,3,1]
+print(sorted(data2))
+
+#islower(), issupper(), isspace(), join(), split(),
 
 #🔸Comparing Strings:
 print('-----------------Comparing-Strings--------------------')
