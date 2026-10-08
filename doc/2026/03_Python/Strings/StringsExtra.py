@@ -3,7 +3,6 @@
 #🔸len,index,backlash:
 print('-----------------len,index,backlash--------------------')
 #len:
-
 print(len('hi there!'))
 print(len(''))
 
@@ -53,6 +52,7 @@ print('-----------------Searching-in-strings--------------------')
 print('ILoveMyself'.index('M'))
 
 #find()
+print('----------find--------')
 greater = 'I Love Myself The Most'
 print(greater.find('are'))         #-1
 print(greater.find('Lov'))         #2
@@ -62,20 +62,24 @@ print(greater.find('The', 14))     #14
 print(greater.find('Love', 2, 6))  #2
 
 #rfind()
+print('----------rfind--------')
 print(greater.rfind('The'))        #-1
 print(greater.rfind('Mys'))        #7
 print('work work work'.rfind('work', 0, 5))
 
 #isalnum() : returns boolean, if num-&-string
+print('----------isalnum--------')
 print('Mani'.isalnum())         #True
 print('mani30'.isalnum())       #T
 print('Mani_30'.isalnum())      #F
 
 #isalpha(), isdigit()
+print('----------isalpha,isdigit-------')
 print('mani'.isalpha())
 print('Mani2'.isdigit())
 
 #islower(), issupper(), isspace(), join(), split(), sorted(), sort(), min() max()
+print('----------min,max-------')
 print(min('watashiwaadoriandesu'))
 print(max('watashiwaadoriandesu'))
 
