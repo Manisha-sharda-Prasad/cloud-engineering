@@ -64,6 +64,7 @@ print(greater.find('Love', 2, 6))  #2
 #rfind()
 print(greater.rfind('The'))        #-1
 print(greater.rfind('Mys'))        #7
+print('work work work'.rfind('work', 0, 5))
 
 #isalnum() : returns boolean, if num-&-string
 print('Mani'.isalnum())         #True
@@ -93,3 +94,8 @@ print(equal)
 
 less = '8' < '20'
 print(less)                   #False: 8 is greater than 2 (0 index)
+
+print('Python' > 'W')
+
+print('30' > '7')
+#print('30' > 7)
