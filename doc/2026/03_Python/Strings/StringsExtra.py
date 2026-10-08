@@ -1,31 +1,41 @@
 #Basic strings:
 
 #🔸len,index,backlash:
+print('-----------------len,index,backlash--------------------')
 #len:
-print('-----------------len,index,backlash,--------------------')
+
 print(len('hi there!'))
 print(len(''))
+
 #index:
 print('hi there!'[0])
 print('hi there!'[1:])
+
 #backlash \: info for python to know the char coming after backlash is a special char
 print('I\'m Mani')
+print(len('\'\\') - len('\n'))
 
 
-#🔸ASCII/ Code point : each char has a certain no. assigned to it.
+#🔸ASCII/ Code Point : each char has a certain no. assigned to it. Char encoding standard.
 print('-----------------ASCII/Code-point--------------------')
 # ord:
+print('----------ord--------')
 print(ord('a'))
+print(ord('d'))
 print(ord('@'))
 print(ord('A'))
 print(ord(' '))
 print(ord('\''))
 print(ord('.'))
+print(ord('d') - ord('a'))
+
 
 # chr:
+print('----------chr--------')
 print(chr(98))
 print(chr(100000))
 #print(chr(100000111))   #ValueError: chr() arg not in range(0x110000)
+print(chr(ord('a')))
 
 
 #🔸Multi-line strings:
@@ -64,7 +74,9 @@ print('Mani_30'.isalnum())      #F
 print('mani'.isalpha())
 print('Mani2'.isdigit())
 
-#islower(), issupper(), isspace(), join(), split(), sorted(), sort(),
+#islower(), issupper(), isspace(), join(), split(), sorted(), sort(), min() max()
+print(min('watashiwaadoriandesu'))
+print(max('watashiwaadoriandesu'))
 
 
 #🔸Comparing Strings:
