@@ -33,7 +33,7 @@ sampleUser.intro()
 print(sampleUser.name, sampleUser.age)
 
 
-# 🔸Encapsulation :::::::::::::::::::::::::::::::
+# 🔸Encapsulation & Abstraction:::::::::::::::::::::::::::::::
 
 class Car():
     def __init__(self, make, model, initial_speed = 0):
@@ -65,4 +65,35 @@ my_car = Car("Ford", "Mustang", 50)
 my_car.current_speed()
 my_car.speed_up()
 my_car.speed_down()
+
+
+# 🔸Instance Variables::::::::::::::::::::::::::::::::
+#Instance/Object Var : property on one obj dont interfere with another property of obj
+
+class Dog():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+my_dog = Dog("Tedd", 2)
+print(my_dog.__dict__)            #{'name': 'Tedd', 'age': 2}
+
+my_dog.color = "brown"            #Added new property, was not defined in constructor
+print(my_dog.__dict__)            #{'name': 'Tedd', 'age': 2, 'color': 'brown'}
+
+del my_dog.age                    #deleting instance var
+print(my_dog.__dict__)            #{'name': 'Tedd', 'color': 'brown'}
+
+
+#Private __Property:::::::::::
+class Cat():
+    def __init__(self, name, age):
+        # Double __Underscore makes it Private
+        self.__name = name
+        self.__age = age
+
+my_cat = Cat("Roo", 4)
+print(my_cat.__dict__)             #{'_Cat__name': 'Roo', '_Cat__age': 4}
+
+#print(my_cat.__name, my_cat.__age) Error: 'Cat' object has no attribute '__name','__age'
 
