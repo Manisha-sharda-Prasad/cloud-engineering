@@ -35,7 +35,7 @@ print(sampleUser.name, sampleUser.age)
 
 # 🔸Encapsulation & Abstraction:::::::::::::::::::::::::::::::
 
-class Car():
+class Car:
     def __init__(self, make, model, initial_speed = 0):
         self.make = make
         self.model = model
@@ -68,9 +68,9 @@ my_car.speed_down()
 
 
 # 🔸Instance Variables::::::::::::::::::::::::::::::::
-#Instance/Object Var : property on one obj dont interfere with another property of obj
+#Instance/Object Var : property on one obj don't interfere with another property of obj
 
-class Dog():
+class Dog:
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -85,8 +85,8 @@ del my_dog.age                    #deleting instance var
 print(my_dog.__dict__)            #{'name': 'Tedd', 'color': 'brown'}
 
 
-#Private __Property:::::::::::
-class Cat():
+#Private __Property: Name Mangling:::::::::::
+class Cat:
     def __init__(self, name, age):
         # Double __Underscore makes it Private
         self.__name = name
@@ -97,3 +97,21 @@ print(my_cat.__dict__)             #{'_Cat__name': 'Roo', '_Cat__age': 4}
 
 #print(my_cat.__name, my_cat.__age) Error: 'Cat' object has no attribute '__name','__age'
 
+
+# 🔸Class Variables::::::::::::::::::::::::::::::::
+class Phone:
+    counter = 0
+    def __init__(self, brand, model):
+        self.__brand = brand
+        self.__model = model
+        Phone.counter += 1
+
+print(Phone.counter)
+hina_phone = Phone("Nokia", '10 NKrX')
+print(hina_phone.counter)                           #1
+print(hina_phone.__dict__)
+
+nina_phone = Phone("Apple", '15 PRO Max')
+print(nina_phone.counter)                           #2
+print(nina_phone.__dict__)
+print(Phone.counter)
