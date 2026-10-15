@@ -181,22 +181,25 @@ def empty_string(user_object):                    #obj as parameter
 
 print()
 
+
+
 #🔸Inheritance ::::::::::::::::::::::::::::::::
 class Vehicle:
     def __init__(self, speed):
         self.speed = speed
     pass
 
-class VehicleCar(Vehicle):
+class LandVehicle(Vehicle):
     pass
 
-class Cars(VehicleCar):
+class Cars(LandVehicle):
     pass
+
 cars = Cars(45)
 print(cars.__dict__)
 
 
-print(issubclass(Cars, VehicleCar))
+print(issubclass(Cars, LandVehicle))
 print(issubclass(Cars, Vehicle))
-print(issubclass(VehicleCar, Vehicle))
+print(issubclass(LandVehicle, Vehicle))
 
