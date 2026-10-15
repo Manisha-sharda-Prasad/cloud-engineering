@@ -183,14 +183,20 @@ print()
 
 #🔸Inheritance ::::::::::::::::::::::::::::::::
 class Vehicle:
+    def __init__(self, speed):
+        self.speed = speed
     pass
 
 class VehicleCar(Vehicle):
     pass
 
-class Car(VehicleCar):
+class Cars(VehicleCar):
     pass
+cars = Cars(45)
+print(cars.__dict__)
 
-print(issubclass(Car, VehicleCar))
-print(issubclass(Car, Vehicle))
+
+print(issubclass(Cars, VehicleCar))
+print(issubclass(Cars, Vehicle))
 print(issubclass(VehicleCar, Vehicle))
+
