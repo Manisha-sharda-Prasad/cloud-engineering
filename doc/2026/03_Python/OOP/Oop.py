@@ -165,3 +165,20 @@ print(card.present())
 
 deck = Deck()
 print(deck.get_remaining())
+
+
+
+
+#🔸Reflection & Introspection ::::::::::::::::::::::::::::::::
+#Introspection: ability of a program to check the 'typeof an Object' or its 'Properties' at runtime/ info of obj during execution.
+#Reflection: ability of a program to change the 'Properties/ Methods' of an 'Object' at runtime.
+
+def empty_string(user_object):                    #obj as parameter
+    for prop_name in user_object.__dict__.keys():
+        prop_value = getattr(user_object, prop_name)
+        if isinstance(prop_value, str):                     #isinstance(takes 2 value, 1:var and  2:type)
+            setattr(user_object, prop_name,"")
+
+
+
+
