@@ -179,6 +179,18 @@ def empty_string(user_object):                    #obj as parameter
         if isinstance(prop_value, str):                     #isinstance(takes 2 value, 1:var and  2:type)
             setattr(user_object, prop_name,"")
 
+print()
 
+#🔸Inheritance ::::::::::::::::::::::::::::::::
+class Vehicle:
+    pass
 
+class VehicleCar(Vehicle):
+    pass
 
+class Car(VehicleCar):
+    pass
+
+print(issubclass(Car, VehicleCar))
+print(issubclass(Car, Vehicle))
+print(issubclass(VehicleCar, Vehicle))
