@@ -2,7 +2,7 @@
 
 # 🔸Class & Objects :::::::::::::::::::::::::::::::
 # Objects are the instances of the Class, Objects has Properties, Name, Methods
-
+print("--------------------Class & Objects ---------------------")
 class User:
     def __init__(self):                  #Constructor, starts with __init___, must have at-least 1 parameter(self).
         self.name = 'sampleName'         #attributes: var inside a class, Also properties.
@@ -34,6 +34,7 @@ print(sampleUser.name, sampleUser.age)
 
 
 # 🔸Encapsulation & Abstraction:::::::::::::::::::::::::::::::
+print("-------------Encapsulation & Abstraction----------------")
 
 class Car:
     def __init__(self, make, model, initial_speed = 0):
@@ -69,6 +70,7 @@ my_car.speed_down()
 
 # 🔸Instance Variables::::::::::::::::::::::::::::::::
 #Instance/Object Var : property on one obj don't interfere with another property of obj
+print("-----------------Instance Variables--------------------")
 
 class Dog:
     def __init__(self, name, age):
@@ -99,6 +101,8 @@ print(my_cat.__dict__)             #{'_Cat__name': 'Roo', '_Cat__age': 4}
 
 
 # 🔸Class Variables::::::::::::::::::::::::::::::::
+print("--------------------Class Variables---------------------")
+
 class Phone:
     counter = 0
     def __init__(self, brand, model):
@@ -119,6 +123,8 @@ print(Phone.counter)
 
 # Exercise 1:::::::::::::::::::::
 # can you provide a default value for the first parameter of a constructor (typically name self)?
+print("----------------Exercise 1------------------")
+
 class Cars:
     def __init__(self='default value', speed=100):
         self.speed = speed
@@ -129,6 +135,7 @@ my_toyota = Cars
 
 
 # Exercise 2:::::::::::::::::::::
+print("----------------Exercise 2------------------")
 from random import shuffle
 
 class Card:
@@ -173,6 +180,8 @@ print(deck.get_remaining())
 #Introspection: ability of a program to check the 'typeof an Object' or its 'Properties' at runtime/ info of obj during execution.
 #Reflection: ability of a program to change the 'Properties/ Methods' of an 'Object' at runtime.
 
+print("---------------Reflection & Introspection-----------------")
+
 def empty_string(user_object):                    #obj as parameter
     for prop_name in user_object.__dict__.keys():
         prop_value = getattr(user_object, prop_name)
@@ -184,6 +193,8 @@ print()
 
 
 #🔸Inheritance ::::::::::::::::::::::::::::::::
+print("---------------------Inheritance--------------------------")
+
 class Vehicle:
     def __init__(self, speed):
         self.speed = speed
