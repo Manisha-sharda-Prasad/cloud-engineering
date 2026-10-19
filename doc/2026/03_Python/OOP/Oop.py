@@ -121,7 +121,7 @@ print(nina_phone.__dict__)
 print(Phone.counter)
 
 
-# Exercise 1:::::::::::::::::::::
+# ▪️Exercise 1:::::::::::::::::::::
 # can you provide a default value for the first parameter of a constructor (typically name self)?
 print("----------------Exercise 1------------------")
 
@@ -134,7 +134,7 @@ my_toyota = Cars
 
 
 
-# Exercise 2:::::::::::::::::::::
+# ▪️Exercise 2:::::::::::::::::::::
 print("----------------Exercise 2------------------")
 from random import shuffle
 
@@ -193,24 +193,32 @@ print()
 
 
 #🔸Inheritance ::::::::::::::::::::::::::::::::
+#class can inherit  attributes, properties, class variable and methods of a Root Parent / Superclass.
+#enables code reuse/ customization, new class extend or override the parent class.
 print("---------------------Inheritance--------------------------")
 
+# Vehicle -> LandVehicle -> Cars
 class Vehicle:
     def __init__(self, speed):
         self.speed = speed
     pass
 
+# to invoke the 'constructor' from 'supper-class', use 'dot-notation' with the name of a supper-class.
 class LandVehicle(Vehicle):
-    pass
+    def __init__(self, speed, wheel_count):
+        Vehicle.__init__(self,speed)           #Same: super.__init__(speed)
+        self.wheel_count = wheel_count
+
 
 class Cars(LandVehicle):
     pass
-
-cars = Cars(45)
+# Pass parameter one for 'speed', one for 'wheel_count'
+cars = Cars(45,4)
 print(cars.__dict__)
 
 
 print(issubclass(Cars, LandVehicle))
 print(issubclass(Cars, Vehicle))
 print(issubclass(LandVehicle, Vehicle))
+
 
