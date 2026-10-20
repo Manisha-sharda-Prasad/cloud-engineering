@@ -193,12 +193,13 @@ print()
 
 
 #🔸Inheritance ::::::::::::::::::::::::::::::::
-#class can inherit  attributes, properties, class variable and methods of a Root Parent / Superclass.
+#class can inherit  Attributes, Properties, Variable and Methods of a Root Parent / Superclass.
 #enables code reuse/ customization, new class extend or override the parent class.
 print("---------------------Inheritance--------------------------")
 
 # Vehicle -> LandVehicle -> Cars
 class Vehicle:
+    class_message = "This is Super Class - Vehicle!!"       # Super Class Variable
     def __init__(self, speed):
         self.speed = speed
     pass
@@ -206,19 +207,37 @@ class Vehicle:
 # to invoke the 'constructor' from 'supper-class', use 'dot-notation' with the name of a supper-class.
 class LandVehicle(Vehicle):
     def __init__(self, speed, wheel_count):
-        Vehicle.__init__(self,speed)           #Same: super.__init__(speed)
+        Vehicle.__init__(self,speed)                     #Same: super.__init__(speed) - Super Class Constructor
         self.wheel_count = wheel_count
+        print(Vehicle.class_message, "1")                #or: super().class_message
+
+    def speed_up(self):
+        self.speed += 5
 
 
 class Cars(LandVehicle):
-    pass
+    def super_speed(self):
+        print("Super Speed Activated!!")
+        super().speed_up()                               # Super Class Method
+        super().speed_up()
+
+
+
+
 # Pass parameter one for 'speed', one for 'wheel_count'
 cars = Cars(45,4)
-print(cars.__dict__)
-
 
 print(issubclass(Cars, LandVehicle))
 print(issubclass(Cars, Vehicle))
 print(issubclass(LandVehicle, Vehicle))
+
+print(cars.class_message, "2")
+
+print(cars.__dict__)
+cars.super_speed()
+print(cars.__dict__)
+
+
+
 
 
